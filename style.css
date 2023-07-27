@@ -1,0 +1,86 @@
+body {
+    filter: blur(0);
+    size: 100%;
+    font-family: "Comic Sans MS";
+    background: radial-gradient(
+        circle,
+        rgba(255,0,255,1)  0%, rgba(0,255,255,1) 5%,
+        rgba(255,0,255,1) 10%, rgba(0,255,255,1) 15%,
+        rgba(255,0,255,1) 20%, rgba(0,255,255,1) 25%,
+        rgba(255,0,255,1) 30%, rgba(0,255,255,1) 35%,
+        rgba(255,0,255,1) 40%, rgba(0,255,255,1) 45%,
+        rgba(255,0,255,1) 50%, rgba(0,255,255,1) 55%,
+        rgba(255,0,255,1) 60%, rgba(0,255,255,1) 65%,
+        rgba(255,0,255,1) 70%, rgba(0,255,255,1) 75%,
+        rgba(255,0,255,1) 80%, rgba(0,255,255,1) 85%,
+        rgba(255,0,255,1) 90%, rgba(0,255,255,1) 95%,
+        rgba(255,0,255,1) 100%
+    );
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    
+    top: 0;
+    left: 0;
+}
+
+.title {
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 100px;
+}
+
+button {
+    font-family: "Comic Sans MS";
+}
+
+.rainbowText {
+    animation: rainbowColor infinite 5s;
+}
+
+.img_container {
+    width: 95%;
+    margin: auto;
+    line-height: 0;
+}
+
+.img_container img {
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    vertical-align: bottom;
+    animation: increaseContrast 1s linear 1 paused;
+}
+
+@keyframes rainbowColor {
+    0%, 100% { color: #FF0000 }
+    12.5% { color: #FFBF00 }
+    25% { color: #7FFF00 }
+    37.5% { color: #00FF3F }
+    50% { color: #00FFFF}
+    62.5% { color: #003FFF }
+    75% { color: #7F00FF }
+    87.5% { color: #FF00BF }
+}
+
+@keyframes increaseContrast {
+    from {
+        filter: saturate(1);
+    }
+    to {
+        filter: saturate(10) ;
+    }
+}
+
+.img_container img:hover {
+    animation-play-state: running;
+}
