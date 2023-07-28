@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Damage Calculator</title>
+    <title>CrossCode Damage Calculator</title>
     <script src="main.js" defer></script>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <div id="root">
@@ -77,6 +78,7 @@
                         <td>Focus</td>
                         <td><input type="number" value=120 min=1 id="enemyStat_foc"></td>
                     </tr>
+                    <tr><td colspan="2"></td></tr>
                     <tr>
                         <td>Enemy Dmg Factor</td>
                         <td><input type="number" value=1 min=0 step=0.1 id="enemyDmgFactor"></td>
@@ -111,10 +113,8 @@
                     <input type="radio" name="dmgType" id="dmgTypeOther" value="OTHER" checked>
                     <label for="dmgTypeOther">Other</label>
                 </fieldset>
-            </fieldset>
-    
-            <fieldset>
-                <legend>Other</legend>
+                <br>
+
                 <input type="checkbox" id="applyBerserk">
                 <label for="applyBerserk">Apply Berserker (Low Health)</label>
                 <br>
@@ -140,20 +140,56 @@
                 </p>
                 <br>
             </fieldset>
-        </div>
-        <div id="finalVals">
-            <fieldset>
-                <legend>Results</legend>
-                <p>Minimum Damage: <output id="minDamage"></output></p>
-                <p>Average Damage: <output id="avgDamage"></output></p>
-                <p>Maximum Damage: <output id="maxDamage"></output></p>
-                <hr>
-                <p>Critical hit chance: <output id="critchance"></output></p>
-                <p>Minimum Damage (crit): <output id="minDamage-crit"></output></p>
-                <p>Average Damage (crit): <output id="avgDamage-crit"></output></p>
-                <p>Maximum Damage (crit): <output id="maxDamage-crit"></output></p>
+
+            <fieldset id="playerAutoFill">
+                <legend>Auto-Fill (Player)</legend>
+                <label for="playerLevel">Player Level</label>
+                <input type="number" value="1" min="1" max="99">
+                <br>
+
+                <label for="equipHead">Headgear</label>
+                <select id="equipHead" class="equipSelector">
+                    <option value="0"></option>
+                </select>
+                <br>
+
+                <label for="equipWeaponR">R. Weapon</label>
+                <select id="equipWeaponR" class="equipSelector">
+                    <option value="0"></option>
+                </select>
+                <br>
+                
+                <label for="equipWeaponL">L. Weapon</label>
+                <select id="equipWeaponL" class="equipSelector">
+                    <option value="0"></option>
+                </select>
+                <br>
+                
+                <label for="equipTorso">Torso</label>
+                <select id="equipTorso" class="equipSelector">
+                    <option value="0"></option>
+                </select>
+                <br>
+
+                <label for="equipBoots">Boots</label>
+                <select id="equipBoots" class="equipSelector">
+                    <option value="0"></option>
+                </select>
             </fieldset>
-        </div>
+        </div>        
+    </div>
+    <div id="finalVals">
+        <fieldset>
+            <legend>Results</legend>
+            <p>Minimum Damage: <output id="minDamage"></output></p>
+            <p>Average Damage: <output id="avgDamage"></output></p>
+            <p>Maximum Damage: <output id="maxDamage"></output></p>
+            <hr>
+            <p>Critical hit chance: <output id="critchance"></output></p>
+            <p>Minimum Damage (crit): <output id="minDamage-crit"></output></p>
+            <p>Average Damage (crit): <output id="avgDamage-crit"></output></p>
+            <p>Maximum Damage (crit): <output id="maxDamage-crit"></output></p>
+        </fieldset>
     </div>
 </body>
 </html>

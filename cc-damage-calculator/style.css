@@ -1,20 +1,31 @@
 #root {
     display: flex;
+    flex-direction: column;
 }
 
 #root > div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
 }
 
-#adjustments > fieldset {
-    width: 20vw 
+#root > div > div {
+    width: fit-content
 }
 
-#finalVals {
-    width: 20%;
+fieldset {
+    min-width: fit-content;
 }
 
 input[type="number"] {
     width: 6em;
+}
+
+.equipSelector {
+    width: 15em;
+}
+#playerAutoFill {
+    display: flex;
+    flex-direction: column;
 }

@@ -82,7 +82,88 @@ function updateAllValues() {
     dashes = getNumericValue("dashCount");
 }
 
+function getSkillBonus(){
+    console.log(skillBonusType)
+    if(skillBonusType == "MELEE") return 1 + modifiers.brawler;
+    if(skillBonusType == "RANGED") return 1 + modifiers.shooter;
+    return 1;
+}
 
+//#region Equipment
+let equipHead = [null];
+let equipArms = [null];
+let equipTorso =[null];
+let equipFeet = [null];
+async function loadEquipment() {
+    fetch("./equipment.json").then(res => res.json()).then(data => {
+        addEquipment(data)
+    })
+}
+
+function addEquipment(data) {
+    function createNode(equip, id) {
+        let node = document.createElement("option")
+        node.value = id;
+        node.innerText = `${equip.name} (${equip.ascended ? "Lvl+" : `Lvl. ${equip.level}`})`
+        return node;
+    }
+    let selectBox = document.getElementById("equipHead")
+    for(let equip of data["HEAD"]) {
+        selectBox.appendChild(createNode(equip, equipHead.push(equip) - 1));
+    }
+    
+    selectBox = document.getElementById("equipWeaponR")
+    let selectBox2 = document.getElementById("equipWeaponL")
+    for(let equip of data["ARM"]) {
+        let id = equipArms.push(equip) - 1;
+
+        selectBox.appendChild(createNode(equip, id));
+        selectBox2.appendChild(createNode(equip, id));
+    }
+
+    selectBox = document.getElementById("equipTorso")
+    for(let equip of data["TORSO"]) {
+        selectBox.appendChild(createNode(equip, equipTorso.push(equip) - 1));
+    }
+
+    selectBox = document.getElementById("equipBoots")
+    for(let equip of data["FEET"]) {
+        let node = createNode(equip, equipFeet.push(equip) - 1);
+        
+        selectBox.appendChild(node);
+    }
+
+    sortEquipLists();
+}
+
+function sortEquipLists() {
+    function sortList(optionID, equipArray) {
+        let optionRoot = document.getElementById(optionID);
+        let array = Array.from(optionRoot.children);
+        array.sort((a, b) => {
+            a = equipArray[a.value];
+            b = equipArray[b.value];
+        
+            if(!a) return -1;
+            if(!b) return 1;
+
+            return a.level - b.level;
+        })
+
+        for(let option of array) {
+            optionRoot.appendChild(option);
+        }
+    }
+
+    sortList("equipHead", equipHead);
+    sortList("equipWeaponR", equipArms);
+    sortList("equipWeaponL", equipArms);
+    sortList("equipTorso", equipTorso);
+    sortList("equipBoots", equipFeet);
+}
+//#endregion
+
+//#region Stats/Vars
 let playerStats = {
     atk: 1,
     def: 1,
@@ -107,13 +188,6 @@ let modifiers = {
     statusRush: 0
 }
 
-function getSkillBonus(){
-    console.log(skillBonusType)
-    if(skillBonusType == "MELEE") return 1 + modifiers.brawler;
-    if(skillBonusType == "RANGED") return 1 + modifiers.shooter;
-    return 1;
-}
-
 let baseDamageFactor = 1;
 let applyDamageMods = true;
 let applyBerserk = false;
@@ -130,6 +204,7 @@ let defenseFactor = 1;
 let applyMark = false;
 let shieldStrength = 0;
 let stateDmgFactor = 0;
+//#endregion
 
 function calculateDamage() {
     updateAllValues();
@@ -187,5 +262,5 @@ document.getElementById("dashCount").addEventListener("change", () => {
     document.getElementById("dashCountOut").innerText = getNumericValue("dashCount")
 })
 
-
+loadEquipment();
 calculateDamage();
