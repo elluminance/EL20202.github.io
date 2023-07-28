@@ -78,6 +78,8 @@ function updateAllValues() {
     stateDmgFactor = getNumericValue("breakWeakness");
 
     damageMod = shieldStrength * stateDmgFactor; 
+
+    dashes = getNumericValue("dashCount");
 }
 
 
@@ -179,12 +181,10 @@ for(let element of document.getElementsByTagName("input")) {
     element.addEventListener("change", calculateDamage)
 }
 
-dashes = getNumericValue("dashCount")
-document.getElementById("dashCountOut").innerText = dashes
+document.getElementById("dashCountOut").innerText = getNumericValue("dashCount")
 
 document.getElementById("dashCount").addEventListener("change", () => {
-    dashes = getNumericValue("dashCount")
-    document.getElementById("dashCountOut").innerText = dashes
+    document.getElementById("dashCountOut").innerText = getNumericValue("dashCount")
 })
 
 
