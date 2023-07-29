@@ -322,6 +322,22 @@ function getPlayerEquipmentStats(stats, level) {
 }
 //#endregion Equipment
 
+//#region Circuits
+let circuitPage = "Neutral"
+function updateCircuitPage(newPage) {
+    document.getElementById(`circuitPage${circuitPage}`).classList.remove("active");
+    document.getElementById(`container${circuitPage}Circuit`).classList.remove("active")
+    document.getElementById(`circuitPage${newPage}`).classList.add("active");
+    document.getElementById(`container${newPage}Circuit`).classList.add("active")
+    circuitPage = newPage;
+
+}
+
+for(let element of ["Neutral", "Heat", "Cold", "Shock", "Wave"]) {
+    document.getElementById(`circuitPage${element}`).addEventListener("click", () => updateCircuitPage(element))
+}
+
+//#endregion
 
 function applyPlayerStats() {
     let stats = {

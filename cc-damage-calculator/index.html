@@ -1,213 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>CrossCode Damage Calculator</title>
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico">
-    <meta charset="utf-8">
+  <title>CrossCode Damage Calculator</title>
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+  <meta charset="utf-8">
 </head>
+
 <body>
-    <div id="root">
-        <div id="adjustments">
-            <fieldset>
-                <legend>Player Stats</legend>
-                <table>
-                    <tr>
-                        <td>Attack</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_atk"></td>
-                    </tr>
-                    <tr>
-                        <td>Defense</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_def"></td>
-                    </tr>
-                    <tr>
-                        <td>Focus</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_foc"></td>
-                    </tr>
-                    <tr>
-                        <td>Brawler</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="brawler">%</td>
-                    </tr>
-                    <tr>
-                        <td>Shooter</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="shooter">%</td>
-                    </tr>
-                    <tr>
-                        <td>Berserker</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="berserk">%</td>
-                    </tr>
-                    <tr>
-                        <td>X Counter</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="crossCounter">%</td>
-                    </tr>
-                    <tr>
-                        <td>Bouncer</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="bouncer">%</td>
-                    </tr>
-                    <tr>
-                        <td>Bullseye</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="bullseye">%</td>
-                    </tr>
-                    <tr>
-                        <td>Momentum</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="momentum">%</td>
-                    </tr>
-                    <tr>
-                        <td>Mark Rush</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="markRush">%</td>
-                    </tr>
-                    <tr>
-                        <td>Status Rush</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="statusRush">%</td>
-                    </tr>
-                </table>
-            </fieldset>
-    
-            <fieldset>
-                <legend>Enemy Stats</legend>
-                <table>
-                    <tr>
-                        <td>Attack</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_atk"></td>
-                    </tr>
-                    <tr>
-                        <td>Defense</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_def"></td>
-                    </tr>
-                    <tr>
-                        <td>Focus</td>
-                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_foc"></td>
-                    </tr>
-                    <tr><td colspan="2"></td></tr>
-                    <tr>
-                        <td>Enemy Dmg Factor</td>
-                        <td><input class="updateOnChange" type="number" value=1 min=0 step=0.1 id="enemyDmgFactor"></td>
-                    </tr>
-                    <tr>
-                        <td>Elemental Resistance</td>
-                        <td><input class="updateOnChange" type="number" value=0 id="elemResist">%</td>
-                    </tr>
-                    <tr>
-                        <td>Shield Factor</td>
-                        <td><input class="updateOnChange" type="number" value=1 step="0.1" max="1" id="shieldStrength"></td>
-                    </tr>
-                    <tr>
-                        <td>State Dmg Factor</td>
-                        <td><input class="updateOnChange" type="number" value=1 step="0.1" id="breakWeakness"></td>
-                    </tr>
-                </table>
-            </fieldset>
-    
-            <fieldset>
-                <legend>Attack Info</legend>
-                <div>
-                    Attack Damage Factor:
-                    <input type="number" value=1 step="0.1" min="0" id="atkDmgFactor">
-                </div>
-                <fieldset>
-                    <legend>Damage Type</legend>
-                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeMelee" value="MELEE">
-                    <label for="dmgTypeMelee">Melee</label>
-                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeRanged" value="RANGED">
-                    <label for="dmgTypeRanged">Ranged</label>
-                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeOther" value="OTHER" checked>
-                    <label for="dmgTypeOther">Other</label>
-                </fieldset>
-                <br>
+  <div id="adjustments" class="flex-horizontal flex-wrap">
+    <fieldset>
+      <legend>Player Stats</legend>
+      <table>
+        <tr>
+          <td>Attack</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_atk"></td>
+        </tr>
+        <tr>
+          <td>Defense</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_def"></td>
+        </tr>
+        <tr>
+          <td>Focus</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_foc"></td>
+        </tr>
+        <tr>
+          <td>Brawler</td>
+          <td><input class="updateOnChange" type="number" value=0 id="brawler">%</td>
+        </tr>
+        <tr>
+          <td>Shooter</td>
+          <td><input class="updateOnChange" type="number" value=0 id="shooter">%</td>
+        </tr>
+        <tr>
+          <td>Berserker</td>
+          <td><input class="updateOnChange" type="number" value=0 id="berserk">%</td>
+        </tr>
+        <tr>
+          <td>X Counter</td>
+          <td><input class="updateOnChange" type="number" value=0 id="crossCounter">%</td>
+        </tr>
+        <tr>
+          <td>Bouncer</td>
+          <td><input class="updateOnChange" type="number" value=0 id="bouncer">%</td>
+        </tr>
+        <tr>
+          <td>Bullseye</td>
+          <td><input class="updateOnChange" type="number" value=0 id="bullseye">%</td>
+        </tr>
+        <tr>
+          <td>Momentum</td>
+          <td><input class="updateOnChange" type="number" value=0 id="momentum">%</td>
+        </tr>
+        <tr>
+          <td>Mark Rush</td>
+          <td><input class="updateOnChange" type="number" value=0 id="markRush">%</td>
+        </tr>
+        <tr>
+          <td>Status Rush</td>
+          <td><input class="updateOnChange" type="number" value=0 id="statusRush">%</td>
+        </tr>
+      </table>
+    </fieldset>
 
-                <input type="checkbox" id="applyBerserk" class="updateOnChange">
-                <label for="applyBerserk">Apply Berserker (Low Health)</label>
-                <br>
-    
-                <input type="checkbox" id="applyBouncer" class="updateOnChange">
-                <label for="applyBouncer">Apply Bouncer (Broken Enemy)</label>
-                <br>
-    
-                <input type="checkbox" id="applyCrossCounter" class="updateOnChange">
-                <label for="applyCrossCounter">Apply X-Counter (Charging Enemy)</label>
-                <br>
+    <fieldset>
+      <legend>Enemy Stats</legend>
+      <table>
+        <tr>
+          <td>Attack</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_atk"></td>
+        </tr>
+        <tr>
+          <td>Defense</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_def"></td>
+        </tr>
+        <tr>
+          <td>Focus</td>
+          <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_foc"></td>
+        </tr>
+        <tr>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <td>Enemy Dmg Factor</td>
+          <td><input class="updateOnChange" type="number" value=1 min=0 step=0.1 id="enemyDmgFactor"></td>
+        </tr>
+        <tr>
+          <td>Elemental Resistance</td>
+          <td><input class="updateOnChange" type="number" value=0 id="elemResist">%</td>
+        </tr>
+        <tr>
+          <td>Shield Factor</td>
+          <td><input class="updateOnChange" type="number" value=1 step="0.1" max="1" id="shieldStrength"></td>
+        </tr>
+        <tr>
+          <td>State Dmg Factor</td>
+          <td><input class="updateOnChange" type="number" value=1 step="0.1" id="breakWeakness"></td>
+        </tr>
+      </table>
+    </fieldset>
 
-                <input type="checkbox" id="applyMark" class="updateOnChange">
-                <label for="applyMark">Apply Mark</label>
-                <br>
+    <fieldset>
+      <legend>Attack Info</legend>
+      <div>
+        Attack Damage Factor:
+        <input type="number" value=1 step="0.1" min="0" id="atkDmgFactor">
+      </div>
+      <fieldset>
+        <legend>Damage Type</legend>
+        <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeMelee" value="MELEE">
+        <label for="dmgTypeMelee">Melee</label>
+        <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeRanged" value="RANGED">
+        <label for="dmgTypeRanged">Ranged</label>
+        <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeOther" value="OTHER" checked>
+        <label for="dmgTypeOther">Other</label>
+      </fieldset>
+      <br>
 
-                <input type="checkbox" id="applySergeyHax" class="updateOnChange">
-                <label for="applySergeyHax">Apply Sergey Hax</label>
+      <input type="checkbox" id="applyBerserk" class="updateOnChange">
+      <label for="applyBerserk">Apply Berserker (Low Health)</label>
+      <br>
 
-                <div class="smallPadding">
-                    Number of Dashes: <output id="dashCountOut"></output><br>
-                    <input type="range" id="dashCount" min="0" max="6" value="0" class="updateOnChange">
-                </div>
-                <div class="smallPadding">
-                    Number of Party Members: <output id="partyCountOut"></output><br>
-                    <input type="range" id="partyCount" min="0" max="2" value="0" class="updateOnChange">
-                </div>
-            </fieldset>
+      <input type="checkbox" id="applyBouncer" class="updateOnChange">
+      <label for="applyBouncer">Apply Bouncer (Broken Enemy)</label>
+      <br>
 
-            <fieldset id="playerAutoFill">
-                <legend>Auto-Fill (Player)</legend>
-                <div>
-                    Player Level: <input class="smallNumberEntry" id="playerLevel" type="number" value="1" min="1" max="99">
-                </div>
-                <br>
+      <input type="checkbox" id="applyCrossCounter" class="updateOnChange">
+      <label for="applyCrossCounter">Apply X-Counter (Charging Enemy)</label>
+      <br>
 
-                <div class="equipSelector">
-                    <label for="equipHead">Headgear</label>
-                    <select id="equipHead">
-                        <option value="0"></option>
-                    </select>
-                </div>
+      <input type="checkbox" id="applyMark" class="updateOnChange">
+      <label for="applyMark">Apply Mark</label>
+      <br>
 
-                <div class="equipSelector">
-                    <label for="equipWeaponR">R. Weapon</label>
-                    <select id="equipWeaponR">
-                        <option value="0"></option>
-                    </select>
-                </div>
-                
-                <div class="equipSelector">
-                    <label for="equipWeaponL">L. Weapon</label>
-                    <select id="equipWeaponL">
-                        <option value="0"></option>
-                    </select>
-                </div>
+      <input type="checkbox" id="applySergeyHax" class="updateOnChange">
+      <label for="applySergeyHax">Apply Sergey Hax</label>
 
-                <div class="equipSelector">
-                    <label for="equipTorso">Torso</label>
-                    <select id="equipTorso">
-                        <option value="0"></option>
-                    </select>
-                </div>
+      <div class="smallPadding">
+        Number of Dashes: <output id="dashCountOut"></output><br>
+        <input type="range" id="dashCount" min="0" max="6" value="0" class="updateOnChange">
+      </div>
+      <div class="smallPadding">
+        Number of Party Members: <output id="partyCountOut"></output><br>
+        <input type="range" id="partyCount" min="0" max="2" value="0" class="updateOnChange">
+      </div>
+    </fieldset>
 
-                <div class="equipSelector">
-                    <label for="equipBoots">Boots</label>
-                    <select id="equipBoots">
-                        <option value="0"></option>
-                    </select>
-                </div>
+    <fieldset id="playerAutoFill" class="flex-horizontal">
+      <legend>Auto-Fill (Player)</legend>
+      <div class="flex-vertical">
+        <div>
+          Player Level: <input class="smallNumberEntry" id="playerLevel" type="number" value="1" min="1" max="99">
+        </div>
+        <br>
 
-                <div style="margin-top: 10px;">
-                    <input type="checkbox" id="enableAscendedScaleOverride">
-                    <label for="enableAscendedScaleOverride"> Scale gear to level <input class="smallNumberEntry" id="gearLevelOverride" type="number" value="1" min="1" max="99"></label>
-                </div>
+        <div class="equipSelector">
+          <label for="equipHead">Headgear</label>
+          <select id="equipHead">
+            <option value="0"></option>
+          </select>
+        </div>
 
-                <button id="applyPlayerStats" class="alignBottom">Apply to Player</button>
-            </fieldset>
-        </div>        
-    </div>
-    <div id="finalVals">
-        <fieldset>
-            <legend>Results</legend>
-            <p>Minimum Damage: <output id="minDamage"></output></p>
-            <p>Average Damage: <output id="avgDamage"></output></p>
-            <p>Maximum Damage: <output id="maxDamage"></output></p>
-            <hr>
-            <p>Critical hit chance: <output id="critchance"></output></p>
-            <p>Minimum Damage (crit): <output id="minDamage-crit"></output></p>
-            <p>Average Damage (crit): <output id="avgDamage-crit"></output></p>
-            <p>Maximum Damage (crit): <output id="maxDamage-crit"></output></p>
+        <div class="equipSelector">
+          <label for="equipWeaponR">R. Weapon</label>
+          <select id="equipWeaponR">
+            <option value="0"></option>
+          </select>
+        </div>
+
+        <div class="equipSelector">
+          <label for="equipWeaponL">L. Weapon</label>
+          <select id="equipWeaponL">
+            <option value="0"></option>
+          </select>
+        </div>
+
+        <div class="equipSelector">
+          <label for="equipTorso">Torso</label>
+          <select id="equipTorso">
+            <option value="0"></option>
+          </select>
+        </div>
+
+        <div class="equipSelector">
+          <label for="equipBoots">Boots</label>
+          <select id="equipBoots">
+            <option value="0"></option>
+          </select>
+        </div>
+
+        <div style="margin-top: 10px;">
+          <input type="checkbox" id="enableAscendedScaleOverride">
+          <label for="enableAscendedScaleOverride"> Scale gear to level <input class="smallNumberEntry"
+              id="gearLevelOverride" type="number" value="1" min="1" max="99"></label>
+        </div>
+
+        <button id="applyPlayerStats" class="alignBottom">Apply to Player</button>
+      </div>
+
+      <div>
+        <fieldset id="circuitSelector">
+          <legend>Circuits</legend>
+          <div>
+            <div class="pageSelector">
+              <button class="active" id="circuitPageNeutral">Neutral</button>
+              <button id="circuitPageHeat">Heat</button>
+              <button id="circuitPageCold">Cold</button>
+              <button id="circuitPageShock">Shock</button>
+              <button id="circuitPageWave">Wave</button>
+            </div>
+            <div class="containerRoot">
+              <div class="containerPage active" id="containerNeutralCircuit">
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 6">Attack +6%</div>
+                <div><input type="checkbox" value="atk 10">Attack +10%</div>
+                <div><input type="checkbox" value="atk 10">Attack +10%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 6">Defense +6%</div>
+                <div><input type="checkbox" value="def 10">Defense +10%</div>
+                <div><input type="checkbox" value="def 10">Defense +10%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 6">Focus +6%</div>
+                <div><input type="checkbox" value="foc 10">Focus +10%</div>
+                <div><input type="checkbox" value="foc 10">Focus +10%</div>
+                <div><input type="checkbox" value="brawler 12">Brawler +12%</div>
+                <div><input type="checkbox" value="brawler 22">Brawler +22%</div>
+                <div><input type="checkbox" value="shooter 12">Shooter +12%</div>
+                <div><input type="checkbox" value="shooter 22">Shooter +22%</div>
+                <div><input type="checkbox" value="crossCounter 40">X-Counter +40%</div>
+                <div><input type="checkbox" value="bullseye 30">Bullseye +30%</div>
+              </div>
+              <div class="containerPage" id="containerHeatCircuit">
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="atk 9">Attack +9%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 11">Brawler +11%</div>
+                <div><input type="checkbox" value="brawler 15">Brawler +15%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 11">Shooter +11%</div>
+                <div><input type="checkbox" value="berserk 20">Berserker +20%</div>
+                <div><input type="checkbox" value="crossCounter 20">X-Counter +20%</div>
+                <div><input type="checkbox" value="bullseye 15">Bullseye +15%</div>
+                <div><input type="checkbox" value="bullseye 30">Bullseye +30%</div>
+                <div><input type="checkbox" value="bullseye 45">Bullseye +45%</div>
+              </div>
+              <div class="containerPage" id="containerColdCircuit">
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="def 9">Defense +9%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 11">Brawler +11%</div>
+                <div><input type="checkbox" value="brawler 15">Brawler +15%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 11">Shooter +11%</div>
+                <div><input type="checkbox" value="berserk 20">Berserker +20%</div>
+                <div><input type="checkbox" value="bullseye 15">Bullseye +15%</div>
+                <div><input type="checkbox" value="bullseye 30">Bullseye +30%</div>
+                <div><input type="checkbox" value="bullseye 45">Bullseye +45%</div>
+              </div>
+              <div class="containerPage" id="containerShockCircuit">
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="foc 9">Focus +9%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 11">Brawler +11%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 11">Shooter +11%</div>
+                <div><input type="checkbox" value="shooter 15">Shooter +15%</div>
+                <div><input type="checkbox" value="crossCounter 20">X-Counter +20%</div>
+                <div><input type="checkbox" value="bullseye 15">Bullseye +15%</div>
+                <div><input type="checkbox" value="bullseye 15">Bullseye +15%</div>
+                <div><input type="checkbox" value="bullseye 30">Bullseye +30%</div>
+                <div><input type="checkbox" value="bullseye 45">Bullseye +45%</div>
+              </div>
+              <div class="containerPage" id="containerWaveCircuit">
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 4">Attack +4%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="atk 7">Attack +7%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 4">Defense +4%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="def 7">Defense +7%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 4">Focus +4%</div>
+                <div><input type="checkbox" value="foc 7">Focus +7%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 6">Brawler +6%</div>
+                <div><input type="checkbox" value="brawler 11">Brawler +11%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 6">Shooter +6%</div>
+                <div><input type="checkbox" value="shooter 11">Shooter +11%</div>
+                <div><input type="checkbox" value="shooter 15">Shooter +15%</div>
+                <div><input type="checkbox" value="berserk 10">Berserker +10%</div>
+                <div><input type="checkbox" value="berserk 20">Berserker +20%</div>
+                <div><input type="checkbox" value="berserk 30">Berserker +30%</div>
+                <div><input type="checkbox" value="bullseye 30">Bullseye +30%</div>
+                <div><input type="checkbox" value="markRush 25">Mark Rush +25%</div>
+                <div><input type="checkbox" value="markRush 35">Mark Rush +35%</div>
+              </div>
+            </div>
+          </div>
+          <fieldset>
+            <legend>Apply Element:</legend>
+            <input type="radio" name="playerCircuitElement" value="Neutral" checked>
+            <label>Neutral</label>
+            <input type="radio" name="playerCircuitElement" value="Heat">
+            <label>Heat</label>
+            <input type="radio" name="playerCircuitElement" value="Cold">
+            <label>Cold</label>
+            <input type="radio" name="playerCircuitElement" value="Shock">
+            <label>Shock</label>
+            <input type="radio" name="playerCircuitElement" value="Wave">
+            <label>Wave</label>
+          </fieldset>
         </fieldset>
-    </div>
+      </div>
+    </fieldset>
+  </div>
+  <div id="finalVals">
+    <fieldset>
+      <legend>Results</legend>
+      <p>Minimum Damage: <output id="minDamage"></output></p>
+      <p>Average Damage: <output id="avgDamage"></output></p>
+      <p>Maximum Damage: <output id="maxDamage"></output></p>
+      <hr>
+      <p>Critical hit chance: <output id="critchance"></output></p>
+      <p>Minimum Damage (crit): <output id="minDamage-crit"></output></p>
+      <p>Average Damage (crit): <output id="avgDamage-crit"></output></p>
+      <p>Maximum Damage (crit): <output id="maxDamage-crit"></output></p>
+    </fieldset>
+  </div>
 </body>
+
 </html>

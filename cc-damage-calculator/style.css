@@ -1,17 +1,16 @@
-#root {
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-vertical {
     display: flex;
     flex-direction: column;
 }
 
-#root > div {
-    display: flex;
-    flex-direction: row;
+.flex-wrap {
     flex-wrap: wrap;
     max-width: 100%;
-}
-
-#root > div > div {
-    width: fit-content
 }
 
 fieldset {
@@ -37,11 +36,6 @@ fieldset {
     width: 100%;
 }
 
-#playerAutoFill {
-    display: flex;
-    flex-direction: column;
-}
-
 .alignBottom {
     width: fit-content;
     padding: 5px;
@@ -54,4 +48,42 @@ fieldset {
 
 .smallNumberEntry  {
     width: 3.5em;
+}
+#circuitSelector {
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: fit-content;
+}
+.containerRoot {
+    width: 475px;
+}
+.containerPage {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px lightgray solid;
+    height: 200px;
+
+    width: 100%;
+}
+
+.containerPage:not(.active) {
+    display: none;
+}
+
+.pageSelector {
+    display: flex;
+    flex-direction: row;
+}
+
+.pageSelector > button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pageSelector > button.active {
+    background-color: lightgray;
+    font-weight: bold;
 }
