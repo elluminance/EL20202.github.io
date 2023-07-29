@@ -333,7 +333,7 @@ function applyPlayerStats() {
     }
     let playerLevel = getNumericValue("playerLevel")
     calcPlayerBaseStats(stats, playerLevel)
-    getPlayerEquipmentStats(stats, playerLevel);
+    getPlayerEquipmentStats(stats, getCheckboxValue("enableAscendedScaleOverride") ? getNumericValue("gearLevelOverride") : playerLevel);
 
     setElementValue("playerStat_atk", stats.atk);
     setElementValue("playerStat_def", stats.def);
@@ -440,7 +440,8 @@ function calculateDamage() {
     document.getElementById("maxDamage-crit").innerText = Math.round(1.05 * damage * (1.5 + modifiers.bullseye));
 }
 
-for (let element of document.getElementsByTagName("input")) {
+//#region Webpage Initialization
+for (let element of document.querySelectorAll("input.updateOnChange")) {
     element.addEventListener("change", calculateDamage)
 }
 
@@ -462,3 +463,4 @@ document.getElementById("partyCount").addEventListener("change", updateParty)
 
 loadEquipment();
 calculateDamage();
+//#endregion

@@ -15,51 +15,51 @@
                 <table>
                     <tr>
                         <td>Attack</td>
-                        <td><input type="number" value=120 min=1 id="playerStat_atk"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_atk"></td>
                     </tr>
                     <tr>
                         <td>Defense</td>
-                        <td><input type="number" value=120 min=1 id="playerStat_def"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_def"></td>
                     </tr>
                     <tr>
                         <td>Focus</td>
-                        <td><input type="number" value=120 min=1 id="playerStat_foc"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_foc"></td>
                     </tr>
                     <tr>
                         <td>Brawler</td>
-                        <td><input type="number" value=0 id="brawler">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="brawler">%</td>
                     </tr>
                     <tr>
                         <td>Shooter</td>
-                        <td><input type="number" value=0 id="shooter">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="shooter">%</td>
                     </tr>
                     <tr>
                         <td>Berserker</td>
-                        <td><input type="number" value=0 id="berserk">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="berserk">%</td>
                     </tr>
                     <tr>
                         <td>X Counter</td>
-                        <td><input type="number" value=0 id="crossCounter">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="crossCounter">%</td>
                     </tr>
                     <tr>
                         <td>Bouncer</td>
-                        <td><input type="number" value=0 id="bouncer">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="bouncer">%</td>
                     </tr>
                     <tr>
                         <td>Bullseye</td>
-                        <td><input type="number" value=0 id="bullseye">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="bullseye">%</td>
                     </tr>
                     <tr>
                         <td>Momentum</td>
-                        <td><input type="number" value=0 id="momentum">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="momentum">%</td>
                     </tr>
                     <tr>
                         <td>Mark Rush</td>
-                        <td><input type="number" value=0 id="markRush">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="markRush">%</td>
                     </tr>
                     <tr>
                         <td>Status Rush</td>
-                        <td><input type="number" value=0 id="statusRush">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="statusRush">%</td>
                     </tr>
                 </table>
             </fieldset>
@@ -69,32 +69,32 @@
                 <table>
                     <tr>
                         <td>Attack</td>
-                        <td><input type="number" value=120 min=1 id="enemyStat_atk"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_atk"></td>
                     </tr>
                     <tr>
                         <td>Defense</td>
-                        <td><input type="number" value=120 min=1 id="enemyStat_def"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_def"></td>
                     </tr>
                     <tr>
                         <td>Focus</td>
-                        <td><input type="number" value=120 min=1 id="enemyStat_foc"></td>
+                        <td><input class="updateOnChange" type="number" value=120 min=1 id="enemyStat_foc"></td>
                     </tr>
                     <tr><td colspan="2"></td></tr>
                     <tr>
                         <td>Enemy Dmg Factor</td>
-                        <td><input type="number" value=1 min=0 step=0.1 id="enemyDmgFactor"></td>
+                        <td><input class="updateOnChange" type="number" value=1 min=0 step=0.1 id="enemyDmgFactor"></td>
                     </tr>
                     <tr>
                         <td>Elemental Resistance</td>
-                        <td><input type="number" value=0 id="elemResist">%</td>
+                        <td><input class="updateOnChange" type="number" value=0 id="elemResist">%</td>
                     </tr>
                     <tr>
                         <td>Shield Factor</td>
-                        <td><input type="number" value=1 step="0.1" max="1" id="shieldStrength"></td>
+                        <td><input class="updateOnChange" type="number" value=1 step="0.1" max="1" id="shieldStrength"></td>
                     </tr>
                     <tr>
                         <td>State Dmg Factor</td>
-                        <td><input type="number" value=1 step="0.1" id="breakWeakness"></td>
+                        <td><input class="updateOnChange" type="number" value=1 step="0.1" id="breakWeakness"></td>
                     </tr>
                 </table>
             </fieldset>
@@ -107,41 +107,41 @@
                 </div>
                 <fieldset>
                     <legend>Damage Type</legend>
-                    <input type="radio" name="dmgType" id="dmgTypeMelee" value="MELEE">
+                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeMelee" value="MELEE">
                     <label for="dmgTypeMelee">Melee</label>
-                    <input type="radio" name="dmgType" id="dmgTypeRanged" value="RANGED">
+                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeRanged" value="RANGED">
                     <label for="dmgTypeRanged">Ranged</label>
-                    <input type="radio" name="dmgType" id="dmgTypeOther" value="OTHER" checked>
+                    <input class="updateOnChange" type="radio" name="dmgType" id="dmgTypeOther" value="OTHER" checked>
                     <label for="dmgTypeOther">Other</label>
                 </fieldset>
                 <br>
 
-                <input type="checkbox" id="applyBerserk">
+                <input type="checkbox" id="applyBerserk" class="updateOnChange">
                 <label for="applyBerserk">Apply Berserker (Low Health)</label>
                 <br>
     
-                <input type="checkbox" id="applyBouncer">
+                <input type="checkbox" id="applyBouncer" class="updateOnChange">
                 <label for="applyBouncer">Apply Bouncer (Broken Enemy)</label>
                 <br>
     
-                <input type="checkbox" id="applyCrossCounter">
+                <input type="checkbox" id="applyCrossCounter" class="updateOnChange">
                 <label for="applyCrossCounter">Apply X-Counter (Charging Enemy)</label>
                 <br>
 
-                <input type="checkbox" id="applyMark">
+                <input type="checkbox" id="applyMark" class="updateOnChange">
                 <label for="applyMark">Apply Mark</label>
                 <br>
 
-                <input type="checkbox" id="applySergeyHax">
+                <input type="checkbox" id="applySergeyHax" class="updateOnChange">
                 <label for="applySergeyHax">Apply Sergey Hax</label>
 
                 <div class="smallPadding">
                     Number of Dashes: <output id="dashCountOut"></output><br>
-                    <input type="range" id="dashCount" min="0" max="6" value="0">
+                    <input type="range" id="dashCount" min="0" max="6" value="0" class="updateOnChange">
                 </div>
                 <div class="smallPadding">
                     Number of Party Members: <output id="partyCountOut"></output><br>
-                    <input type="range" id="partyCount" min="0" max="2" value="0">
+                    <input type="range" id="partyCount" min="0" max="2" value="0" class="updateOnChange">
                 </div>
             </fieldset>
 
@@ -188,8 +188,8 @@
                 </div>
 
                 <div style="margin-top: 10px;">
-                    <input type="checkbox" id="enableScaleToLevel">
-                    <label for="enableScaleToLevel"> Scale gear to level <input class="smallNumberEntry" id="gearLevel" type="number" value="1" min="1" max="99"></label>
+                    <input type="checkbox" id="enableAscendedScaleOverride">
+                    <label for="enableAscendedScaleOverride"> Scale gear to level <input class="smallNumberEntry" id="gearLevelOverride" type="number" value="1" min="1" max="99"></label>
                 </div>
 
                 <button id="applyPlayerStats" class="alignBottom">Apply to Player</button>
