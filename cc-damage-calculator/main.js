@@ -330,11 +330,74 @@ function updateCircuitPage(newPage) {
     document.getElementById(`circuitPage${newPage}`).classList.add("active");
     document.getElementById(`container${newPage}Circuit`).classList.add("active")
     circuitPage = newPage;
-
 }
 
 for(let element of ["Neutral", "Heat", "Cold", "Shock", "Wave"]) {
     document.getElementById(`circuitPage${element}`).addEventListener("click", () => updateCircuitPage(element))
+}
+
+function applyCircuitStats(stats) {
+    let statBonuses = {
+        atk: 0,
+        def: 0,
+        foc: 0,
+
+        modifiers: {
+
+        }
+    }
+    /**
+     * @param {HTMLInputElement} box 
+     * @param {number} [factor=1] 
+     */
+    function applyStatValue(box, factor = 1) {
+        const valueRegex = /(\S+) (\d+)/
+
+        let result = box.value.match(valueRegex);
+
+        let [statName, statValue] = [result[1], +result[2]];
+
+        statValue *= 0.01 * factor;
+        
+        if(["atk", "def", "foc"].includes(statName)) {
+            statBonuses[statName] += statValue;
+        } else {
+            if(!(statName in statBonuses.modifiers)) {
+                statBonuses.modifiers[statName] = statValue;
+            } else {
+                statBonuses.modifiers[statName] += statValue;
+            }
+        }
+    }
+    /**
+     * @param {NodeListOf<HTMLInputElement>} children
+     */
+    function lookThroughChildren(children, factor = 1) {
+        for(let element of children) {
+            if(!element.checked) continue;
+            applyStatValue(element, factor);
+        }
+    }
+    
+    let element = getRadioValue("playerCircuitElement");
+    let neutralFactor = 1;
+    if(element != "Neutral") {
+        lookThroughChildren(document.querySelectorAll(`#container${element}Circuit input`));
+        neutralFactor = 0.5;
+    }
+    lookThroughChildren(document.querySelectorAll(`#containerNeutralCircuit input`), neutralFactor);
+    
+    stats.atk *= 1 + statBonuses.atk;
+    stats.def *= 1 + statBonuses.def;
+    stats.foc *= 1 + statBonuses.foc;
+
+    for(let mod in statBonuses.modifiers) {
+        if(!(mod in stats.modifiers)) {
+            stats.modifiers[mod] = statBonuses.modifiers[mod];
+        } else {
+            stats.modifiers[mod] += statBonuses.modifiers[mod];
+        }
+    }
 }
 
 //#endregion
@@ -350,10 +413,16 @@ function applyPlayerStats() {
     let playerLevel = getNumericValue("playerLevel")
     calcPlayerBaseStats(stats, playerLevel)
     getPlayerEquipmentStats(stats, getCheckboxValue("enableAscendedScaleOverride") ? getNumericValue("gearLevelOverride") : playerLevel);
+    applyCircuitStats(stats);
+
+    stats.atk = Math.floor(stats.atk);
+    stats.def = Math.floor(stats.def);
+    stats.foc = Math.floor(stats.foc);
 
     setElementValue("playerStat_atk", stats.atk);
     setElementValue("playerStat_def", stats.def);
     setElementValue("playerStat_foc", stats.foc);
+
 
     for(let key of MODIFIERS) {
         setElementValue(key, Math.round(stats.modifiers[key] * 100) || 0);
