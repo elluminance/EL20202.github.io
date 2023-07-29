@@ -18,12 +18,23 @@ fieldset {
     min-width: fit-content;
 }
 
-input[type="number"] {
-    width: 6em;
+:where(input[type="number"]) {
+    width: 5em;
+}
+
+.smallPadding {
+    padding: 3px 0px;
 }
 
 .equipSelector {
-    width: 15em;
+    min-width: 100%;
+    width: fit-content;
+    padding: 1px 0px;
+}
+
+.equipSelector > select {
+    display: block;
+    width: 100%;
 }
 
 #playerAutoFill {
@@ -35,4 +46,12 @@ input[type="number"] {
     width: fit-content;
     padding: 5px;
     margin: auto;
+}
+
+.mediumNumberEntry {
+    width: 6em;
+}
+
+.smallNumberEntry  {
+    width: 3.5em;
 }

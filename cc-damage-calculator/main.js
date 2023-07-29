@@ -83,6 +83,7 @@ function updateAllValues() {
     damageMod = shieldStrength * stateDmgFactor;
 
     dashes = getNumericValue("dashCount");
+    partyMembers = getNumericValue("partyCount");
 }
 
 function getSkillBonus() {
@@ -91,7 +92,99 @@ function getSkillBonus() {
     return 1;
 }
 
+//#region Player Stat Auto-Fill
+let playerBaseStats = {
+    hp: {
+        base: 200,
+        increase: 2000,
+        variance: 0.1
+    },
+    attack: {
+        base: 20,
+        increase: 200,
+        variance: 0.9
+    },
+    defense: {
+        base: 20,
+        increase: 200,
+        variance: 0.5
+    },
+    focus: {
+        base: 20,
+        increase: 200,
+        variance: 0.3
+    }
+}
+
+function calcPlayerBaseStats(stats, level) {
+    function baseStatFormula(statEntry) {
+        let base = statEntry.base;
+        let increase = statEntry.increase;
+        let variance = statEntry.variance;
+
+        let varianceFactor = Math.sin(Math.PI * 2 * (level / 4 + variance));
+        let levelFactor = ((1.25 ** (level / 10)) - 1) / (1.25 ** 10 - 1);
+        let increaseFactor = Math.log(1.25) / 10 * (1.25 ** (level / 10)) / (1.25 ** 10 - 1) * increase * 0.5;
+
+        return base + Math.floor(increase * levelFactor + varianceFactor * increaseFactor);
+    }
+
+    stats.atk = baseStatFormula(playerBaseStats.attack);
+    stats.def = baseStatFormula(playerBaseStats.defense);
+    stats.foc = baseStatFormula(playerBaseStats.focus);
+}
+
 //#region Equipment
+
+let statReference = [
+    {"level":1,"base":20,"hp":205},
+    {"level":6,"base":23,"hp":234},
+    {"level":11,"base":26,"hp":266},
+    {"level":16,"base":30,"hp":303},
+    {"level":21,"base":34,"hp":343},
+    {"level":26,"base":38,"hp":389},
+    {"level":31,"base":43,"hp":439},
+    {"level":36,"base":49,"hp":496},
+    {"level":41,"base":56,"hp":560},
+    {"level":46,"base":63,"hp":630},
+    {"level":51,"base":71,"hp":710},
+    {"level":56,"base":79,"hp":798},
+    {"level":61,"base":89,"hp":897},
+    {"level":66,"base":100,"hp":1008},
+    {"level":71,"base":113,"hp":1132},
+    {"level":76,"base":127,"hp":1270},
+    {"level":81,"base":142,"hp":1425},
+    {"level":86,"base":159,"hp":1598},
+    {"level":91,"base":179,"hp":1792},
+    {"level":96,"base":200,"hp":2008},
+    {"level":99,"base":215,"hp":2150},
+];
+
+function getAscendedEquipStats(equip, scaleToLevel) {
+    function getAverageStat(level) {
+        level = Math.max(Math.min(level, 99), 0);
+        for(let i = statReference.length; --i;) {
+            let levelStats = statReference[i];
+
+            if(levelStats.level <= level) {
+                if(levelStats.level == level) return levelStats.base;
+
+                let next = statReference[i + 1];
+                return next.base + (levelStats.base - next.base) * ((level - next.level) / (levelStats.level - next.level));
+            }
+        }
+        return 1;
+    }
+
+    let factor = getAverageStat(scaleToLevel) / getAverageStat(equip.level);
+    
+    return {
+        atk: Math.round(equip.atk * factor),
+        def: Math.round(equip.def * factor),
+        foc: Math.round(equip.foc * factor),
+    }
+}
+
 let equipHead = [null];
 let equipArms = [null];
 let equipTorso = [null];
@@ -106,7 +199,7 @@ function addEquipment(data) {
     function createNode(equip, id) {
         let node = document.createElement("option")
         node.value = id;
-        node.innerText = `${equip.name} (${equip.ascended ? "Lvl+" : `Lvl. ${equip.level}`})`
+        node.innerText = `${equip.name} (${equip.ascended ? "↑Lvl" : `Lvl. ${equip.level}`})`
         return node;
     }
     let selectBox = document.getElementById("equipHead")
@@ -138,6 +231,18 @@ function addEquipment(data) {
     sortEquipLists();
 }
 
+const MODIFIERS = [
+    "brawler",
+    "shooter",
+    "bullseye",
+    "berserk",
+    "crossCounter",
+    "bouncer",
+    "momentum",
+    "markRush",
+    "statusRush",
+]
+
 function sortEquipLists() {
     function sortList(optionID, equipArray) {
         let optionRoot = document.getElementById(optionID);
@@ -149,6 +254,9 @@ function sortEquipLists() {
             if (!a) return -1;
             if (!b) return 1;
 
+            if (a.level == b.level) {
+                return a.name < b.name ? -1 : 1;
+            }
             return a.level - b.level;
         })
 
@@ -164,7 +272,7 @@ function sortEquipLists() {
     sortList("equipBoots", equipFeet);
 }
 
-function getPlayerEquipmentStats(stats) {
+function getPlayerEquipmentStats(stats, level) {
     function applyEquipmentSlot(slot) {
         let equip;
         switch (slot) {
@@ -187,12 +295,22 @@ function getPlayerEquipmentStats(stats) {
 
         if (!equip) return;
 
-        if(equip.ascended) {
-            //scale stats to level
+        if (equip.ascended) {
+            let adjustedStats = getAscendedEquipStats(equip, level);
+            stats.atk += adjustedStats.atk;
+            stats.def += adjustedStats.def;
+            stats.foc += adjustedStats.foc;
         } else {
             stats.atk += equip.atk;
             stats.def += equip.def;
             stats.foc += equip.foc;
+        }
+
+        for(let modifier of MODIFIERS) {
+            if(!(modifier in stats.modifiers)) {
+                stats.modifiers[modifier] = 0;
+            }
+            stats.modifiers[modifier] += equip[modifier] ?? 0;
         }
     }
 
@@ -202,20 +320,28 @@ function getPlayerEquipmentStats(stats) {
     applyEquipmentSlot("torso");
     applyEquipmentSlot("feet");
 }
+//#endregion Equipment
+
 
 function applyPlayerStats() {
     let stats = {
         atk: 0,
         def: 0,
         foc: 0,
+
+        modifiers: {}
     }
-    
-    //find player's base stats
-    getPlayerEquipmentStats(stats);
+    let playerLevel = getNumericValue("playerLevel")
+    calcPlayerBaseStats(stats, playerLevel)
+    getPlayerEquipmentStats(stats, playerLevel);
 
     setElementValue("playerStat_atk", stats.atk);
     setElementValue("playerStat_def", stats.def);
     setElementValue("playerStat_foc", stats.foc);
+
+    for(let key of MODIFIERS) {
+        setElementValue(key, Math.round(stats.modifiers[key] * 100) || 0);
+    }
 }
 
 document.getElementById("applyPlayerStats").addEventListener("click", () => {
@@ -323,6 +449,16 @@ document.getElementById("dashCountOut").innerText = getNumericValue("dashCount")
 document.getElementById("dashCount").addEventListener("change", () => {
     document.getElementById("dashCountOut").innerText = getNumericValue("dashCount")
 })
+
+document.getElementById("partyCountOut").innerText = getNumericValue("partyCount")
+
+let updateParty = () => {
+    let count = getNumericValue("partyCount");
+    document.getElementById("partyCountOut").innerText = count >= 2 ? "2+" : count; 
+};
+
+updateParty();
+document.getElementById("partyCount").addEventListener("change", updateParty)
 
 loadEquipment();
 calculateDamage();

@@ -5,6 +5,7 @@
     <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
 </head>
 <body>
     <div id="root">
@@ -133,48 +134,63 @@
 
                 <input type="checkbox" id="applySergeyHax">
                 <label for="applySergeyHax">Apply Sergey Hax</label>
-                <br>
 
-                <p>Number of Dashes: <output id="dashCountOut"></output><br>
+                <div class="smallPadding">
+                    Number of Dashes: <output id="dashCountOut"></output><br>
                     <input type="range" id="dashCount" min="0" max="6" value="0">
-                </p>
-                <br>
+                </div>
+                <div class="smallPadding">
+                    Number of Party Members: <output id="partyCountOut"></output><br>
+                    <input type="range" id="partyCount" min="0" max="2" value="0">
+                </div>
             </fieldset>
 
             <fieldset id="playerAutoFill">
                 <legend>Auto-Fill (Player)</legend>
-                <label for="playerLevel">Player Level</label>
-                <input type="number" value="1" min="1" max="99">
+                <div>
+                    Player Level: <input class="smallNumberEntry" id="playerLevel" type="number" value="1" min="1" max="99">
+                </div>
                 <br>
 
-                <label for="equipHead">Headgear</label>
-                <select id="equipHead" class="equipSelector">
-                    <option value="0"></option>
-                </select>
-                <br>
+                <div class="equipSelector">
+                    <label for="equipHead">Headgear</label>
+                    <select id="equipHead">
+                        <option value="0"></option>
+                    </select>
+                </div>
 
-                <label for="equipWeaponR">R. Weapon</label>
-                <select id="equipWeaponR" class="equipSelector">
-                    <option value="0"></option>
-                </select>
-                <br>
+                <div class="equipSelector">
+                    <label for="equipWeaponR">R. Weapon</label>
+                    <select id="equipWeaponR">
+                        <option value="0"></option>
+                    </select>
+                </div>
                 
-                <label for="equipWeaponL">L. Weapon</label>
-                <select id="equipWeaponL" class="equipSelector">
-                    <option value="0"></option>
-                </select>
-                <br>
-                
-                <label for="equipTorso">Torso</label>
-                <select id="equipTorso" class="equipSelector">
-                    <option value="0"></option>
-                </select>
-                <br>
+                <div class="equipSelector">
+                    <label for="equipWeaponL">L. Weapon</label>
+                    <select id="equipWeaponL">
+                        <option value="0"></option>
+                    </select>
+                </div>
 
-                <label for="equipBoots">Boots</label>
-                <select id="equipBoots" class="equipSelector">
-                    <option value="0"></option>
-                </select>
+                <div class="equipSelector">
+                    <label for="equipTorso">Torso</label>
+                    <select id="equipTorso">
+                        <option value="0"></option>
+                    </select>
+                </div>
+
+                <div class="equipSelector">
+                    <label for="equipBoots">Boots</label>
+                    <select id="equipBoots">
+                        <option value="0"></option>
+                    </select>
+                </div>
+
+                <div style="margin-top: 10px;">
+                    <input type="checkbox" id="enableScaleToLevel">
+                    <label for="enableScaleToLevel"> Scale gear to level <input class="smallNumberEntry" id="gearLevel" type="number" value="1" min="1" max="99"></label>
+                </div>
 
                 <button id="applyPlayerStats" class="alignBottom">Apply to Player</button>
             </fieldset>
