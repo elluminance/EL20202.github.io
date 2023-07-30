@@ -54,6 +54,7 @@ fieldset {
     margin-top: auto;
     margin-bottom: auto;
     height: fit-content;
+    height: 295px;
 }
 .containerRoot {
     width: 475px;
@@ -86,4 +87,63 @@ fieldset {
 .pageSelector > button.active {
     background-color: lightgray;
     font-weight: bold;
+    cursor: auto;
+}
+
+.multiElementContainer {
+    width:fit-content;
+    height: 220px;
+    padding: 0px;
+    overflow-y: scroll;
+    border: 1px solid gray;
+}
+
+.fillWidth {
+    min-width: 100%;
+}
+
+.multiElementContainer > button {
+    display: block;
+    background-color: white;
+    min-width: 100%;
+    text-align: left;
+    border-width: 0 1px 1px 0;
+    border-color: darkgray;
+}
+.multiElementContainer > button:last-child {
+    border-bottom: 0;
+}
+
+.multiElementContainer > button.active {
+    background-color: #aaf;
+}
+
+.multiElementContainer > button:active {
+    background-color: #777;
+}
+
+.multiElementContainer > button:active.active {
+    background-color: #33f;
+    color: white;
+}
+
+#resetConsumables {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+#consumableOverlapWarning {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+#consumableSelector {
+    width: 200px;
+    height: 295px;
+
+    position:relative;
 }

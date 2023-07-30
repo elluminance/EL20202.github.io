@@ -402,6 +402,101 @@ function applyCircuitStats(stats) {
 
 //#endregion
 
+//#region Consumables
+async function loadConsumables() {
+    await fetch("consumables.json").then(res => res.json()).then(data => processConsumables(data))
+}
+
+const consumables = [];
+/** @type {Set<HTMLButtonElement>} */
+const selectedConsumables = new Set();
+
+const consumableContainer = document.querySelector("#consumableSelector > .multiElementContainer");
+
+function processConsumables(data) {
+    for(let foodItem of data) {
+        let id = consumables.push(foodItem) - 1;
+
+        let button = document.createElement("button");
+        button.value = id;
+        button.textContent = foodItem.name;
+        button.title = foodItem.titleText;
+        button.addEventListener("click", toggleConsumable)
+        
+        consumableContainer.appendChild(button)
+    }
+}
+
+/** @this HTMLButtonElement */
+function toggleConsumable() {
+    if(this.classList.contains("active")) {
+        this.classList.remove("active");
+        selectedConsumables.delete(this);
+    } else {
+        this.classList.add("active");
+        selectedConsumables.add(this);
+    }
+
+    checkConsumables();
+    document.getElementById("consumableCount").innerText = selectedConsumables.size;
+}
+
+function checkConsumables() {
+    let buffs = new Set();
+    function checkStat(obj, stat) {
+        if(obj[stat]) {
+            if(buffs.has(stat)) {
+                document.getElementById("consumableOverlapWarning").classList.remove("hidden")
+                return true;
+            }
+            buffs.add(stat);
+        }
+        return false;
+    }
+    for(let button of selectedConsumables) {
+        let statChange = consumables[button.value].statChanges;
+        for(let stat of ["atk", "def", "foc"]) {
+            if(checkStat(statChange, stat)) return;
+        }
+        for(let stat of Object.keys(statChange.modifiers)) {
+            if(checkStat(statChange.modifiers, stat)) return;
+        }
+        document.getElementById("consumableOverlapWarning").classList.add("hidden")
+    }
+}
+
+function clearSelectedConsumables() {
+    for(let element of selectedConsumables) {
+        element.classList.remove("active");
+    }
+    selectedConsumables.clear();
+    document.getElementById("consumableOverlapWarning").classList.add("hidden")
+    document.getElementById("consumableCount").innerText = 0;
+}
+
+document.getElementById("resetConsumables").addEventListener("click", clearSelectedConsumables)
+
+function applyConsumables(stats) {
+    for(let button of selectedConsumables) {
+        let statChange = consumables[button.value].statChanges;
+
+        stats.atk *= statChange.atk || 1;
+        stats.def *= statChange.def || 1;
+        stats.foc *= statChange.foc || 1;
+
+        for(let [key, val] of Object.entries(statChange.modifiers)) {
+            if(key in stats.modifiers) {
+                stats.modifiers[key] += val;
+            } else {
+                stats.modifiers[key] = val;
+            }
+        }
+    }
+}
+
+loadConsumables();
+//#endregion
+
 function applyPlayerStats() {
     let stats = {
         atk: 0,
@@ -414,6 +509,7 @@ function applyPlayerStats() {
     calcPlayerBaseStats(stats, playerLevel)
     getPlayerEquipmentStats(stats, getCheckboxValue("enableAscendedScaleOverride") ? getNumericValue("gearLevelOverride") : playerLevel);
     applyCircuitStats(stats);
+    applyConsumables(stats);
 
     stats.atk = Math.floor(stats.atk);
     stats.def = Math.floor(stats.def);

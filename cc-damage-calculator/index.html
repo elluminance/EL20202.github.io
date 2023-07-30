@@ -27,28 +27,28 @@
           <td><input class="updateOnChange" type="number" value=120 min=1 id="playerStat_foc"></td>
         </tr>
         <tr>
-          <td>Brawler</td>
-          <td><input class="updateOnChange" type="number" value=0 id="brawler">%</td>
-        </tr>
-        <tr>
           <td>Shooter</td>
           <td><input class="updateOnChange" type="number" value=0 id="shooter">%</td>
         </tr>
         <tr>
-          <td>Berserker</td>
-          <td><input class="updateOnChange" type="number" value=0 id="berserk">%</td>
+          <td>Brawler</td>
+          <td><input class="updateOnChange" type="number" value=0 id="brawler">%</td>
         </tr>
         <tr>
-          <td>X Counter</td>
-          <td><input class="updateOnChange" type="number" value=0 id="crossCounter">%</td>
+          <td>Bullseye</td>
+          <td><input class="updateOnChange" type="number" value=0 id="bullseye">%</td>
         </tr>
         <tr>
           <td>Bouncer</td>
           <td><input class="updateOnChange" type="number" value=0 id="bouncer">%</td>
         </tr>
         <tr>
-          <td>Bullseye</td>
-          <td><input class="updateOnChange" type="number" value=0 id="bullseye">%</td>
+          <td>X Counter</td>
+          <td><input class="updateOnChange" type="number" value=0 id="crossCounter">%</td>
+        </tr>
+        <tr>
+          <td>Berserker</td>
+          <td><input class="updateOnChange" type="number" value=0 id="berserk">%</td>
         </tr>
         <tr>
           <td>Momentum</td>
@@ -375,6 +375,20 @@
             <input type="radio" name="playerCircuitElement" value="Wave">
             <label>Wave</label>
           </fieldset>
+        </fieldset>
+      </div>
+      <div>
+        <fieldset id="consumableSelector">
+          <legend>Consumables</legend>
+          <div class="multiElementContainer fillWidth">
+          </div>
+          <div>
+            Selected Items: <output id="consumableCount">0</output>
+          </div>
+          <div id="consumableOverlapWarning" class="hidden">
+            Overlapping Buffs Detected
+          </div>
+          <button id="resetConsumables">Clear Items</button>
         </fieldset>
       </div>
     </fieldset>
