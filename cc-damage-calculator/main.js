@@ -532,6 +532,105 @@ document.getElementById("applyPlayerStats").addEventListener("click", () => {
 })
 //#endregion
 
+//#region Enemy Stat Auto-Fill
+async function fetchEnemies() {
+    await fetch("enemies.json").then(res => res.json()).then(data => loadEnemies(data))
+}
+
+let enemies = [];
+
+const areaToName = {
+    "arid-dng-1": "Vermillion Dungeon",
+    "arid-dng-2": "Vermillion Tower",
+    "arid": "Vermillion Wasteland",
+    "autumn-area": "Autumn's Rise",
+    "autumn-fall": "Autumn's Fall",
+    "beach": "Azure Archipelago",
+    "bergen-trails": "Bergen Trail",
+    "bergen":"Bergen Village",
+    "cargo-ship":"Cargo Ship",
+    "cold-dng":"Temple Mine",
+    "evo-village":"Homestedt",
+    "fallback":"Fallback",
+    "final-dng":"Ku'lero Temple",
+    "forest":"Sapphire Ridge",
+    "heat-area":"Maroon Valley",
+    "heat-dng":"Faj'ro Temple",
+    "heat-village":"Ba'kii Kum",
+    "hideout":"Old Hideout",
+    "jungle-city":"Basin Keep",
+    "jungle":"Gaia's Garden",
+    "meta":"Meta",
+    "rhombus-dng":"Rhombus Dungeon",
+    "rhombus-sqr":"Rhombus Square",
+    "rookie-harbor":"Rookie Harbor",
+    "shock-dng":"Zir'vitar Temple",
+    "testing-grounds":"Testing Ground",
+    "tree-dng":"Grand Krys'kajo",
+    "wave-dng":"So'najiz Temple",
+}
+
+function loadEnemies(data) {
+    const selectBox = document.getElementById("enemySelectBox");
+    /** @type {HTMLOptGroupElement} */
+    const defaultOptGroup = document.querySelector("#enemySelectBox > optgroup[_area='other']")
+    
+    for(let enemy of data) {
+        let id = enemies.push(enemy) - 1;
+        let option = document.createElement("option");
+        /** @type {HTMLOptGroupElement} */
+        let optgroup;
+        if(enemy.area) {
+            optgroup = document.querySelector(`#enemySelectBox > optgroup[_area=${enemy.area}]`);
+            if(!optgroup) {
+                optgroup = document.createElement("optgroup");
+                optgroup.setAttribute("_area", enemy.area);
+                optgroup.label = areaToName[enemy.area] ?? enemy.area;
+                selectBox.insertBefore(optgroup, defaultOptGroup);
+            }
+        } else {
+            optgroup = defaultOptGroup;
+            optgroup.classList.remove("hidden")
+        }
+        option.value = id;
+        option.innerText = enemy.name;
+        optgroup.appendChild(option)
+    }
+}
+
+
+/** @this {HTMLSelectElement} */
+function selectEnemy() {
+    /** @type {HTMLSelectElement} */
+    let stateBox = document.getElementById("enemyStateBox");
+    stateBox.innerHTML = "";
+    
+    if(this.value) {
+        let enemy = enemies[this.value]
+        stateBox.disabled = false;
+        let isFirst = true;
+        for(let state of Object.keys(enemy.states)) {
+            let option = document.createElement("option");
+            option.value = state;
+            option.innerText = state;
+            stateBox.appendChild(option);
+            if(isFirst || state == "DEFAULT") {
+                stateBox.value = state;
+                isFirst = false;
+            }
+        }
+    } else {
+        stateBox.disabled = true;
+        stateBox.value = "";
+    }
+}
+
+fetchEnemies();
+document.getElementById("enemySelectBox").addEventListener("change", selectEnemy)
+document.getElementById("enemyStateBox").disabled = true;
+//#endregion
+
+
 //#region Stats/Vars
 let playerStats = {
     atk: 1,

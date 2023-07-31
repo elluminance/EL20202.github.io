@@ -149,7 +149,7 @@
     </fieldset>
 
     <fieldset id="playerAutoFill" class="flex-horizontal">
-      <legend>Auto-Fill (Player)</legend>
+      <legend>Player Autofill</legend>
       <div class="flex-vertical">
         <div>
           Player Level: <input class="smallNumberEntry" id="playerLevel" type="number" value="1" min="1" max="99">
@@ -390,6 +390,21 @@
           </div>
           <button id="resetConsumables">Clear Items</button>
         </fieldset>
+      </div>
+    </fieldset>
+
+    <fieldset id="enemyStatAutoFill" class="flex-horizontal">
+      <legend>Enemy Autofill</legend>
+
+      <div class="flex-vertical" id="enemySelector">
+        <label for="enemySelectBox">Enemy Type</label>
+        <select id="enemySelectBox">
+          <option></option>
+          <optgroup label="Other" _area="other" class="hidden"></optgroup>
+        </select>
+
+        <label for="enemyStateBox">Enemy State</label>
+        <select id="enemyStateBox" disabled></select>
       </div>
     </fieldset>
   </div>
