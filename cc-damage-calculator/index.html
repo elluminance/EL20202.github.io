@@ -197,7 +197,7 @@
               id="gearLevelOverride" type="number" value="1" min="1" max="99"></label>
         </div>
 
-        <button id="applyPlayerStats" class="alignBottom">Apply to Player</button>
+        <button id="applyPlayerStats" class="applyButton">Apply to Player</button>
       </div>
 
       <div>
@@ -409,6 +409,8 @@
           <input type="checkbox" id="enemyScaleCheckbox">
           <label for="enemyScaleCheckbox">Scale to level <input type="number" id="enemyLevelOverride" class="smallNumberEntry" min="1" max="99" value="1"></label>
         </div>
+
+        <button id="applyEnemyStats" class="applyButton">Apply to Enemy</button>
       </div>
       <div class="flex-vertical" style="padding-left: 4px">
         <fieldset>
@@ -426,21 +428,20 @@
         </fieldset>
         <fieldset>
           <legend>Enemy's Current Element</legend>
-          <input type="radio" name="enemyElement" value="Neutral" checked disabled>
+          <input type="radio" name="enemyElement" value="NEUTRAL" checked disabled>
           <label>Neutral</label>
-          <input type="radio" name="enemyElement" value="Heat" disabled>
+          <input type="radio" name="enemyElement" value="HEAT" disabled>
           <label>Heat</label>
-          <input type="radio" name="enemyElement" value="Cold" disabled>
+          <input type="radio" name="enemyElement" value="COLD" disabled>
           <label>Cold</label>
-          <input type="radio" name="enemyElement" value="Shock" disabled>
+          <input type="radio" name="enemyElement" value="SHOCK" disabled>
           <label>Shock</label>
-          <input type="radio" name="enemyElement" value="Wave" disabled>
+          <input type="radio" name="enemyElement" value="WAVE" disabled>
           <label>Wave</label>
         </fieldset>
         <div>
 
         </div>
-        <button id="applyEnemyStats">Apply to Enemy</button>
       </div>
     </fieldset>
   </div>

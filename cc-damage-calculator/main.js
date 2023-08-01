@@ -26,6 +26,10 @@ function getCheckboxValue(name) {
     return document.getElementById(name).checked
 }
 
+function setRadioValue(name, value) {
+    document.querySelector(`input[type="radio"][name="${name}"][value="${value}"]`).checked = true;
+}
+
 function updateValue(...args) {
     switch (args[0]) {
         case "playerStat":
@@ -617,12 +621,19 @@ function loadEnemies(data) {
             document.getElementById("enemyStateBox").value = state;
         }
     }
-    
 }
 
 
 /** @this {HTMLSelectElement} */
 function selectEnemy() {
+    /** @param {string[]} [elements=[]]  */
+    function enableElementButtons(elements=[]) {
+        for(let element of ["NEUTRAL", "HEAT", "COLD", "SHOCK", "WAVE"]) {
+            document.querySelector(
+                `input[type="radio"][name="enemyElement"][value="${element}"]`
+            ).disabled = !elements.includes(element);
+        }
+    }
     let stateBox = document.getElementById("enemyStateBox");
     /** @type {HTMLSelectElement} */
     stateBox.innerHTML = "";
@@ -640,14 +651,44 @@ function selectEnemy() {
                 stateBox.value = state;
                 isFirst = false;
             }
+
+            if(enemy.elementModes) {
+                enableElementButtons(["NEUTRAL", ...Object.keys(enemy.elementModes)])
+            } else {
+                setRadioValue("enemyElement", "NEUTRAL");
+                enableElementButtons()
+            }
         }
     } else {
         stateBox.disabled = true;
         stateBox.value = "";
+        setRadioValue("enemyElement", "NEUTRAL");
+        enableElementButtons()
     }
 }
 
+
 function applyEnemyStats() {
+    function elementKeyToIndex(element) {
+        switch(element) {
+            case "Heat": return 0;
+            case "Cold": return 1;
+            case "Shock": return 2;
+            case "Wave": return 3;
+        }
+    }
+    
+    function getElemFactor(elemFactorArray) {
+        let playerElement = getRadioValue("playerAttackingElement");
+        let elemFactor;
+        if(playerElement != "Neutral") {
+            elemFactor = 1 - elemFactorArray[elementKeyToIndex(playerElement)]
+        } else {
+            elemFactor = 0;
+        }
+        return elemFactor;
+    }
+
     /** @type {HTMLSelectElement} */
     const selectBox = document.getElementById("enemySelectBox");
     /** @type {HTMLSelectElement} */
@@ -665,12 +706,30 @@ function applyEnemyStats() {
     if(getCheckboxValue("enemyScaleCheckbox")) {
         statFactor = getEnemyStatFactor(enemy.level, getNumericValue("enemyLevelOverride") || enemy.level);
     }
+
+    let atk = enemy.params.atk;
+    let def = enemy.params.def;
+    let foc = enemy.params.foc;
+    let elemFactor = getElemFactor(enemy.params.elemFactor);
+
+    if(enemy.elementModes) {
+        let elementMode = enemy.elementModes[getRadioValue("enemyElement")];
+
+        if(elementMode) {
+            atk = elementMode.atk;
+            def = elementMode.def;
+            foc = elementMode.foc;
+            elemFactor = getElemFactor(elementMode.elemFactor);
+        }
+    }
     
-    setElementValue("enemyStat_atk", Math.round(enemy.params.atk * statFactor));
-    setElementValue("enemyStat_def", Math.round(enemy.params.def * statFactor));
-    setElementValue("enemyStat_foc", Math.round(enemy.params.foc * statFactor));
+    setElementValue("enemyStat_atk", Math.round(atk * statFactor));
+    setElementValue("enemyStat_def", Math.round(def * statFactor));
+    setElementValue("enemyStat_foc", Math.round(foc * statFactor));
 
     setElementValue("breakWeakness", state.damageFactor ?? 1);
+    setElementValue("enemyDmgFactor", enemy.damageFactor ?? 1);
+    setElementValue("elemResist", Math.round(elemFactor * 100))
     
     updateAllValues();
     calculateDamage();
