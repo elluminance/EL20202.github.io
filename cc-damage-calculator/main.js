@@ -727,6 +727,8 @@ function applyEnemyStats() {
     setElementValue("enemyStat_def", Math.round(def * statFactor));
     setElementValue("enemyStat_foc", Math.round(foc * statFactor));
 
+    document.getElementById("applyBouncer").checked = !!state.isWeak
+
     setElementValue("breakWeakness", state.damageFactor ?? 1);
     setElementValue("enemyDmgFactor", enemy.damageFactor ?? 1);
     setElementValue("elemResist", Math.round(elemFactor * 100))
