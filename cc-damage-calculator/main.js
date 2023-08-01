@@ -163,7 +163,7 @@ let statReference = [
 function getAscendedEquipStats(equip, scaleToLevel) {
     function getAverageStat(level) {
         level = Math.max(Math.min(level, 99), 0);
-        for(let i = statReference.length; --i;) {
+        for(let i = statReference.length; i--;) {
             let levelStats = statReference[i];
 
             if(levelStats.level <= level) {
@@ -229,6 +229,7 @@ function addEquipment(data) {
     }
 
     sortEquipLists();
+    applyEquipLocalStorage();
 }
 
 const MODIFIERS = [
@@ -270,6 +271,15 @@ function sortEquipLists() {
     sortList("equipWeaponL", equipArms);
     sortList("equipTorso", equipTorso);
     sortList("equipBoots", equipFeet);
+}
+
+function applyEquipLocalStorage() {
+    for(let item of ["equipHead", "equipWeaponR", "equipWeaponL", "equipTorso", "equipBoots"]) {
+        let state = localStorage.getItem(`selectionState-${item}`);
+        if(state) {
+            document.getElementById(item).value = state;
+        }
+    }
 }
 
 function getPlayerEquipmentStats(stats, level) {
@@ -571,6 +581,7 @@ const areaToName = {
 }
 
 function loadEnemies(data) {
+    /** @type {HTMLSelectElement} */
     const selectBox = document.getElementById("enemySelectBox");
     /** @type {HTMLOptGroupElement} */
     const defaultOptGroup = document.querySelector("#enemySelectBox > optgroup[_area='other']")
@@ -596,13 +607,24 @@ function loadEnemies(data) {
         option.innerText = enemy.name;
         optgroup.appendChild(option)
     }
+
+    let state = localStorage.getItem("selectionState-enemySelectBox");
+    if(state) {
+        selectBox.value = state;
+        selectEnemy.call(selectBox);
+        state = localStorage.getItem("selectionState-enemyStateBox");
+        if(state) {
+            document.getElementById("enemyStateBox").value = state;
+        }
+    }
+    
 }
 
 
 /** @this {HTMLSelectElement} */
 function selectEnemy() {
-    /** @type {HTMLSelectElement} */
     let stateBox = document.getElementById("enemyStateBox");
+    /** @type {HTMLSelectElement} */
     stateBox.innerHTML = "";
     
     if(this.value) {
@@ -625,9 +647,82 @@ function selectEnemy() {
     }
 }
 
+function applyEnemyStats() {
+    /** @type {HTMLSelectElement} */
+    const selectBox = document.getElementById("enemySelectBox");
+    /** @type {HTMLSelectElement} */
+    const stateBox = document.getElementById("enemyStateBox");
+    
+    let enemy = enemies[selectBox.value];
+
+    if(!enemy) return;
+
+    let state = enemy.states[stateBox.value];
+
+    
+    let statFactor = 1;
+
+    if(getCheckboxValue("enemyScaleCheckbox")) {
+        statFactor = getEnemyStatFactor(enemy.level, getNumericValue("enemyLevelOverride") || enemy.level);
+    }
+    
+    setElementValue("enemyStat_atk", Math.round(enemy.params.atk * statFactor));
+    setElementValue("enemyStat_def", Math.round(enemy.params.def * statFactor));
+    setElementValue("enemyStat_foc", Math.round(enemy.params.foc * statFactor));
+
+    setElementValue("breakWeakness", state.damageFactor ?? 1);
+    
+    updateAllValues();
+    calculateDamage();
+}
+
+function getEnemyStatFactor(oldLevel, newLevel) {
+    const EnemyStatFactor = [ 
+        {level: 1, base: 24},
+        {level: 6, base: 32}, 
+        {level: 11,base: 45},
+        {level: 16,base: 63},
+        {level: 21,base: 84},
+        {level: 26,base: 105},
+        {level: 31,base: 132},
+        {level: 36,base: 163},
+        {level: 41,base: 199},
+        {level: 46,base: 236},
+        {level: 51,base: 278},
+        {level: 56,base: 323},
+        {level: 61,base: 372},
+        {level: 66,base: 425},
+        {level: 71,base: 484},
+        {level: 76,base: 547},
+        {level: 81,base: 614},
+        {level: 86,base: 687},
+        {level: 91,base: 766},
+        {level: 96,base: 850},
+        {level: 99,base: 928}
+    ];
+
+    function getAverageStat(level) {
+        level = Math.max(Math.min(level, 99), 0);
+        for(let i = EnemyStatFactor.length; i--;) {
+            let levelStats = EnemyStatFactor[i];
+
+            if(levelStats.level <= level) {
+                if(levelStats.level == level) return levelStats.base;
+
+                let next = EnemyStatFactor[i + 1];
+                return levelStats.base + (next.base - levelStats.base) * ((level - levelStats.level) / (next.level - levelStats.level));
+            }
+        }
+        return 1;
+    }
+
+    return getAverageStat(newLevel) / getAverageStat(oldLevel)
+}
+
 fetchEnemies();
 document.getElementById("enemySelectBox").addEventListener("change", selectEnemy)
 document.getElementById("enemyStateBox").disabled = true;
+document.getElementById("applyEnemyStats").addEventListener("click", applyEnemyStats)
 //#endregion
 
 
@@ -743,4 +838,14 @@ document.getElementById("partyCount").addEventListener("change", updateParty)
 
 loadEquipment();
 calculateDamage();
+
+/** @this {HTMLInputElement} */
+function trackForLocalStorage() {
+    localStorage.setItem(`selectionState-${this.id}`, this.value);
+}
+
+for(let item of ["enemySelectBox", "enemyStateBox", "equipHead", "equipWeaponL", "equipWeaponR", "equipTorso", "equipBoots"]) {
+    document.getElementById(item).addEventListener("change", trackForLocalStorage);
+}
+
 //#endregion

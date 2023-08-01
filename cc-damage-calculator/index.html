@@ -405,6 +405,42 @@
 
         <label for="enemyStateBox">Enemy State</label>
         <select id="enemyStateBox" disabled></select>
+        <div style="padding-top: 5px">
+          <input type="checkbox" id="enemyScaleCheckbox">
+          <label for="enemyScaleCheckbox">Scale to level <input type="number" id="enemyLevelOverride" class="smallNumberEntry" min="1" max="99" value="1"></label>
+        </div>
+      </div>
+      <div class="flex-vertical" style="padding-left: 4px">
+        <fieldset>
+          <legend>Player's Attacking Element</legend>
+          <input type="radio" name="playerAttackingElement" value="Neutral" checked>
+          <label>Neutral</label>
+          <input type="radio" name="playerAttackingElement" value="Heat">
+          <label>Heat</label>
+          <input type="radio" name="playerAttackingElement" value="Cold">
+          <label>Cold</label>
+          <input type="radio" name="playerAttackingElement" value="Shock">
+          <label>Shock</label>
+          <input type="radio" name="playerAttackingElement" value="Wave">
+          <label>Wave</label>
+        </fieldset>
+        <fieldset>
+          <legend>Enemy's Current Element</legend>
+          <input type="radio" name="enemyElement" value="Neutral" checked disabled>
+          <label>Neutral</label>
+          <input type="radio" name="enemyElement" value="Heat" disabled>
+          <label>Heat</label>
+          <input type="radio" name="enemyElement" value="Cold" disabled>
+          <label>Cold</label>
+          <input type="radio" name="enemyElement" value="Shock" disabled>
+          <label>Shock</label>
+          <input type="radio" name="enemyElement" value="Wave" disabled>
+          <label>Wave</label>
+        </fieldset>
+        <div>
+
+        </div>
+        <button id="applyEnemyStats">Apply to Enemy</button>
       </div>
     </fieldset>
   </div>
