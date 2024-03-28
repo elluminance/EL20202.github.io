@@ -16,6 +16,7 @@ body {
         rgba(255,0,255,1) 90%, rgba(0,255,255,1) 95%,
         rgba(255,0,255,1) 100%
     );
+    background-attachment: fixed;
 }
 
 #content {
@@ -50,18 +51,34 @@ button {
 }
 
 .img_container {
-    width: 95%;
-    margin: auto;
-    line-height: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.img_container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .img_container img {
-    width: 25%;
+    display: block;
+}
+
+img {
     padding: 0;
     margin: 0;
-    border: none;
-    vertical-align: bottom;
-    animation: increaseContrast 1s linear 1 paused;
+    width: 90%;
+    filter: saturate(1);
+
+    transition: 1s;
+    vertical-align: middle;
+    margin: auto;
+}
+img:hover {
+    filter: saturate(1) contrast(10);
+    rotate: 180deg;
+    width: 0%
 }
 
 @keyframes rainbowColor {
@@ -75,15 +92,8 @@ button {
     87.5% { color: #FF00BF }
 }
 
-@keyframes increaseContrast {
-    from {
-        filter: saturate(1);
+@media (prefers-color-scheme: dark) {
+    .white-bg {
+        background-color: #333;
     }
-    to {
-        filter: saturate(10) ;
-    }
-}
-
-.img_container img:hover {
-    animation-play-state: running;
 }
