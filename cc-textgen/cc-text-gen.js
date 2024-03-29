@@ -3,10 +3,20 @@ const maincanvas = document.getElementById("main-canvas");
 //const smallFontimg = new Image();
 //smallFont.src="hall-fetica-small.png"
 
-const TEXT_ALIGN = {
-    LEFT: 0,
-    CENTER: 1,
-    RIGHT: 2
+function getRadioValue(name) {
+    for (let elem of document.querySelectorAll(`input[name=${name}]`)) {
+        if (elem.checked) {
+            return elem.value
+        }
+    }
+}
+
+function getNumericValue(name) {
+    return document.getElementById(name).valueAsNumber
+}
+
+function getCheckboxValue(name) {
+    return document.getElementById(name).checked
 }
 
 const fontstart = 32;
@@ -17,19 +27,82 @@ const fontColors = [
     "#ffe430",
     "#808080"
 ]
+
+const fontUtilsColors = [
+    ...fontColors,
+    "#ff8932",
+    "#5fc3fc",
+    "#2334ed",
+    "#fc76b0",
+    "#0ffcc5",
+    "#8efc20",
+    "#e502dd",
+    "#89b73e",
+    "#900090",
+    "#814914",
+    "#ffa100",
+    "#a70000"
+]
+const fontUtilNameMapping = {
+    "white": 0,
+    "red": 1,
+    "green": 2,
+    "yellow": 3,
+    "gray": 4,
+    "grey": 4,
+    "orange": 5,
+    "purple": 6,
+    "blue": 7,
+    "dark_blue": 8,
+    "dark-blue": 8,
+    "pink": 9,
+    "teal": 10,
+    "lime": 11,
+    "fuchsia": 12,
+    "olive": 13,
+    "violet": 14,
+    "brown": 15,
+    "gold": 16,
+    "dark_red": 17,
+    "dark-red": 17
+}
+
+let fontColorArray = fontColors;
+let allowArbitraryColors = false;
+let fontUtilsNamedColors = false;
+function adjustSize() {
+    maincanvas.width = getNumericValue("sizeX");
+    maincanvas.height = getNumericValue("sizeY");
+    rendertext();
+}
+
+
+function updateData() {
+    fontColorArray = getCheckboxValue("fontUtilsColor") ? fontUtilsColors : fontColors;
+    allowArbitraryColors = getCheckboxValue("arbitraryColor");
+    fontUtilsNamedColors = getCheckboxValue("fontUtilsColor");
+    rendertext();
+}
+
+for (let element of document.querySelectorAll("input.updateOnChange")) {
+    element.addEventListener("change", updateData);
+}
+
 class Font {
     #img = new Image();
     #charWidths = [];
-    #charDrawWidths = [];
+    //#charDrawWidths = [];
     #charStartX = [];
     #charStartY = [];
     #charHeight = 0;
     #canvas;
+    #whiteColor = "#ffffff"
 
-    constructor(src, height) {
+    constructor(src, height, whiteColor = "#ffffff") {
         this.#charHeight = height;
         this.#img.src = src;
-        this.#img.onload = this.prepareFont.bind(this); 
+        this.#img.onload = this.prepareFont.bind(this);
+        this.#whiteColor = whiteColor;
     }
 
     prepareFont() {
@@ -75,32 +148,38 @@ class Font {
                 }
             }
         }
+
+        rendertext();
     }
 
     /** 
      * @param {CanvasRenderingContext2D} context 
      * @param {string} text 
      */
-    drawText(mainContext, text, width, height, textAlign = TEXT_ALIGN.LEFT) {
+    drawText(mainContext, text, width, height) {
         let mainY = 0;
+        const charHeight = this.#charHeight;
         /** @type {HTMLCanvasElement} */
         let canvas = document.createElement('canvas');
         canvas.width = 1024;
-        canvas.height = 1024;
+        canvas.height = charHeight;
         let context = canvas.getContext('2d');
         
         let color = "#ffffff";
-        const charHeight = this.#charHeight;
+
+        let textAlign = getRadioValue("textAlign");
+
+
         function drawLine() {
-            let drawX;
+            let drawX = 0;
             switch (textAlign) {
-                case TEXT_ALIGN.LEFT:
+                case "LEFT":
                     drawX = 0;
                     break;
-                case TEXT_ALIGN.CENTER:
+                case "CENTER":
                     drawX = Math.floor((width - x)/2);
                     break;
-                case TEXT_ALIGN.RIGHT:
+                case "RIGHT":
                     drawX = width - x;
                     break;
             }
@@ -126,14 +205,32 @@ class Font {
                                 let j = text.indexOf("]", i+2);
                                 if(j != -1) {
                                     let colorcode = text.substring(i+3,j);
-                                    color = fontColors[colorcode]
+                                    color = fontColorArray[colorcode]
                                     if(color) {
+                                        i = j;
+                                        continue;
+                                    } else if(allowArbitraryColors && colorcode.match(/^#[0-9a-fA-F]{6}$/)){
+                                        color = colorcode;
                                         i = j;
                                         continue;
                                     } else {
                                         color = fontColors[0];
                                     }
                                     
+                                }
+                            }
+                            break;
+                        case "C":
+                            if(!fontUtilsNamedColors || text[i+2] == "[") {
+                                let j = text.indexOf("]", i+2);
+                                if(j != -1) {
+                                    color = fontUtilsColors[fontUtilNameMapping[text.substring(i+3,j)]];
+                                    if(color) {
+                                        i = j;
+                                        continue;
+                                    } else {
+                                        color = this.#whiteColor;
+                                    }
                                 }
                             }
                             break;
@@ -182,5 +279,31 @@ function rendertext() {
     let context = maincanvas.getContext('2d');
 
     context.clearRect(0, 0, maincanvas.width, maincanvas.height)
-    normalfont.drawText(context, text, maincanvas.width, maincanvas.height);    
+    let font = normalfont;
+    switch(getRadioValue("fontSize")) {
+        case "NORMAL":
+            font = normalfont;
+            break;
+        case "SMALL":
+            font = smallfont;
+            break;
+    }
+
+    font.drawText(context, text, maincanvas.width, maincanvas.height);   
+
 }
+
+function saveToFile() {
+    const link = document.createElement("a");
+    link.download = "image.png";
+    link.href = maincanvas.toDataURL();
+    link.click();
+}
+
+function adjustBgColor() {
+    maincanvas.style.backgroundColor = document.getElementById("bgColor").value
+}
+
+adjustSize();
+updateData();
+adjustBgColor();

@@ -1,21 +1,66 @@
 <html>
 <head>
-    <title>Document</title>
+    <title>Crosscode Text Generator</title>
     <script defer src="cc-text-gen.js"></script>
     <link rel="stylesheet" href="cc-text-gen.css">
+    <link rel="icon" href="favicon.ico">
 </head>
 <body>
     <div class="flex">
-        <div>
-    
-            <textarea id="text-input" rows="20" cols="60">Enter text here!</textarea>
+        <fieldset>
+            <legend>Input</legend>
+            <textarea id="text-input" rows="20" cols="80" placeholder="Enter text here!"></textarea>
             <br>
-            <button onclick="rendertext()">submit</button>
-        </div>
+
+            <div class="flex flex-row">
+                <fieldset>
+                    <legend>Text Alignment</legend>
+                    <input type="radio" name="textAlign" value="LEFT" id="textalignLeft" checked class="updateOnChange">
+                    <label for="textalignLeft">Left</label>
+                    <input type="radio" name="textAlign" value="CENTER" id="textalignCenter" class="updateOnChange">
+                    <label for="textalignCenter">Center</label>
+                    <input type="radio" name="textAlign" value="RIGHT" id="textalignRight" class="updateOnChange">
+                    <label for="textalignRight">Right</label>
+                </fieldset>
+                    
     
-        <div>
+                <fieldset>
+                    <legend>Font Type</legend>
+                    <input type="radio" name="fontSize" value="NORMAL" id="fontSizeNormal" checked>
+                    <label for="fontSizeNormal">Normal</label>
+                    <input type="radio" name="fontSize" value="SMALL" id="fontSizeSmall">
+                    <label for="fontSizeSmall">Small</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Misc. Options</legend>
+                    <input type="checkbox" id="fontUtilsColor" class="updateOnChange">
+                    <label for="fontUtilsColor">Use Font Util Colors (\c[5]-\c[17], \C[...])</label>
+                    <br>
+                    <input type="checkbox" id="arbitraryColor" class="updateOnChange">
+                    <label for="arbitraryColor">Allow arbitrary colors (\c[#123456])</label>
+                </fieldset>
+            </div>
+
+            <button onclick="rendertext()" class="centerBlock">Generate Text</button>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Output</legend>
             <canvas width="600" height="400" id="main-canvas"></canvas>
-        </div>
+            <fieldset>
+                <legend>Output</legend>
+                <label for="sizeX">Width</label>
+                <input type="number" value="600" min="1" max="1024" id="sizeX">
+                <label for="sizeY">Height</label>
+                <input type="number" value="400" min="1" max="1024" id="sizeY">
+                <button onclick="adjustSize()">Adjust</button>
+                <br>
+                <input type="color" id="bgColor" value="#D3D3D3" onchange="adjustBgColor()">
+                <label for="bgColor">Background Color</label>
+                <button onclick="saveToFile()" class="centerBlock">Save to File</button>
+            </fieldset>
+            <br>
+        </fieldset>
     </div>
 </body>
 </html>
