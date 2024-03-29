@@ -194,7 +194,7 @@ class Font {
             if(text[i] == '\n') {
                 drawLine();
                 x = 0;
-            } else if(charcode >= fontstart) {
+            } else if(charcode in this.#charWidths) {
                 if(text[i] == "\\") {
                     switch(text[i+1]) {
                         case "\\":
@@ -249,11 +249,8 @@ class Font {
                 context.fillStyle = color;
                 context.fillRect(x,0,w,h);
                 context.globalCompositeOperation = "multiply";
-                //i want to draw...
                 context.drawImage(
-                    //...from this image...
                     this.#img,
-                    //...
                     this.#charStartX[charcode], this.#charStartY[charcode],
                     w, h,
                     x, 0,
