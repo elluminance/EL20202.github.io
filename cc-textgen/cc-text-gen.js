@@ -88,6 +88,20 @@ for (let element of document.querySelectorAll("input.updateOnChange")) {
     element.addEventListener("change", updateData);
 }
 
+/**
+ * @param {string} text 
+ * @param {number} startIndex  
+ * @returns {[index, string | null]} 
+ */
+function processBracketedTextCommand(text, startIndex) {
+    let index = text.indexOf("]", startIndex);
+    let value = null;
+    if(index != -1) {
+        value = text.substring(startIndex, index);
+    }
+    return [index, value];
+}
+
 class Font {
     #img = new Image();
     #charWidths = [];
@@ -171,16 +185,16 @@ class Font {
 
 
         function drawLine() {
-            let drawX = 0;
+            let drawX = 0, textwidth = Math.min(x, 1024);
             switch (textAlign) {
                 case "LEFT":
                     drawX = 0;
                     break;
                 case "CENTER":
-                    drawX = Math.floor((width - x)/2);
+                    drawX = Math.floor((width - textwidth)/2);
                     break;
                 case "RIGHT":
-                    drawX = width - x;
+                    drawX = width - textwidth;
                     break;
             }
             mainContext.drawImage(canvas, drawX, mainY);
@@ -194,7 +208,9 @@ class Font {
             if(text[i] == '\n') {
                 drawLine();
                 x = 0;
+            //ensure character is actually drawable
             } else if(charcode in this.#charWidths) {
+                //handle important text commands
                 if(text[i] == "\\") {
                     switch(text[i+1]) {
                         case "\\":
@@ -202,35 +218,29 @@ class Font {
                             break;
                         case "c":
                             if(text[i+2] == "[") {
-                                let j = text.indexOf("]", i+2);
-                                if(j != -1) {
-                                    let colorcode = text.substring(i+3,j);
-                                    color = fontColorArray[colorcode]
-                                    if(color) {
-                                        i = j;
-                                        continue;
-                                    } else if(allowArbitraryColors && colorcode.match(/^#[0-9a-fA-F]{6}$/)){
-                                        color = colorcode;
-                                        i = j;
-                                        continue;
-                                    } else {
-                                        color = fontColors[0];
-                                    }
-                                    
+                                let [j, colorcode] = processBracketedTextCommand(text, i+3);
+                                color = fontColorArray[colorcode]
+                                if(color) {
+                                    i = j;
+                                    continue;
+                                } else if(allowArbitraryColors && colorcode?.match(/^#[0-9a-fA-F]{6}$/)){
+                                    color = colorcode;
+                                    i = j;
+                                    continue;
+                                } else {
+                                    color = fontColors[0];
                                 }
                             }
                             break;
                         case "C":
                             if(!fontUtilsNamedColors || text[i+2] == "[") {
-                                let j = text.indexOf("]", i+2);
-                                if(j != -1) {
-                                    color = fontUtilsColors[fontUtilNameMapping[text.substring(i+3,j)]];
-                                    if(color) {
-                                        i = j;
-                                        continue;
-                                    } else {
-                                        color = this.#whiteColor;
-                                    }
+                                let [j, colorcode] = processBracketedTextCommand(text, i+3);
+                                color = fontColorArray[fontUtilNameMapping[colorcode]];
+                                if(color) {
+                                    i = j;
+                                    continue;
+                                } else {
+                                    color = this.#whiteColor;
                                 }
                             }
                             break;
@@ -238,6 +248,7 @@ class Font {
                 }
                 let w = this.#charWidths[charcode];
                 let h = this.#charHeight;
+                //draw the character once
                 context.drawImage(
                     this.#img, 
                     this.#charStartX[charcode], this.#charStartY[charcode],
@@ -246,9 +257,11 @@ class Font {
                     w, h
                 );
                 context.globalCompositeOperation = "source-atop";
+                //now, fill in the chararacter with color
                 context.fillStyle = color;
                 context.fillRect(x,0,w,h);
                 context.globalCompositeOperation = "multiply";
+                //now, draw over the color with the character to properly colorize the character
                 context.drawImage(
                     this.#img,
                     this.#charStartX[charcode], this.#charStartY[charcode],
@@ -258,9 +271,9 @@ class Font {
                 );
                 context.globalCompositeOperation = "source-over";
                 x += this.#charWidths[charcode];
-                
             }
         }
+        //draw the last line to make sure it's rendered.
         drawLine();
     }
 }
@@ -300,6 +313,14 @@ function saveToFile() {
 function adjustBgColor() {
     maincanvas.style.backgroundColor = document.getElementById("bgColor").value
 }
+
+
+function textBoxChanged() {
+    if(getCheckboxValue("autoUpdateText")) {
+        rendertext();
+    }
+}
+textsrc.addEventListener("input", textBoxChanged)
 
 adjustSize();
 updateData();

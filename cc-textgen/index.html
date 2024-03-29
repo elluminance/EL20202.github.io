@@ -26,9 +26,9 @@
     
                 <fieldset>
                     <legend>Font Type</legend>
-                    <input type="radio" name="fontSize" value="NORMAL" id="fontSizeNormal" checked>
+                    <input type="radio" name="fontSize" value="NORMAL" id="fontSizeNormal" checked class="updateOnChange">
                     <label for="fontSizeNormal">Normal</label>
-                    <input type="radio" name="fontSize" value="SMALL" id="fontSizeSmall">
+                    <input type="radio" name="fontSize" value="SMALL" id="fontSizeSmall" class="updateOnChange">
                     <label for="fontSizeSmall">Small</label>
                 </fieldset>
                 <fieldset>
@@ -37,7 +37,7 @@
                     <label for="fontUtilsColor">Use Font Util Colors (\c[5]-\c[17], \C[...])</label>
                     <br>
                     <input type="checkbox" id="arbitraryColor" class="updateOnChange">
-                    <label for="arbitraryColor">Allow arbitrary colors (\c[#123456])</label>
+                    <label for="arbitraryColor">Allow arbitrary colors (\c[#RRGGBB])</label>
                 </fieldset>
             </div>
 
@@ -57,6 +57,9 @@
                 <br>
                 <input type="color" id="bgColor" value="#D3D3D3" onchange="adjustBgColor()">
                 <label for="bgColor">Background Color</label>
+                <input type="checkbox" id="autoUpdateText">
+                <label for="autoUpdateText">Auto-Update Text</label>
+                
                 <button onclick="saveToFile()" class="centerBlock">Save to File</button>
             </fieldset>
             <br>
