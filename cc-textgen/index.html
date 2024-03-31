@@ -4,6 +4,7 @@
     <script defer src="cc-text-gen.js"></script>
     <link rel="stylesheet" href="cc-text-gen.css">
     <link rel="icon" href="favicon.ico">
+    <meta charset="utf-8">
 </head>
 <body>
     <div class="flex">
@@ -48,7 +49,7 @@
             <legend>Output</legend>
             <canvas width="600" height="400" id="main-canvas"></canvas>
             <fieldset>
-                <legend>Output</legend>
+                <legend>Output Settings</legend>
                 <label for="sizeX">Width</label>
                 <input type="number" value="600" min="1" max="1024" id="sizeX">
                 <label for="sizeY">Height</label>
@@ -57,8 +58,10 @@
                 <br>
                 <input type="color" id="bgColor" value="#D3D3D3" onchange="adjustBgColor()">
                 <label for="bgColor">Background Color</label>
-                <input type="checkbox" id="autoUpdateText">
+                <input type="checkbox" id="autoUpdateText" class="updateOnChange" checked>
                 <label for="autoUpdateText">Auto-Update Text</label>
+                <input type="checkbox" id="doublescale" class="updateOnChange">
+                <label for="doublescale">2&times; Scaling</label>
                 
                 <button onclick="saveToFile()" class="centerBlock">Save to File</button>
             </fieldset>

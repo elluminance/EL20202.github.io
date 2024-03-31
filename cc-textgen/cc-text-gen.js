@@ -182,10 +182,10 @@ class Font {
         let color = "#ffffff";
 
         let textAlign = getRadioValue("textAlign");
-
+        let scalefactor = getCheckboxValue("doublescale") ? 2 : 1;
 
         function drawLine() {
-            let drawX = 0, textwidth = Math.min(x, 1024);
+            let drawX = 0, textwidth = Math.min(x * scalefactor, maincanvas.width);
             switch (textAlign) {
                 case "LEFT":
                     drawX = 0;
@@ -197,8 +197,9 @@ class Font {
                     drawX = width - textwidth;
                     break;
             }
-            mainContext.drawImage(canvas, drawX, mainY);
-            mainY += charHeight;
+            mainContext.imageSmoothingEnabled = false;
+            mainContext.drawImage(canvas, drawX, mainY, canvas.width * scalefactor, canvas.height * scalefactor);
+            mainY += charHeight * scalefactor;
             context.clearRect(0, 0, 1024, charHeight);
         }
         
