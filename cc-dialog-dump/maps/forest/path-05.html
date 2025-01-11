@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Bamboo Thicket</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Bamboo Thicket</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">bug</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.bug-hunting.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...A Trial it is you seek, and a trial you shall receive... </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.spawnBug</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.barriers</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Perception is a skill few can master...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...This trial will test your awareness and wit...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Catch the golden bug in the thicket </span>
+                    <span class="color-c3">6 times</span>
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...But do so quickly, or else the trial is failed...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Speak to me again if you wish to begin the trial...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Or cancel it...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.bugTalk</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">party.has.Emilie</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.emilie\BROKEN.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(BROKEN)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Nooooooooo... Don't make me chase the bug. Not inside the bamboo maze. It could hide ANYWHERE!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">map.bugTalk</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.MAX_TIME</b> to <i>60</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.MAX_ROUNDS</b> to <i>6</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.bugPos</b> to <i>0</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.bugPosPrev</b> to <i>0</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.bugCounter</b> to <i>0</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.bugHasPos</b> to <i>False</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.bugFound</b> to <i>False</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">!tmp.spawnBug</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.startChallenge</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.bugPos</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...You have returned...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Do you wish to begin your trial... </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_CHOICE">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_CHOICE</p>
+                      <img src="..\..\char-img\main.lea\DEFAULT.png">
+                    </div>
+                    <div class="step-data">
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 0</span>
+                          <span class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Yes</span>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="step-collection container">
+                          <div class="step event-step-CLEAR_MSG">
+                            <div class="step-core">
+                              <p class="step-name">CLEAR_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <p>From side <i>ALL</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_DREAM_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_DREAM_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">..Very well.. </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>tmp.spawnBug</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>tmp.barriers</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 1</span>
+                          <span class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">No</span>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="step-collection container">
+                          <div class="step event-step-CLEAR_MSG">
+                            <div class="step-core">
+                              <p class="step-name">CLEAR_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <p>From side <i>ALL</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_DREAM_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_DREAM_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">..Very well.. </span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-GOTO_LABEL">
+                            <div class="step-core">
+                              <p class="step-name">GOTO_LABEL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>end</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Are you ready?...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-LABEL">
+              <div class="step-core">
+                <p class="step-name">LABEL</p>
+              </div>
+              <div class="step-data">
+                <p>choice</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c2">Begin Trial</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugReady</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...Take your position next to the bug...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...Let the trial begin...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SET_TASK">
+                      <div class="step-core">
+                        <p class="step-name">SET_TASK</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Catch the bug in the bamboo maze </span>
+                            <span class="color-c3">\v[tmp.MAX_ROUNDS] times</span>
+                            <span class="color-c0">!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.startChallenge</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.moveBug</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugHasPos</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>end</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c1">End Trial</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...If that is your choice...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.spawnBug</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.barriers</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>end</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 2</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">[Help]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...This trial will test your awareness and wit...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...Catch the golden bug in the thicket </span>
+                            <span class="color-c3">\v[tmp.MAX_ROUNDS] times</span>
+                            <span class="color-c0">...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...But do so fast, or else the trial is failed...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>choice</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 3</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Cancel</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container"></div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-LABEL">
+              <div class="step-core">
+                <p class="step-name">LABEL</p>
+              </div>
+              <div class="step-data">
+                <p>end</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">tmp.startChallenge</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Giving up so soon, Seeker...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c1">Abort Challenge</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.startChallenge</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.moveBug</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugHasPos</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...If that is your choice...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugReady</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugPos</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugPos</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.spawnBug</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.barriers</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugReady</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugFound</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.bugPos</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.target</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Cancel</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">map.bugReward</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...You have completed the </span>
+                    <span class="color-c3">Trial of Insight</span>
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Take this token as a sign of your victory...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 4 [<span class="condition">quest.bug-hunting-wave.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Stay ever vigilant, Seeker...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">timerOut</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.startChallenge &amp;&amp; timers.time.remainingTimeNotNull &lt;= 0 &amp;&amp; !tmp.bugFound</span>
+          <br>End condition: <span class="condition">!tmp.startChallenge</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startChallenge</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.moveBug</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugHasPos</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...The time is up, Seeker...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.bugCounter &lt;= 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...You didn't even find the bug once...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.bugCounter == 1</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_DREAM_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_DREAM_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">...You only found the bug once...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_DREAM_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_DREAM_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">...You only found the bug \v[tmp.bugCounter] times...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...There is still much you need to learn...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Speak to me to try again...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugReady</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugPos</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.spawnBug</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barriers</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugReady</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugPos</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.target</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">trialDone</span>
+        </p>
+        <p>Start condition: <span class="condition">map.trialDone</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startChallenge</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.moveBug</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugHasPos</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugReady</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.spawnBug</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.spawnBug</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barriers</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugReady</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bugPos</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.target</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...You have done well, Seeker... </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Come to me to claim your reward... </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.bugReward</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

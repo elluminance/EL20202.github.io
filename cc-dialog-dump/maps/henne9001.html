@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\step_style.css">
+    <script src="..\main.js" defer=""></script>
+    <title>Fallback - henne9001</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Fallback - henne9001</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">start</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">toff &gt;= 1</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added misc.radical-fish (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\char-img\misc.radical-fish\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">misc.radical-fish</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Welcome stranger. Good luck with this and remember: Cloudy drink kills frog!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>toff</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Gaia's Garden - Drizzle Bosk</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Gaia's Garden - Drizzle Bosk</h1>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name"></span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Glasses</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\..\char-img\main.glasses\THOUGHTFUL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.glasses</p>
+                <p class="char-name-expression">(THOUGHTFUL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So much water... as expected for a jungle.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">chest</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">party.alive.Emilie</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\char-img\main.emilie\SHOCKED.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.emilie</p>
+                      <p class="char-name-expression">(SHOCKED)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Mon dieu, we finally reached it!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">party.alive.Glasses</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_SIDE_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_SIDE_MSG</p>
+                          <img src="..\..\..\char-img\main.glasses\SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.glasses</p>
+                            <p class="char-name-expression">(SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Oh, we finally reached it! Let's hope it was worth it.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">party.alive.Apollo</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_SIDE_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_SIDE_MSG</p>
+                                <img src="..\..\..\char-img\antagonists.fancyguy\SHOUTING.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">antagonists.fancyguy</p>
+                                  <p class="char-name-expression">(SHOUTING)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">This chest was most challenging to acquire!</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="step-name">ELSE</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">party.alive.Joern</span>
+                                </p>
+                                <div class="step-collection container">
+                                  <div class="step event-step-SHOW_SIDE_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_SIDE_MSG</p>
+                                      <img src="..\..\..\char-img\antagonists.sidekick\SURPRISED.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">antagonists.sidekick</p>
+                                        <p class="char-name-expression">(SURPRISED)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">Now that certainly took some time.</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p>
+                                  <span class="step-name">ELSE</span>
+                                </p>
+                                <div class="step-collection container"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

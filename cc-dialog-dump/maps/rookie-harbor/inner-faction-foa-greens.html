@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Rookie Harbor - Fruits of Autumn HQ</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Rookie Harbor - Fruits of Autumn HQ</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">receptionist</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">    </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added greenies.female-farmer-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleFarmer\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">greenies.female-farmer-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hello \v[lore.title.seeker]. Welcome to the headquarters of the </span>
+                    <span class="color-c3">Fruits of Autumn</span>
+                    <span class="color-c0">.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleFarmer\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">greenies.female-farmer-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">If you are interested in advancing humanity's understanding of this planet, talk to the Chief Woodkeeper.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleFarmer\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">greenies.female-farmer-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">He should currently be studying the local plantlife in our gardens.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">chief-woodkeeper-manzana</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Greetings, \v[lore.title.seeker]. The Track is in harmony right now, so there is no need for your assistance.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">!quest.faction-tutorial.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Welcome to our humble garden, \v[lore.title.seeker]. I appreciate your interest in our work, but you should visit </span>
+                    <span class="color-c3">\v[lore.title.seeker]-Central</span>
+                    <span class="color-c0"> first.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">On the ground floor is an introduction into the different branches of the great tree that is human civilization.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It is mandatory for receiving assignments from us or any other branch in \v[area.rookie-harbor.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">quest.faction-tutorial.started &amp;&amp; !quest.foa-1-treedoc.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ah, \v[lore.title.seeker]. I am glad to see you return to us.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Do you desire to help us in our plight now?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">quest.foa-1-treedoc.started &amp;&amp; !quest.foa-1-treedoc.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Please make haste, before the sickness spreads and endangers the stability of the entire Track.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 4 [<span class="condition">quest.foa-1-treedoc.task.1</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ah, you are done. Wonderful! Your effort should have quelled the threat to \v[area.autumn-area.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">You have our deepest thanks. May we continue to preserve the harmony on this world together.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 5 [<span class="condition">quest.foa-1-treedoc.solved &amp;&amp; plot.line &gt;= 3300 &amp;&amp; !quest.foa-2-tree_defense.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Greetings, \v[lore.title.seeker]. It is good to see you return to us.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">As it happens, the well-being of nature requires our attention once again.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Another case of the sickness has been observed in \v[area.autumn-area.name], this time in a more intense form.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Worse yet, it has stricken a sacred tree that has been proven to be vital to the ecosystem of the entire area.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NERVOUS.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NERVOUS)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I fear that healing it will be more arduous than with the other cases, but it must be done at all costs.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">So, can I ask you for your assistance once again?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 6 [<span class="condition">quest.foa-2-tree_defense.started &amp;&amp; !quest.foa-2-tree_defense.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Remember that you will need to </span>
+                    <span class="color-c3">defend the tree</span>
+                    <span class="color-c0"> for some time after treating it.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 7 [<span class="condition">quest.foa-2-tree_defense.task.1</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I heard that your efforts have once again quelled the threat to \v[area.autumn-area.name]. Wonderful!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">You have our deepest thanks. May we continue to preserve the harmony on this world together.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 8 [<span class="condition">quest.foa-2-tree_defense.solved &amp;&amp; dungeons.heat.beaten &amp;&amp; !quest.foa-3-buffel_cave.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Greetings, \v[lore.title.seeker]. I am glad to see you, for our land is in peril once again.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">A proud bovine has fallen victim to a vile sickness and is now experiencing a burning pain.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It annihilated its whole herd in fiery anguish before starting fires all over \v[area.autumn-fall.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NERVOUS.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NERVOUS)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Will you help us to bring peace to this tortured being?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 9 [<span class="condition">quest.foa-3-buffel_cave.started &amp;&amp; !quest.foa-3-buffel_cave.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Enter the </span>
+                    <span class="color-c3">Densewater Caverns</span>
+                    <span class="color-c0"> to bring peace to the raging Bovine.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">You can find it on the </span>
+                    <span class="color-c3">Secluded Path</span>
+                    <span class="color-c0"> in the </span>
+                    <span class="color-c3">northeast of \v[area.autumn-fall.name]</span>
+                    <span class="color-c0">.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 10 [<span class="condition">quest.foa-3-buffel_cave.task.2</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ah, you are back, \v[lore.title.seeker]. So the wrath of the proud beast has finally been extinguished?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">That is good to hear. May it rest in peace. And may you continue to bring peace and harmony to this world!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\EXCITED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(EXCITED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Lea!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">True words, my friend, and wise. Goodbye.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SMILE.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SMILE)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Bye.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 11 [<span class="condition">false &amp;&amp; quest.foa-3-buffel_cave.solved &amp;&amp; dungeons.tree.beaten &amp;&amp; !quest.foa-4-sick_bovine.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Greetings, \v[lore.title.seeker]! I am glad to see you, for our land is in peril once again.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">A proud bovine has fallen victim to the sickness that before has affected several trees and is now experiencing great pain.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">In its anguish it extinguished its entire herd before starting to terrorize the entirety of \v[area.autumn-area.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NERVOUS.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NERVOUS)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Will you help us to bring peace to this tortured being?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 12 [<span class="condition">false &amp;&amp; quest.foa-4-sick_bovine.started &amp;&amp; !quest.foa-4-sick_bovine.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Please quickly meet up with our chief herbalist Helen. You should find her on </span>
+                    <span class="color-c3">Path 3 in \v[area.autumn-area.name]</span>
+                    <span class="color-c0">.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 13 [<span class="condition">false &amp;&amp; quest.foa-4-sick_bovine.task.2</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ah, you are done. Wonderful! Your effort should have quenched the threat to \v[area.autumn-area.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">You have our deepest thanks. May we continue to preserve the harmony on this world together.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 14 [<span class="condition">quest.foa-4-sick_bovine.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Greetings, \v[lore.title.seeker]. The Track is in harmony right now, so there is no need for your assistance.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 15 [<span class="condition">quest.faction-tutorial.started &amp;&amp; !quest.faction-tutorial.label.greens</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.faction-foa-man-chiefgarden (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Welcome to our gardens, \v[lore.title.seeker]. I am Manzana, the Chief Woodkeeper of this branch.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It is always reassuring to have your kind supporting our fruitful endeavours.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">In fact, your appearance comes at a fortunate time, as we have noticed unrest brewing among the thickets of \v[area.autumn-area.name].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">A sickness has befallen trees in different locations and threatens the balance of the Track in the entire region.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\rookie-harbor.faction-foa-man-chiefgarden\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.faction-foa-man-chiefgarden</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Would you be able to assist us in stemming it, before it can cause widespread harm?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Rhombus Square - Cliff Exhibition</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Rhombus Square - Cliff Exhibition</h1>
+      <div class="container entity entity-Door">
+        <p>
+          <span class="entity-type">Door</span>: <span class="entity-name">d5-tremorLab</span>
+        </p>
+        <p>Block condition: <span class="condition">!map.tremorOpen</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">item.655.amount &gt;= 1</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Used </span>
+                        <span class="color-c3">Tremor Lab Key</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.tremorOpen</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Locked</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">r1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">I am Speed!</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">b1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">How business is booming!</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">b2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Yes, I also love business booming.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">b1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Can't believe those stocks.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">b2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Stocks are at an all time high.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">b2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">So thankful nobody ever abolished those. </span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">b1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">More money for us.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">You log into a game and think you can escape the whole business thing.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">And the game just throws a whole business district in your face.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Could you imagine walking around in a suit all day?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Imagine all those NPCs being alive, doomed to walk around in inflexible pants and jackets.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Urgh, let's not think about it too much. I just wanna chill and grind some loot.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">c5</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">I'm surprised to find such rough terrain in the middle of the city.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c6</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Me too, but I guess that is the freedom game developers have.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c6</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Also it's probably used for another elaborate puzzle.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c5</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Heh, they do love their puzzles.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">ctronComment</span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Glasses</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.glasses\THOUGHTFUL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.glasses</p>
+                <p class="char-name-expression">(THOUGHTFUL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Really? Seriously? Was this really necessary? This Pond? Right over the crossing?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.glasses\BLANK.png">
+              <div class="char-name">
+                <p class="char-name-text">main.glasses</p>
+                <p class="char-name-expression">(BLANK)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">How do those trucks even fit below it?! Why would you even </span>
+                  <span class="color-c1">need</span>
+                  <span class="color-c0"> any water here?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">cptFuture</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">quest.autobahn.currentTask == 2 &amp;&amp; map.cptFutureMove &gt;= 1</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.captain-future (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (ASTONISHED) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">map.cptFutureMove &gt;= 2</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Are you ready for the chase?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.cptFutureMove</b> to <i>2</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Allow me to introduce you to my trusty ride, </span>
+                          <span class="color-c3">Meteor</span>
+                          <span class="color-c0">!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\SMILE.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(SMILE)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">You better not take her lightly!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Me and my ship have solved many crimes in the past and this one won't be any different!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">As it happens, I've just received reports that </span>
+                          <span class="color-c3">dirt-filled cars</span>
+                          <span class="color-c0"> have been spotted on our highways!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\PROUD.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(PROUD)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">That's right! It must be them!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">guards.captain-future</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">So it's time to </span>
+                          <span class="color-c3">start the chase</span>
+                          <span class="color-c0">! Are you ready?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Yes</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">guards.captain-future</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Great!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">guards.captain-future</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">I will take the wheel while you </span>
+                            <span class="color-c3">stand on the roof</span>
+                            <span class="color-c0"> for greater mobility!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHOCKED.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHOCKED)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...?!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">guards.captain-future</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Come on! There's no time to waste!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-TELEPORT">
+                      <div class="step-core">
+                        <p class="step-name">TELEPORT</p>
+                      </div>
+                      <div class="step-data">
+                        <p>
+                          <a href="..\..\maps\rhombus-sqr\interior\autobahn.html">rhombus-sqr.interior.autobahn</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">No</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">guards.captain-future</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">If you need to prepare, please do so quickly!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">guards.captain-future</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">We have to catch those thieves in the act!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">toCptCarScene</span>
+        </p>
+        <p>Start condition: <span class="condition">quest.autobahn.currentTask == 2</span>
+          <br>End condition: <span class="condition">map.cptFutureMove &gt;= 1</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.cptFutureMove</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\guards.captain-future\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">guards.captain-future</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Over here!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">questGuard</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.bg-3-goat_final.started &amp;&amp; !quest.bg-3-goat_final.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">This area is locked for unauthorized trespassers! Move along, there is nothing to see here!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Why?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I am unauthorized to tell and you are not authorized to know! And now, leave!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\ANNOYED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ANNOYED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Bye...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">quest.bg-3-goat_final.task.5 &amp;&amp; !quest.bg-3-goat_final.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">This area is locked for unauthorized trespassers! Move along, there is nothing to see here!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi! Lea. Why. Meet.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I see, I see. You are one of the \v[lore.title.seeker]s, on an official mission from a local guard.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Those country bumpkins from \v[area.bergen.name] sure put a lot of trust into some adventurer.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\ANNOYED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ANNOYED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">... Why?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Relax, I'm not interested in arguing over the "\v[lore.title.seeker] Defense Assistance"-clause with you or my supervisors.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">You can handle this... goat problem that Bergen left to us. I will even give you an up-to-date briefing, how's that?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\EXHAUSTED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(EXHAUSTED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">lea.words.what</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">What? How? Why?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">How? Why?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Okay, listen. Those goats you are hunting have violently occupied the building behind us.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (SURPRISED_TOWARD) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It's the </span>
+                    <span class="color-c3">Rhombus Parks Embassy</span>
+                    <span class="color-c0">. Takes care of the local parks and sends researchers to the mainland.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\ASTONISHED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ASTONISHED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Maybe the goats want to munch on some rare plants or steal hoof research. I don't know and I don't care.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Point is, \v[lore.title.seeker], they are occupying the building, holding hostages and they keep bleating all day.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">That's gotta stop. You following?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Fine. Then go inside and detain those terrorist goats! We will continue to secure the area here.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\DETERMINED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(DETERMINED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Bye.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">quest.bg-3-goat_final.task.6 &amp;&amp; !quest.bg-3-goat_final.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Go inside and detain those terrorist goats, \v[lore.title.seeker]! We will continue to secure the area here.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">quest.bg-3-goat_final.task.7 &amp;&amp; !quest.bg-3-goat_final.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guards.female-tall-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[lore.title.seeker], things are very quiet now. Did you defuse the situation?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\femaleGuard\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guards.female-tall-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Impressive. You can now get your reward from whoever you got the assignment from. We will take it from here.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SMUG.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SMUG)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Bye...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">goatShop</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.bg-3-goat_final.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_AR_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_AR_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox textbox-small ar-box-color-GREEN">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[enterprising goat noises]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

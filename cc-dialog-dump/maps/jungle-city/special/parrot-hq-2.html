@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Basin Keep - Papagang HQ Club</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Basin Keep - Papagang HQ Club</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">barkeep</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added basin.female-green (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femaleLongHair1\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">basin.female-green</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">No drinks unless the boss gives his okay.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\main.lea\ANNOYED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ANNOYED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">... Bye.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">firstBattle</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.touchScene1</span>
+          <br>End condition: <span class="condition">tmp.fight1-start || map.fight1-end</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_CHOICE">
+            <div class="step-core">
+              <p class="step-name">SHOW_CHOICE</p>
+              <img src="..\..\..\char-img\main.lea\DETERMINED.png">
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 0</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">[Confront Criminals]</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\..\char-img\main.lea\DETERMINED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(DETERMINED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Lea! Wait!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_AR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_AR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox textbox-small ar-box-color-RED">
+                        <span class="text-langlabel">
+                          <span class="color-c0">[disrespectful bird noises]</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\..\char-img\main.lea\ANNOYED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(ANNOYED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">... Why?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_AR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_AR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox textbox-small ar-box-color-RED">
+                        <span class="text-langlabel">
+                          <span class="color-c0">[curses of the bird variety]</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\..\char-img\main.lea\ANNOYED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(ANNOYED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">... Wait!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.fighting</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.barrier-1</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.barrierBoss</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.couchGirlsWatching</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.fight1-start</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 1</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">[Turn back]</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.touchScene1</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">firstBattleOLD</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.firstBattle</span>
+          <br>End condition: <span class="condition">map.fight1-end</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.door1Closed</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.hostageHP</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[aggressive squawking]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[aggressive squawking]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\char-img\main.lea\EXHAUSTED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(EXHAUSTED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\char-img\main.lea\DETERMINED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(DETERMINED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Rescue all the hostages by stunning their captor with a </span>
+                  <span class="color-c3">charged shot</span>
+                  <span class="color-c0">!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SET_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c3">Stun</span>
+                  <span class="color-c0"> the Papagangster with </span>
+                  <span class="color-c3">a charged attack</span>
+                  <span class="color-c0"> to </span>
+                  <span class="color-c3">free the hostage</span>
+                  <span class="color-c0">.
+</span>
+                  <span class="color-c1">Be careful to not get too close or hurt the hostage!</span>
+                  <span class="color-c0"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">dancer5</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">map.fight1-end</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added greenies.female-flowers-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femalePigtails\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">greenies.female-flowers-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Please don't mind my friend here.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added greenies.female-flowers-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femalePigtails\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">greenies.female-flowers-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">He just really likes to dance and doesn't want any trouble.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\main.lea\SMILE.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SMILE)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,3931 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Vermillion Wasteland - Crimson Lake</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Vermillion Wasteland - Crimson Lake</h1>
+      <div class="container entity entity-TeleportGround">
+        <p>
+          <span class="entity-type">TeleportGround</span>: <span class="entity-name">south-1</span>
+        </p>
+        <p>Block condition: <span class="condition">(party.has.Schneider2 &amp;&amp; plot.line &gt;= 11850 &amp;&amp; plot.line &lt; 12200)  || plot.evo.hideEnemies</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.evo.hideEnemies</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.sergey (SERIOUS) to side LEFT</p>
+                  </div>
+                </div>
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.sergey\SERIOUS.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.sergey</p>
+                      <p class="char-name-expression">(SERIOUS)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Lea, not this way. Head to the </span>
+                        <span class="color-c3">Quest Hub</span>
+                        <span class="color-c0">, quickly!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CLEAR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">CLEAR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <p>From side <i>ALL</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.schneider2 (WONDERING) to side LEFT</p>
+                  </div>
+                </div>
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.schneider2\WONDERING.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.schneider2</p>
+                      <p class="char-name-expression">(WONDERING)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">The tour does not include the river area. We've been there yesterday already.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.lea\MOPING.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(MOPING)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-TeleportGround">
+        <p>
+          <span class="entity-type">TeleportGround</span>: <span class="entity-name">west-1</span>
+        </p>
+        <p>Block condition: <span class="condition">plot.evo.hideEnemies</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (SERIOUS) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Lea, not this way. Head to the </span>
+                  <span class="color-c3">Quest Hub</span>
+                  <span class="color-c0">, quickly!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-TeleportGround">
+        <p>
+          <span class="entity-type">TeleportGround</span>: <span class="entity-name">north-1</span>
+        </p>
+        <p>Block condition: <span class="condition">plot.evo.hideEnemies</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (SERIOUS) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Lea, not this way. Head to the </span>
+                  <span class="color-c3">Quest Hub</span>
+                  <span class="color-c0">, quickly!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">SchneiderTour1</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 11900</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 11950</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\UP.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(UP)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So we're just out of town and oh look!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (SURPRISED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">It's one of these devices!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PISSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PISSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Yet the almighty plot decided we're not ready to proceed, so these things remain unresponsive.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\ANNOYED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(ANNOYED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WINK.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WINK)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Nothing to do here, so let's appreciate the amazing nature of this place.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">This way!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>11950</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SET_PERMA_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_PERMA_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Talk to Lukas in </span>
+                  <span class="color-c3">Vermillion Wasteland - Crimson Lake</span>
+                  <span class="color-c0"> to proceed with his tour.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-REMOVE_PARTY_MEMBER">
+            <div class="step-core">
+              <p class="step-name">REMOVE_PARTY_MEMBER</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <i>Schneider2</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">schneider2</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">plot.line &gt;= 11900 &amp;&amp; plot.line &lt; 12000</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.schneider2 (UP) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\UP.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(UP)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">This... is a lake.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SHOCKED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SHOCKED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Why?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\WONDERING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(WONDERING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Because it's filled with water... or whatever that purple stuff is.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SMUG.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SMUG)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Why?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\EYES_CLOSED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(EYES_CLOSED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Sorry, this tour doesn't include basic scientific explanations.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\ANNOYED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ANNOYED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\MOPING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(MOPING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Bye!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\LAUGH.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(LAUGH)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Gyahahaha, what a tough customer!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\UP.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(UP)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I'm sure Tronny would have a good explanation for you.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\WINK.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(WINK)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Aaaand he'd probably also complain about those weird rock formations.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.schneider2 (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Let's continue. Off to the </span>
+                    <span class="color-c3">north</span>
+                    <span class="color-c0">!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.schneider2\WONDERING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.schneider2</p>
+                  <p class="char-name-expression">(WONDERING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Be careful not to step on a virus along the way!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SCARED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SCARED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_PARTY_MEMBER">
+              <div class="step-core">
+                <p class="step-name">ADD_PARTY_MEMBER</p>
+              </div>
+              <div class="step-data">
+                <p>
+                  <i>Schneider2</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SET_PERMA_TASK">
+              <div class="step-core">
+                <p class="step-name">SET_PERMA_TASK</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Head to the north from </span>
+                    <span class="color-c3">Vermillion Wasteland - Crimson Lake</span>
+                    <span class="color-c0"> to proceed with Lukas' tour.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>plot.line</b> to <i>12000</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">SchneiderTourDirections</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 12100</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 12120</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.schneider2\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Alright, our final sight will be further to the </span>
+                  <span class="color-c3">west</span>
+                  <span class="color-c0">!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SET_PERMA_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_PERMA_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Head to the west from </span>
+                  <span class="color-c3">Vermillion Wasteland - Crimson Lake</span>
+                  <span class="color-c0"> to proceed with Lukas' tour.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>12120</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">SchneiderLeaDepressedComment</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 12900</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 12920</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You're so quiet today... even for your standards.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.lea\DEAD_INSIDE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(DEAD_INSIDE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>12920</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">LakeScene1</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 13010</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 13100</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (NORM_SERIOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (SAD) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\TOWARDS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(TOWARDS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">The view here isn't all that bad, hm?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Okay, look... I can't keep watching you like this.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">There must be a way to help you out of this.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We gotta try to talk about this. Somehow. </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I'll just ask some questions, ok?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Okay, let's see...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I suppose you remembered something about yourself... Something that made you sad?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Okay, so what could it be?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Did you... lose somebody dear to you?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SHAKE_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SHAKE_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[shakes head]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Hm...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Did somebody... betray you?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Oh...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I'm sorry to hear that...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Just what did this person exactly do to you...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Are all your troubles... because of that person?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SHAKE_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SHAKE_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[shakes head]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So there is something else?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\COMPLAINING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(COMPLAINING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Man, this is hard.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I wonder how the others are doing. Hlin, Buggy, Emilie... all of them.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">It seemed like you got along quite well with Emilie and Tronny, didn't you?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\TOWARDS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(TOWARDS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So... I'm sure we'll be missed.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">In difficult times like these... it's good to know there are people out there that care for you.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Even though it looks like we're on our own for now.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (NORM_SERIOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (SAD) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I think it's probably better if we call it a day.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Let's finish the trial building tomorrow, okay?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Alright then, back to the dormitory.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SET_PERMA_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_PERMA_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You decided to call it a day and head back to the </span>
+                  <span class="color-c3">Dormitory</span>
+                  <span class="color-c0">.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>13100</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">LakeScene2</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 13400</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 13410</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (NORM_SERIOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\RANTING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(RANTING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Beating up that Rhino-thing just to see such a place, I can't believe it.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">How the hell do they even know what my room looks like? </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And why would they put that kind of reconstruction in this place?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_AWAY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Anyway... I seem to remember a little more now.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Like the place I live at... the place I work at...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">What was the name of the company again? </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\UP.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(UP)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Anyway, I think I worked in the IT department...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\ASTONISHED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(ASTONISHED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Still... this all feels very strange.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Like... why did I forget all of this suddenly?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You know... I had a... pretty scary thought.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I'm spending all of my time in this game now....</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">The only thing left from my "real life" are those memories that are slowly returning.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">But what... what if there is no real life anymore?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">What if we're just stuck in this game, forever?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\PRE_CRY1.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(PRE_CRY1)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Is... is this maybe the feeling you had yesterday?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\PRE_CRY1.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(PRE_CRY1)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD_SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD_SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I see...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\PRE_CRY2.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(PRE_CRY2)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\PONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(PONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Here's the thing, though...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Why does it matter?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Does that make our lives any less meaningful?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We don't know why we're stuck in this game...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">But, honestly... we don't even know why we live in the first place.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So we're either stuck in this game or stuck in "real life". What's the big difference?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\ANNOYED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(ANNOYED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Is it so strange thinking that way?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Oh well...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\UP.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(UP)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I think what's important... is that it's a life worth living.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WINK.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WINK)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And being stuck in this game isn't the worst fate imaginable, now is it?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\TOWARDS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(TOWARDS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We're not alone. We have friends in this world.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\SKEPTICAL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(SKEPTICAL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And heck, I know a few people that would be happy being logged into CrossWorlds permanently. </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So it's not all bad, is it?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WINK.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WINK)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Especially if we get out of this place. This place kinda sucks, honestly.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Now that I think about it, my room fits in pretty well...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\DISGUSTED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(DISGUSTED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\LAUGH.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(LAUGH)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Gyahahahahaha!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider2 (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well then!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider2\TOWARDS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider2</p>
+                <p class="char-name-expression">(TOWARDS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Let's hand in that quest already!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>13410</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">plotPenta</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Hey what's the holdup?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">plotQuadro</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Nothing... just taking a break.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">plotPenta</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Already? We just started the quest! We still gotta go to the forest!</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">plotQuadro</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Let's take things slowly, okay?</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">raidStart</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 28100</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 28200</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.evo.hideEnemies</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.apolloThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.joernThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_PARTY_MEMBER">
+            <div class="step-core">
+              <p class="step-name">ADD_PARTY_MEMBER</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <i>Emilie</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_PARTY_MEMBER">
+            <div class="step-core">
+              <p class="step-name">ADD_PARTY_MEMBER</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <i>Schneider</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\antagonists.fancyguy\SHOUTING.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.fancyguy</p>
+                <p class="char-name-expression">(SHOUTING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">To the forest!!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\antagonists.sidekick\ANGRY.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.sidekick</p>
+                <p class="char-name-expression">(ANGRY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Good luck, everyone!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.raidBarrier1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.emilie (SHOCKED) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\SHOCKED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SHOCKED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Mon dieu, what are those... robot thingies?!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (SERIOUS) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">The barriers are connected to those enemies, we need to get rid of them to proceed!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.joernThere</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.apolloThere</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>18200</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">raidFight1End</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.shredderKilled &gt;= 4</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 28300</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.raidBarrier1</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.sergey\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Onward, to the </span>
+                  <span class="color-c3">Quest Hub</span>
+                  <span class="color-c0">!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>28300</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">raidFight2</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.closeToQuestHub</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 28400</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.raidBarrier2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>28400</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.schneider\COMPLAINING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(COMPLAINING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">More metal faces!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">raidFight3End</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.shredderKilled2 &gt;= 4</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 28500</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.raidBarrier2</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.randomEvotar</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.emilie (SHOCKED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\SHOCKED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SHOCKED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Look! It's one of those... Evotars!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.emilie (ASTONISHED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added cross-worlds.hexacast-male-red (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\ASTONISHED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(ASTONISHED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Hey, you! You should go to the quest hub!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\hexacastMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.hexacast-male-red</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Huh?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\SUSPICIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SUSPICIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Uhm... They got amazing loot there!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\hexacastMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.hexacast-male-red</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider (SERIOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Go there if you want to get out of here!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Quick, there's just this one chance!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\hexacastMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.hexacast-male-red</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">R-Really? Quest Hub, you say?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.emilie\CURIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(CURIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Huh... that worked well.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>28500</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">WalkingBack</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 31300</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 31400</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.evo.hideEnemies</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shizukaThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.emilieThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.buggyThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.hlinThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.joernThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.apolloThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.grumpyThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.schneiderThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.schneider (WONDERING) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (NERVOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider\WONDERING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(WONDERING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So, uhm... Sergey?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Yes?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.schneider\NORM_SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(NORM_SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Now that you've gathered the Evotars, what's next?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\THINKING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(THINKING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I have to get in touch with Instatainment and explain the whole situation.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And hopefully we will be able to create a proper future for Evotars that way.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.emilie (CURIOUS) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\CURIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(CURIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So... what will happen with Lea now?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (NERVOUS) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (EYES_CLOSED) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I am afraid I cannot afford to keep her in the game for much longer.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I am not allowed to do that in the first place...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\COMPLEX.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(COMPLEX)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And I really should not break company rules while I try to discuss the matter with them.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\SAD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SAD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">But... there is no need to log her out right away, non?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\AWAY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(AWAY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We can at least play together for a little longer, oui?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\THINKING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(THINKING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\EYES_CLOSED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(EYES_CLOSED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I suppose... there is no reason to rush things now.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">What are we waiting for, then?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.emilie\HAPPY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(HAPPY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Off to the Playground!!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\EXCITED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(EXCITED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">It all began when I set out
+to find my long-lost colleagues.
+
+My old friends...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.endScenes</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>31400</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\autumn\entrance.html">autumn.entrance</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">CtronEndScene</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 31600</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 31700</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ctronThere</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.glasses (THOUGHTFUL) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.glasses\THOUGHTFUL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.glasses</p>
+                <p class="char-name-expression">(THOUGHTFUL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">He had a point.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.glasses\WORRIED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.glasses</p>
+                <p class="char-name-expression">(WORRIED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Those cliffs really do not make any sense.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>31700</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\autumn\guild\inner-fs-eg.html">autumn.guild.inner-fs-eg</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">boringBridge</span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Emilie &amp;&amp; plot.line &lt; 40000</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.emilie\HAPPY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(HAPPY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Laser bridge!! Awesome!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

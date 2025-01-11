@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Fallback - dreams.tenth</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Fallback - dreams.tenth</h1>
+      <div class="container entity entity-Door">
+        <p>
+          <span class="entity-type">Door</span>: <span class="entity-name">entrance</span>
+        </p>
+        <p>Block condition: <span class="condition">!map.doorOpen</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.line &lt; 10200</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.sergey (EYES_CLOSED) to side LEFT</p>
+                  </div>
+                </div>
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.lea (NERVOUS) to side RIGHT</p>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.sergey\WORRIED.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.sergey</p>
+                      <p class="char-name-expression">(WORRIED)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">The door is locked, correct? It seems we are trapped.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.lea\NERVOUS.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(NERVOUS)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CLEAR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">CLEAR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <p>From side <i>ALL</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">!tmp.doorInspected</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.doorInspected</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>add <b>tmp.inspected</b> by <i>1</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">Dreeeeam</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shady</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Let me tell you a little trick 
+about conversations.
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">People... they like to 
+share their stories.
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So if you want to be on their 
+good side... listen to them.
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Add a few comments, ask questions...
+let them know you are interested.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Keep the conversation flowing naturally, 
+but let them do the talking.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">That's how people
+enjoy your company.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">However... none of this works, 
+if the other person can't talk.
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I found that out the hard way... 
+when I met her.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">She could only listen, 
+very much like you.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So for once...
+I had to do the talking.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Talking... about myself.
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>13600</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.doorOpen</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\arid\interior\the-room.html">arid.interior.the-room</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

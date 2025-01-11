@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Ba'kii Kum - Shop</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Ba'kii Kum - Shop</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">shop-wepon</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">    </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added baki.male-yellow-tall (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\shadMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">baki.male-yellow-tall</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I can offer hardest steel to protect soft human body.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">shop-item</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">   </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added rookie-harbor.female-small-red (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femaleShortHair1\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">rookie-harbor.female-small-red</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hello, \v[lore.title.seeker]. Need some provisions on this hot day?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

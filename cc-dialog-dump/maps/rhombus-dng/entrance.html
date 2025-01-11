@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Rhombus Dungeon - Entrance</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Rhombus Dungeon - Entrance</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">intro</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Initializing Avatar</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.arSign</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (ASTONISHED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Oh, they added a welcome sign. Very hospitable.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DETERMINED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (WORRIED) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\NOTIFYING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(NOTIFYING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Are you looking for that redhead pentafist from before?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NOD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NOD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[nods]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\ROLL_EYES.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(ROLL_EYES)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well... I am afraid you will not find her here.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You see, each player is placed into a separate instance of these rooms.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\MOPING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(MOPING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You will find plenty of puzzles ahead. </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\THINKING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(THINKING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You really would not want other players to interfere around here.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">So it is all about who will be fastest by themselves, right?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\DETERMINED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(DETERMINED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

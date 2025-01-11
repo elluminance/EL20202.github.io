@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Rise - Hillkat Cave</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Rise - Hillkat Cave</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">battle-starter</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.arena-touch</span>
+          <br>End condition: <span class="condition">tmp.battle-start</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!quest.fd-2-meerkat-cave.solved</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.barrier</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[angry Hillkat noises]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.battle-start</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!quest.fd-2-meerkat-cave.solved</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

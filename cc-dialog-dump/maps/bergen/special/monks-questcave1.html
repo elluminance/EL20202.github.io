@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Bergen Village - Cave of Aspiration</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Bergen Village - Cave of Aspiration</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">map-init</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>g.monk-cave</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.0-end</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">map.2-end</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">map.endEnded</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!map.gotTime</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.bestTime</b> to <i>-1</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.bestTime-noShield</b> to <i>-1</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.bestTime &lt;= 0</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.bestTime-noShield &lt;= 0</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">quest.monks-jump_1_bonus.started &amp;&amp; !map.challengeExplain &amp;&amp; !quest.monks-jump_1_noShield.solved</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Deactivate your shield here!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.challengeExplain</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.shieldOff-reminder &amp;&amp; !quest.monks-jump_1_noShield.solved</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_CENTER_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_CENTER_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c1">Attention!</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </div>
+                    <hr>
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">Your shield</span>
+                        <span class="color-c0"> got automatically reactivated when leaving the cave. To continue the quest </span>
+                        <span class="color-c3">"Chlg. of Aspiration: No Shield"</span>
+                        <span class="color-c0">, you have to </span>
+                        <span class="color-c3">deactivate it again</span>
+                        <span class="color-c0">!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.shieldOff-reminder</b> to <i>False</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.init</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-1-switch5</span>
+        </p>
+        <p>Start condition: <span class="condition"> tmp.1-switch5</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.1-shooting_start</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ SHOOT ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-0-endTrigger</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.0-switchCount&gt;=20</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Patience...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.0-afterBarrier</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-1-after</span>
+        </p>
+        <p>Start condition: <span class="condition"> tmp.1-shootswitch-4 </span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Patience...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.1-afterBarrier</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-2-barrage1</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.2-final</span>
+          <br>End condition: <span class="condition">tmp.2-shootswitch-1 </span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.shield-off &amp;&amp; false</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Your shield has returned!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.2-barrage1-end</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-2-endResults</span>
+        </p>
+        <p>Start condition: <span class="condition">map.endEnded &amp;&amp; tmp.endEnd &amp;&amp; quest.monks-1-jump_challenge.solved </span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.gotTime</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.time</b> to <i>{'varName': 'timers.monktrial-1-timer.time'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.time == 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.time</b> to <i>0.01</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.shield-off</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.time &lt;= 105</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bestTime-VAR</b> to <i>{'indirect': 'tmp.varString-time'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">(tmp.time &lt; tmp.bestTime-VAR) || (tmp.bestTime-VAR &lt;= 0)</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.bestTime-VAR &lt;= 0</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Record (\v[tmp.resultMode])!</span>
+                              <span class="color-c0">
+\v[tmp.time-format]</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Record (\v[tmp.resultMode])!</span>
+                              <span class="color-c0">
+\v[tmp.time-format]
+
+Old Best:
+\v[tmp.bestTime-FORMAT]
+</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>{'indirect': 'tmp.varString-time'}</b> to <i>{'varName': 'tmp.time'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_BOARD_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_BOARD_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">Time (\v[tmp.resultMode]):</span>
+                        <span class="color-c0">
+\v[tmp.time-format]
+
+Best:
+\v[tmp.bestTime-FORMAT]
+</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.time&lt;=120 &amp;&amp; quest.monks-jump_1_time.task.0 </span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.shield-off &amp;&amp; quest.monks-jump_1_noShield.task.1</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">times-reset-debug</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.reset</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.gotTime</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.bestTime</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Times reset!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.reset</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-1-shoot-1</span>
+        </p>
+        <p>Start condition: <span class="condition"> tmp.1-shootswitch-1</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ SHOOT ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-1-shoot-2</span>
+        </p>
+        <p>Start condition: <span class="condition"> tmp.1-shootswitch-2</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ SHOOT ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">event-1-shoot-3</span>
+        </p>
+        <p>Start condition: <span class="condition"> tmp.1-shootswitch-3</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ SHOOT ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

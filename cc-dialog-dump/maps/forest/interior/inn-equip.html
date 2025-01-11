@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Cave Inn Mall</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Cave Inn Mall</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">shop-wepon</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added baki.male-green-tall (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\shadMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">baki.male-green-tall</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Weapon best quality of Shad, but now foremost we produce for human being.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name">clue4</span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">How is your chest hunting going?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">I'm still missing a few. </span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">But I heard of a hidden path east of here.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Where did you hear that?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Some </span>
+                <span class="color-c3">player with the lab coat skin</span>
+                <span class="color-c0"> walked by, mumbling about it and stuff.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

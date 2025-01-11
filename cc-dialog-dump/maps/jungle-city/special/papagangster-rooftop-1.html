@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Basin Keep - Clipson Tower Roof</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Basin Keep - Clipson Tower Roof</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">crateHiding</span>
+        </p>
+        <p>Start condition: <span class="condition">(tmp.hideCrate &gt;= 1) &amp;&amp; tmp.cratingStarted</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.cratesDone</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">(tmp.cratePos.x &lt;= 430) || (tmp.cratePos.x &gt;= 1242) || (tmp.cratePos.y &lt;= 312) || (tmp.cratePos.y &gt;= 1124)</span>
+              </p>
+              <div class="step-collection container"></div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>{'indirect': 'tmp.tempHideStringGamma'}</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">test</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">\v[tmp.tempHideStringOmega]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>{'indirect': 'tmp.tempHideStringOmega'}</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.hideCrate</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">papagunSpawner</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.cratingStarted &amp;&amp; !tmp.lastCrateDone</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">combat.activeCnt.jungle/special/parrot-gangster-2 &lt; tmp.enemiesMax</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.tempSpawnTime</b> to <i>{'varName': 'tmp.spawnTime'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.tempEnemyFactor</b> to <i>{'varName': 'tmp.enemiesMax'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>sub <b>tmp.tempEnemyFactor</b> by <i>{'varName': 'combat.activeCnt.jungle/special/parrot-gangster-2'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>mul <b>tmp.tempEnemyFactor</b> by <i>2</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>sub <b>tmp.tempSpawnTime</b> by <i>{'varName': 'tmp.tempEnemyFactor'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.doubleSpawn &gt;= 1</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>sub <b>tmp.doubleSpawn</b> by <i>1</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>div <b>tmp.tempSpawnTime</b> by <i>3</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">test</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-RED">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">DOUBLE SPAWN!</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.tempSpawnTime &lt; 3</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.tempSpawnTime</b> to <i>3</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">test</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-RED">
+                            <span class="text-langlabel">
+                              <span class="color-c0">ENEMY SPAWN IN \v[tmp.tempSpawnTime]sec!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">!tmp.lastCrateDone &amp;&amp; tmp.cratingStarted</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>add <b>tmp.enemiesSpawned</b> by <i>1</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>add <b>tmp.spawnerID</b> by <i>{'varName': 'tmp.tempSpawnIDAdd'}</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">tmp.spawnerID &gt; 4</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-CHANGE_VAR_NUMBER">
+                              <div class="step-core">
+                                <p class="step-name">CHANGE_VAR_NUMBER</p>
+                              </div>
+                              <div class="step-data">
+                                <p>sub <b>tmp.spawnerID</b> by <i>4</i>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">startCrating</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.startCrating</span>
+          <br>End condition: <span class="condition">map.cratingDone</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[Angry bird noises!]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[Angry bird noises!]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.enemiesSpawned</b> to <i>2</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.cratingStarted</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

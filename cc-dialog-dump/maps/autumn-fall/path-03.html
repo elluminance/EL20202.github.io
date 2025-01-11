@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Fall - Eastern Exit</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Fall - Eastern Exit</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BarrierBlock</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.barrierBlock</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">Access denied</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barrierBlock</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BarrierBlock2</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.barrierBlock2</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">Blocked</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barrierBlock2</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-TeleportGround">
+        <p>
+          <span class="entity-type">TeleportGround</span>: <span class="entity-name">right-1</span>
+        </p>
+        <p>Block condition: <span class="condition">plot.line &lt; 19050</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.sergey (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Uhm... Lea?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\THINKING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(THINKING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I think C'tron and the others are waiting for you at the </span>
+                  <span class="color-c3">First Scholar HQ</span>
+                  <span class="color-c0">, correct?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.sergey\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You probably should go there before heading to </span>
+                  <span class="color-c3">Sapphire Ridge</span>
+                  <span class="color-c0">.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_AWAY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name"></span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">  </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.triblader-male-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Yo, what's up?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">item.410.amount &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">I see you got the </span>
+                          <span class="color-c3">\v[item.410.name]</span>
+                          <span class="color-c0"> with you! Nice, nice!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Well then, good luck in </span>
+                          <span class="color-c3">Sapphire Ridge</span>
+                          <span class="color-c0">! Beware of bugs!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">party.has.Emilie</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-ADD_MSG_PERSON">
+                          <div class="step-core">
+                            <p class="step-name">ADD_MSG_PERSON</p>
+                          </div>
+                          <div class="step-data">
+                            <p>Added main.emilie (SUSPICIOUS) to side RIGHT</p>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_MSG</p>
+                            <img src="..\..\char-img\main.emilie\SUSPICIOUS.png">
+                            <div class="char-name">
+                              <p class="char-name-text">main.emilie</p>
+                              <p class="char-name-expression">(SUSPICIOUS)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">Wait... What was that?</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">If you want to pass the barrier up ahead you first have to collect the </span>
+                          <span class="color-c3">\v[item.410.name]</span>
+                          <span class="color-c0">.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">You get it at the end of the </span>
+                          <span class="color-c3">Grand Krys'kajo</span>
+                          <span class="color-c0"> dungeon in </span>
+                          <span class="color-c3">Gaia's Garden</span>
+                          <span class="color-c0">.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">If you've already finished the dungeon... just revisit the </span>
+                          <span class="color-c3">final boss room</span>
+                          <span class="color-c0">. I'm sure you'll find the shades somewhere in there.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\ASTONISHED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(ASTONISHED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

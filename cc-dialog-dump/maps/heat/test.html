@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Rise - heat.test</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Rise - heat.test</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">questfoa_2-defense_start</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.quest_traders-defense_start</span>
+          <br>End condition: <span class="condition">tmp.quest_traders-defense_started</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-crate_dmg</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SET_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Hungry lifeforms approaching!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-wave1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SET_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c3">Defend the tree for 2 minutes</span>
+                  <span class="color-c0"> for the salve to take effect!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-defense_start</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-defense_started</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">quest_traders-crate_tackled</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.quest_traders-crate_tackled</span>
+          <br>End condition: <span class="condition">!tmp.quest_traders-crate_tackled</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.quest_traders-crate_dmg</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.quest_traders-crate_dmg&lt;=4</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.quest_traders-crate_dmg=1</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Salve weakened!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.quest_traders-crate_dmg=2</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Salve strongly weakened!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.quest_traders-crate_dmg=3</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Salve almost dissolved!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.quest_traders-crate_dmg=4</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.quest_traders-defense_started</b> to <i>False</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Salve dissolved!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.quest_traders-failed</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-crate_tackled</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">quest_foa2_failed</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.quest_traders-failed</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-defense_started</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Salve lost effect. The sickness returned!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c1">QUEST FAILED</span>
+                  <span class="color-c0">
+
+Restart task to try again</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\heat\test.html">heat.test</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">quest_traders-defense_end</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.quest_traders-defense_started &amp;&amp; timers.quest_defense-timer.remainingTime &lt;= 0    </span>
+          <br>End condition: <span class="condition">tmp.quest_traders-defense_over  </span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-defense_started</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">Tree healed!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.quest_traders-defense_over</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

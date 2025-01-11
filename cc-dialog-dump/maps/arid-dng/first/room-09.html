@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Vermillion Dungeon - Bomb Switch</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Vermillion Dungeon - Bomb Switch</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">startProper</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 14000</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\..\char-img\main.sergey\SERIOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(SERIOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Further to the </span>
+                  <span class="color-c3">east</span>
+                  <span class="color-c0">! You need to reach the </span>
+                  <span class="color-c3">wall</span>
+                  <span class="color-c0">!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shredderLevel</b> to <i>55</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>14000</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">shreddersKilled</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.shredderKill &gt;= 2</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.respawns</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">newgame.sergey-hax &amp;&amp; tmp.respawns == 1</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\char-img\main.lea\INSANE_DOWN.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(INSANE_DOWN)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c1">...!</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\char-img\antagonists.designer\FROWN.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(FROWN)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\char-img\antagonists.designer\FROWN.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(FROWN)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">More!!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.shredderLevel</b> by <i>5</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.respawns &gt;= 2</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>sub <b>tmp.shredderKill</b> by <i>4</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.shrederKill &gt;= 8</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.shredderKill</b> to <i>8</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\..\step_style.css">
+    <script src="..\..\..\..\main.js" defer=""></script>
+    <title>Vermillion Tower - The Final Arena</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Vermillion Tower - The Final Arena</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">roundTalk</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.designer.talkStart &gt; tmp.designer.talkEnd</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.designer.talkStart == 2</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\LAUGH.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(LAUGH)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">You do not disappoint!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.designer.talkStart == 3</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\LAUGH.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(LAUGH)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">The player we desired!!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.designer.talkStart &gt;= 4 &amp;&amp; tmp.designer.talkStart &lt; 8</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\SMILE.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(SMILE)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...you prevailed!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.designer.talkStart &gt;= 8</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\LAUGH.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(LAUGH)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">The one worthy of the ultimate experience!!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.designer.talkEnd</b> to <i>{'varName': 'tmp.designer.talkStart'}</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">elementTalk</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.rageElement != tmp.rageElementTalk</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.rageElementTalk</b> to <i>{'varName': 'tmp.rageElement'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.rageElementTalk == 1</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\SHOUT.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(SHOUT)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Through swirls of burning fire...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.rageElementTalk == 2</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\DOWN_TALK.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(DOWN_TALK)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Through spikes of freezing ice...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.rageElementTalk == 3</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\CONDESCENDING.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(CONDESCENDING)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Through turrets of thunder...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.rageElementTalk == 4</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\TOWARD_TALK.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(TOWARD_TALK)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Through a barrage of vibrating bullets...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">start</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">newgame.sergey-hax</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\SMILE.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(SMILE)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">And this time we are prepared for your </span>
+                        <span class="color-c1">damage level</span>
+                        <span class="color-c0">!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\..\char-img\antagonists.designer\SMILE.png">
+                    <div class="char-name">
+                      <p class="char-name-text">antagonists.designer</p>
+                      <p class="char-name-expression">(SMILE)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">En garde!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">End</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.nextStage</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\LAUGH.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(LAUGH)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">The real experience begins now!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">High into the sky, we shall rise!!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\..\..\maps\arid-dng\second\f99\boss-2.html">arid-dng.second.f99.boss-2</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

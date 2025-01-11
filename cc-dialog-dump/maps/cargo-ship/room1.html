@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Cargo Ship - Cargo Hold 1</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Cargo Ship - Cargo Hold 1</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">hint1</span>
+        </p>
+        <p>Start condition: <span class="condition">map.hint1</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 11</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>11</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Oh yeah! Never mind the visor! I just need this to see what you're doing.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.sergey\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.sergey</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Do not worry about it for now. We will explain it to you later on.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">carla</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">plot.line &gt;= 10</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.carla (GLASS_WHISTLING) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.carla\GLASS_WHISTLING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.carla</p>
+                  <p class="char-name-expression">(GLASS_WHISTLING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Huh? Don't tell me you're already stuck?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Yes]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_COOL.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_COOL)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Gee, back to the basics.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_TOWARD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_TOWARD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Look, how about you try to jump over this container here?</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_GRIN)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">That cardboard box ain't there for no reason.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[No]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Right, then! Go on!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">plot.line &gt;= 11</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.carla (SMUG) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.carla\GLASS_SMILE.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.carla</p>
+                  <p class="char-name-expression">(GLASS_SMILE)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Need a hint?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Yes]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-IF">
+                      <div class="step-combined">
+                        <p>
+                          <span class="step-name">IF</span>
+                          <span class="condition">map.wall1</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_TOWARD.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_TOWARD)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">So, that wall ain't there anymore. You're free to pass.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_GRIN)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Now all that's left is some jumping over those containers.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <span class="step-name">ELSE</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_WHISTLING.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_WHISTLING)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">You need to find a way to remove this wall.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_GRIN)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Basic stuff, Lea. You'll need to throw balls at something. That's all I'm gonna say.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-IF">
+                            <div class="step-combined">
+                              <p>
+                                <span class="step-name">IF</span>
+                                <span class="condition">!map.vrpComment</span>
+                              </p>
+                              <div class="step-collection container">
+                                <div class="step event-step-CHANGE_VAR_NUMBER">
+                                  <div class="step-core">
+                                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                  </div>
+                                  <div class="step-data">
+                                    <p>set <b>map.vrpComment</b> to <i>1</i>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[No]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Right, then! Go on!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">plot.line &gt;= 12</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.carla (SMUG) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.carla\GLASS_DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.carla</p>
+                  <p class="char-name-expression">(GLASS_DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Need a hint?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Yes]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-IF">
+                      <div class="step-combined">
+                        <p>
+                          <span class="step-name">IF</span>
+                          <span class="condition">map.wall2</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Y'know, ball throwing is pretty much the solution to most obstacles around here.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_GRIN)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Those boxes here are no exception.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <span class="step-name">ELSE</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_WHISTLING.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_WHISTLING)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Well, ain't that just another stupid wall....</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_TOWARD.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_TOWARD)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">But the color is different this time. Maybe that means something, who knows?</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_SMILE.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_SMILE)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">I'm pretty sure you yourself can't pass it. But maybe something else can...?</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[No]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Right, then! Go on!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 4 [<span class="condition">plot.line &gt;= 13</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.carla (SMUG) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.carla\GLASS_UP_COOL.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.carla</p>
+                  <p class="char-name-expression">(GLASS_UP_COOL)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Well, would ya look at all those switches! Need a hint?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Yes]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-IF">
+                      <div class="step-combined">
+                        <p>
+                          <span class="step-name">IF</span>
+                          <span class="condition">!map.door1</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_NERVOUS.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_NERVOUS)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Yeah, that switch is pretty well hidden, huh?</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_SMILE.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_SMILE)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Remember those charged balls? Those bounce on walls, y'know?</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="step event-step-SHOW_MSG">
+                            <div class="step-core">
+                              <p class="step-name">SHOW_MSG</p>
+                              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                              <div class="char-name">
+                                <p class="char-name-text">main.carla</p>
+                                <p class="char-name-expression">(GLASS_GRIN)</p>
+                              </div>
+                            </div>
+                            <div class="step-data">
+                              <div class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">I'm sure those will help ya out here.</span>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <p>
+                          <span class="step-name">ELSE</span>
+                        </p>
+                        <div class="step-collection container">
+                          <div class="step event-step-IF">
+                            <div class="step-combined">
+                              <p>
+                                <span class="step-name">IF</span>
+                                <span class="condition">!map.door2 || !map.door3</span>
+                              </p>
+                              <div class="step-collection container">
+                                <div class="step event-step-IF">
+                                  <div class="step-combined">
+                                    <p>
+                                      <span class="step-name">IF</span>
+                                      <span class="condition">!map.door2</span>
+                                    </p>
+                                    <div class="step-collection container"></div>
+                                    <p>
+                                      <span class="step-name">ELSE</span>
+                                    </p>
+                                    <div class="step-collection container"></div>
+                                  </div>
+                                </div>
+                                <div class="step event-step-SHOW_MSG">
+                                  <div class="step-core">
+                                    <p class="step-name">SHOW_MSG</p>
+                                    <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                                    <div class="char-name">
+                                      <p class="char-name-text">main.carla</p>
+                                      <p class="char-name-expression">(GLASS_GRIN)</p>
+                                    </div>
+                                  </div>
+                                  <div class="step-data">
+                                    <div class="textbox">
+                                      <span class="text-langlabel">
+                                        <span class="color-c0">See those switches on the containers? Yes, you can hit those. From a distance, that is!</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="step event-step-SHOW_MSG">
+                                  <div class="step-core">
+                                    <p class="step-name">SHOW_MSG</p>
+                                    <img src="..\..\char-img\main.carla\GLASS_TOWARD.png">
+                                    <div class="char-name">
+                                      <p class="char-name-text">main.carla</p>
+                                      <p class="char-name-expression">(GLASS_TOWARD)</p>
+                                    </div>
+                                  </div>
+                                  <div class="step-data">
+                                    <div class="textbox">
+                                      <span class="text-langlabel">
+                                        <span class="color-c0">Just make sure you throw the balls from the same height.</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <p>
+                                <span class="step-name">ELSE</span>
+                              </p>
+                              <div class="step-collection container">
+                                <div class="step event-step-SHOW_MSG">
+                                  <div class="step-core">
+                                    <p class="step-name">SHOW_MSG</p>
+                                    <img src="..\..\char-img\main.carla\GLASS_ANGRY.png">
+                                    <div class="char-name">
+                                      <p class="char-name-text">main.carla</p>
+                                      <p class="char-name-expression">(GLASS_ANGRY)</p>
+                                    </div>
+                                  </div>
+                                  <div class="step-data">
+                                    <div class="textbox">
+                                      <span class="text-langlabel">
+                                        <span class="color-c0">Really? You can't figure this one out?</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="step event-step-SHOW_MSG">
+                                  <div class="step-core">
+                                    <p class="step-name">SHOW_MSG</p>
+                                    <img src="..\..\char-img\main.carla\GLASS_WHISTLING.png">
+                                    <div class="char-name">
+                                      <p class="char-name-text">main.carla</p>
+                                      <p class="char-name-expression">(GLASS_WHISTLING)</p>
+                                    </div>
+                                  </div>
+                                  <div class="step-data">
+                                    <div class="textbox">
+                                      <span class="text-langlabel">
+                                        <span class="color-c0">Just jump over the boxes and hit that thing hard. That's all, really.</span>
+                                      </span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[No]</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.carla</p>
+                          <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Right, then! Go on! You're almost there!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 5 [<span class="condition">plot.line &gt;= 14</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.carla (GRIN) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (PROUD) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.carla</p>
+                  <p class="char-name-expression">(GLASS_GRIN)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">That's all for this room! Nice work, girl!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">intro</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 10</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SET_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Reach the exit!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>10</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.carla (UP_GRIN) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_UP_GRIN.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_UP_GRIN)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Alright! Let's get started!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Your task is to reach the door at the other end of this room.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_GRIN)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And don't mind me! I'll just stick around and keep an eye on ya.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_UP_COOL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_UP_COOL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well... I might give you some hints. If you ask nicely, y'know?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\NERVOUS.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(NERVOUS)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-Door">
+        <p>
+          <span class="entity-type">Door</span>: <span class="entity-name">endDoor</span>
+        </p>
+        <p>Block condition: <span class="condition">plot.line&gt;= 700 &amp;&amp; plot.line &lt; 15000</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.carla (GLASS_ANGRY) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (SURPRISED_AWAY) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_ANGRY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_ANGRY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Wrong direction, girl.
+Gotta reach the teleporter!
+</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">ShreddersGo</span>
+        </p>
+        <p>Start condition: <span class="condition">plot.line &gt;= 700 &amp;&amp; tmp.shreddersStart</span>
+          <br>End condition: <span class="condition">tmp.shreddersSpawned || plot.line &gt;= 15000</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shreddersSpawned</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.carla (GLASS_ANGRY) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (SHOCKED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_ANGRY.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_ANGRY)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Damn, how're we gonna pass this one?!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">newgame.sergey-hax </span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.carla\GLASS_COOL.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.carla</p>
+                      <p class="char-name-expression">(GLASS_COOL)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Actually, never mind. You can just go ahead and </span>
+                        <span class="color-c3">snipe it away</span>
+                        <span class="color-c0">.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.lea\INSANE_DOWN.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(INSANE_DOWN)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.carla\GLASS_UP.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.carla</p>
+                      <p class="char-name-expression">(GLASS_UP)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">But I'm still gonna do my resourceful instant matter building, don't mind me.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.carla\GLASS_WHISTLING.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.carla</p>
+                      <p class="char-name-expression">(GLASS_WHISTLING)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Wait, I got an idea!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.carlaDoesStuff</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">Carla does Stuff</span>
+        </p>
+        <p>Start condition: <span class="condition">map.carlaDoesStuff</span>
+          <br>End condition: <span class="condition">map.carlaProp2</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.carlaProp1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.carla\GLASS_GRIN.png">
+              <div class="char-name">
+                <p class="char-name-text">main.carla</p>
+                <p class="char-name-expression">(GLASS_GRIN)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Carla, Instant Matter builder, at your service.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.carlaProp2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">defeatShredder</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.shredderKill &gt;= 1</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.lea\INSANE_DOWN.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(INSANE_DOWN)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c1">...!!</span>
+                  <span class="color-c0"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\antagonists.designer\DOWN_TALK_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(DOWN_TALK_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Damn you.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

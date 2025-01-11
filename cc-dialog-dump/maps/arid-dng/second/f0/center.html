@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\..\step_style.css">
+    <script src="..\..\..\..\main.js" defer=""></script>
+    <title>Vermillion Tower - Center Elevator GF</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Vermillion Tower - Center Elevator GF</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">Battle Start</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.battleStart</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barrier</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.metaSpace</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">You feel like you've seen this place before...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MODAL_CHOICE">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MODAL_CHOICE</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Do you want to skip through the dungeon?</span>
+                      </span>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 0</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Yes</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.skip</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>map.elevator</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>map.elevatorSign</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floor0</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floor1</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floor2</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floor3</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floor4</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>g.last-dng.floorEnd</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.barrier</b> to <i>False</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>end</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 1</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">No</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.wave1</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.wave1</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.wave1</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.wave1</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">Battle End</span>
+        </p>
+        <p>Start condition: <span class="condition">map.preDone </span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.designer</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added antagonists.designer (DEFAULT_AR) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\DEFAULT_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(DEFAULT_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We seek the ultimate experience.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\DOWN_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(DOWN_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">That is why we create.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\TOWARD_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(TOWARD_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Vast forests, majestic mountains, mysterious caves...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\CONDESCENDING_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(CONDESCENDING_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Any place that can harbor a story and nourish a memory.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\..\char-img\antagonists.designer\DOWN_AR.png">
+              <div class="char-name">
+                <p class="char-name-text">antagonists.designer</p>
+                <p class="char-name-expression">(DOWN_AR)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">We created it all.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.designer</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.elevator</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.elevatorSign</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>g.last-dng.floor0</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>g.last-dng.floor1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barrier</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

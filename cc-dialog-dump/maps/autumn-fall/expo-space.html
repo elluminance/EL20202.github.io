@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Fall - autumn-fall.expo-space</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Fall - autumn-fall.expo-space</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">gotThatFrobbit</span>
+        </p>
+        <p>Start condition: <span class="condition">quest.daft-frobbit.task.5</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Traveler, envoy of change,
+you have mastered the trial of these fields.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I will bestow upon you the Shade
+to open the passage to the north.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Let your every step
+form the path of your growth.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>7100</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\rookie-harbor\expo-space.html">rookie-harbor.expo-space</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">GetThatQuest</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">quest.daft-frobbit.task.5</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">quest.daft-frobbit.started</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Go catch that Frobbit!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Your journey has taken you across
+these signs of prosperity long passed.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Seeking your next destination
+in the wilderness to the north...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">... you must first accomplish
+the </span>
+                        <span class="color-c3">trial of these fields</span>
+                        <span class="color-c0">.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Pursue the path 
+of the </span>
+                        <span class="color-c3">luminous creature</span>
+                        <span class="color-c0">...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...and prove your mastery
+of the elements acquired.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Traveler, envoy of change,
+will you accept this trial?</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\maps\autumn-fall\path-04.html">autumn-fall.path-04</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

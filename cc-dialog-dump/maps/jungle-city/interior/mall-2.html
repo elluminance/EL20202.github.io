@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Basin Keep - Corner Mall</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Basin Keep - Corner Mall</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">shop-item</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">        </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added basin.male-brown (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\maleNormalHair1\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">basin.male-brown</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hello, \v[lore.title.seeker]. Need some equipment on this rainy day?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name"></span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">    </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added basin.female-umbrella (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femaleLongHair1\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">basin.female-umbrella</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I'm sorry dear customer, but Umbrella Inc. is currently experiencing a ... sort of outbreak.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\main.lea\SURPRISED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\femaleLongHair1\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">basin.female-umbrella</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">In order to avoid any residents from getting inf... from having a bad time, we have closed off access to the third floor.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">p-1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Which one to take...</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Are you going to be done anytime soon?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">We spent like 30 minutes here, just take the stronger one.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">But the stronger one looks worse...</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">What are you talking about? You know equipment doesn't change your appearance.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">But why does it look different in the shelf then?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">p-2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Because it's more fancy? What do I know.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

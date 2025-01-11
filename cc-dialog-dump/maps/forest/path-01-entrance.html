@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Western Exit</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Western Exit</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">intro</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 19100</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.pos.x &lt; 200</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.lea (ASTONISHED) to side LEFT</p>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_MSG</p>
+                    <img src="..\..\char-img\main.lea\ASTONISHED.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(ASTONISHED)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">...!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">party.has.Apollo</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added antagonists.fancyguy (CONTENT) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\antagonists.fancyguy\CONTENT.png">
+                          <div class="char-name">
+                            <p class="char-name-text">antagonists.fancyguy</p>
+                            <p class="char-name-expression">(CONTENT)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">We finally set foot in </span>
+                              <span class="color-c3">Sapphire Ridge</span>
+                              <span class="color-c0">!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\antagonists.fancyguy\SHOUTING.png">
+                          <div class="char-name">
+                            <p class="char-name-text">antagonists.fancyguy</p>
+                            <p class="char-name-expression">(SHOUTING)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">A mysterious land covered in an eternal shadow!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">party.has.Joern</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-ADD_MSG_PERSON">
+                              <div class="step-core">
+                                <p class="step-name">ADD_MSG_PERSON</p>
+                              </div>
+                              <div class="step-data">
+                                <p>Added antagonists.sidekick (DEFAULT) to side LEFT</p>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\antagonists.sidekick\DEFAULT.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">antagonists.sidekick</p>
+                                  <p class="char-name-expression">(DEFAULT)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Very spooky.</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">party.has.Glasses</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-ADD_MSG_PERSON">
+                              <div class="step-core">
+                                <p class="step-name">ADD_MSG_PERSON</p>
+                              </div>
+                              <div class="step-data">
+                                <p>Added main.glasses (SMILE) to side LEFT</p>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.glasses\SMILE.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(SMILE)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Oh! This must be </span>
+                                    <span class="color-c3">Sapphire Ridge</span>
+                                    <span class="color-c0">!</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.glasses\EMBARRASSED.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(EMBARRASSED)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">A very mysterious place, huh?</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.glasses\THOUGHTFUL.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(THOUGHTFUL)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Apparently, around here, it's night all day long.</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.glasses\WORRIED.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(WORRIED)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">...</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.glasses\EXHAUSTED.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(EXHAUSTED)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Let's just ignore all the implications that would have on the ecosystem.</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">party.has.Emilie</span>
+                                </p>
+                                <div class="step-collection container">
+                                  <div class="step event-step-ADD_MSG_PERSON">
+                                    <div class="step-core">
+                                      <p class="step-name">ADD_MSG_PERSON</p>
+                                    </div>
+                                    <div class="step-data">
+                                      <p>Added main.emilie (WATCH_OUT_BADASS) to side LEFT</p>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_MSG</p>
+                                      <img src="..\..\char-img\main.emilie\WATCH_OUT_BADASS.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">main.emilie</p>
+                                        <p class="char-name-expression">(WATCH_OUT_BADASS)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">Oui. Don't think too much about it, you little nerd.</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="step-name">ELSE</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">party.has.Joern</span>
+                                </p>
+                                <div class="step-collection container">
+                                  <div class="step event-step-ADD_MSG_PERSON">
+                                    <div class="step-core">
+                                      <p class="step-name">ADD_MSG_PERSON</p>
+                                    </div>
+                                    <div class="step-data">
+                                      <p>Added antagonists.sidekick (UP) to side LEFT</p>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_MSG</p>
+                                      <img src="..\..\char-img\antagonists.sidekick\UP.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">antagonists.sidekick</p>
+                                        <p class="char-name-expression">(UP)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">This is </span>
+                                          <span class="color-c3">Sapphire Ridge</span>
+                                          <span class="color-c0">, right?</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_MSG</p>
+                                      <img src="..\..\char-img\main.lea\NOD.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">main.lea</p>
+                                        <p class="char-name-expression">(NOD)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">[nods]</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_MSG</p>
+                                      <img src="..\..\char-img\antagonists.sidekick\SMILE.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">antagonists.sidekick</p>
+                                        <p class="char-name-expression">(SMILE)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">Pretty. I like those lanterns.</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p>
+                                  <span class="step-name">ELSE</span>
+                                </p>
+                                <div class="step-collection container">
+                                  <div class="step event-step-IF">
+                                    <div class="step-combined">
+                                      <p>
+                                        <span class="step-name">IF</span>
+                                        <span class="condition">party.has.Emilie</span>
+                                      </p>
+                                      <div class="step-collection container">
+                                        <div class="step event-step-ADD_MSG_PERSON">
+                                          <div class="step-core">
+                                            <p class="step-name">ADD_MSG_PERSON</p>
+                                          </div>
+                                          <div class="step-data">
+                                            <p>Added main.emilie (ASTONISHED) to side LEFT</p>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.emilie\ASTONISHED.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.emilie</p>
+                                              <p class="char-name-expression">(ASTONISHED)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">Oh! So dark and shiny!</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.emilie\AWAY.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.emilie</p>
+                                              <p class="char-name-expression">(AWAY)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">So that's </span>
+                                                <span class="color-c3">Sapphire Ridge</span>
+                                                <span class="color-c0">, non? I think I like this area.</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <p>
+                                        <span class="step-name">ELSE</span>
+                                      </p>
+                                      <div class="step-collection container">
+                                        <div class="step event-step-ADD_MSG_PERSON">
+                                          <div class="step-core">
+                                            <p class="step-name">ADD_MSG_PERSON</p>
+                                          </div>
+                                          <div class="step-data">
+                                            <p>Added main.sergey (DEFAULT) to side LEFT</p>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.sergey\DEFAULT.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.sergey</p>
+                                              <p class="char-name-expression">(DEFAULT)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">Here we are. </span>
+                                                <span class="color-c3">Sapphire Ridge</span>
+                                                <span class="color-c0">.</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.sergey\NOTIFYING.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.sergey</p>
+                                              <p class="char-name-expression">(NOTIFYING)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">So... is it like the area you saw in your dreams?</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.lea\NOD.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.lea</p>
+                                              <p class="char-name-expression">(NOD)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">[nods]</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="step event-step-SHOW_MSG">
+                                          <div class="step-core">
+                                            <p class="step-name">SHOW_MSG</p>
+                                            <img src="..\..\char-img\main.sergey\SMILE.png">
+                                            <div class="char-name">
+                                              <p class="char-name-text">main.sergey</p>
+                                              <p class="char-name-expression">(SMILE)</p>
+                                            </div>
+                                          </div>
+                                          <div class="step-data">
+                                            <div class="textbox">
+                                              <span class="text-langlabel">
+                                                <span class="color-c0">Great! Let us have a look around then.</span>
+                                              </span>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CLEAR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">CLEAR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <p>From side <i>ALL</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">party.has.Emilie</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.emilie (SUSPICIOUS) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SUSPICIOUS.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SUSPICIOUS)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Wait...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SWEATY_SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">What... what's that over there?</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CLEAR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">CLEAR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <p>From side <i>ALL</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.emilie (SWEATY_SMILE) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SWEATY_SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SWEATY_SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Please... please don't tell me it's what I think it is.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CLEAR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">CLEAR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <p>From side <i>ALL</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.emilieBugSaga</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.emilieThere</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.emilie (BROKEN) to side RIGHT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\BROKEN.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(BROKEN)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Lea... ch&#233;rie...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.lea (SURPRISED) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.lea\SURPRISED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.lea</p>
+                            <p class="char-name-expression">(SURPRISED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Hi?</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\BROKEN.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(BROKEN)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">This... this area is killing me.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.lea\NERVOUS.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.lea</p>
+                            <p class="char-name-expression">(NERVOUS)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Why?</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\EXHAUSTED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(EXHAUSTED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">L-Look over there.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CLEAR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">CLEAR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <p>From side <i>ALL</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.emilie (SWEATY_SMILE) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\BROKEN.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(BROKEN)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">They... They're everywhere!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\PAIN.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(PAIN)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">It's like they wanted to make up for the total lack of bugs in the jungle.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CLEAR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">CLEAR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <p>From side <i>ALL</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.emilie (SWEATY_SMILE) to side RIGHT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-ADD_MSG_PERSON">
+                        <div class="step-core">
+                          <p class="step-name">ADD_MSG_PERSON</p>
+                        </div>
+                        <div class="step-data">
+                          <p>Added main.lea (DEFAULT) to side LEFT</p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SWEATY_SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">I don't suppose you have a free slot in your party, non?</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">newgame.sergey-hax</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_MSG</p>
+                                <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.emilie</p>
+                                  <p class="char-name-expression">(SWEATY_SMILE)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">I'd appreciate it a lot if you could just </span>
+                                    <span class="color-c1">snipe away</span>
+                                    <span class="color-c0"> those bugs real quick before they get too close.</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.lea</p>
+                            <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\EMBARRASSED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(EMBARRASSED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Ah... please don't feel pressured though.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SUSPICIOUS.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SUSPICIOUS)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Oui, I'm sure I can take it by myself as well.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\EXHAUSTED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(EXHAUSTED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">I'll just need to mentally prepare myself.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(SWEATY_SMILE)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">You'll find me somewhere around cows and Hedgehags....</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.lea\NERVOUS.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.lea</p>
+                            <p class="char-name-expression">(NERVOUS)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.emilie\DEFAULT.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.emilie</p>
+                            <p class="char-name-expression">(DEFAULT)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Au revoir! And you know how to reach me!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MSG</p>
+                          <img src="..\..\char-img\main.lea\DEFAULT.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.lea</p>
+                            <p class="char-name-expression">(DEFAULT)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Bye!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-CLEAR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">CLEAR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <p>From side <i>ALL</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.emilieGone</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">party.has.Glasses</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_SIDE_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_SIDE_MSG</p>
+                                <img src="..\..\char-img\main.glasses\EXHAUSTED.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.glasses</p>
+                                  <p class="char-name-expression">(EXHAUSTED)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Poor Emilie... You sure you don't want her to join the party?</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">party.has.Apollo</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_SIDE_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_SIDE_MSG</p>
+                                <img src="..\..\char-img\antagonists.fancyguy\PONDERING.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">antagonists.fancyguy</p>
+                                  <p class="char-name-expression">(PONDERING)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Wait! The Pentafist girl is afraid of bugs?</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_SIDE_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_SIDE_MSG</p>
+                                <img src="..\..\char-img\main.lea\NOD.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">main.lea</p>
+                                  <p class="char-name-expression">(NOD)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">[nods]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SHOW_SIDE_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_SIDE_MSG</p>
+                                <img src="..\..\char-img\antagonists.fancyguy\SUSPICIOUS.png">
+                                <div class="char-name">
+                                  <p class="char-name-text">antagonists.fancyguy</p>
+                                  <p class="char-name-expression">(SUSPICIOUS)</p>
+                                </div>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Oh. That is... unfortunate.</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p>
+                            <span class="step-name">ELSE</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">party.has.Joern</span>
+                                </p>
+                                <div class="step-collection container">
+                                  <div class="step event-step-SHOW_SIDE_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_SIDE_MSG</p>
+                                      <img src="..\..\char-img\antagonists.sidekick\SURPRISED.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">antagonists.sidekick</p>
+                                        <p class="char-name-expression">(SURPRISED)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">She's not very fond of bugs, hm?</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_SIDE_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_SIDE_MSG</p>
+                                      <img src="..\..\char-img\main.lea\NOD.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">main.lea</p>
+                                        <p class="char-name-expression">(NOD)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">[nods]</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="step event-step-SHOW_SIDE_MSG">
+                                    <div class="step-core">
+                                      <p class="step-name">SHOW_SIDE_MSG</p>
+                                      <img src="..\..\char-img\antagonists.sidekick\ANGRY.png">
+                                      <div class="char-name">
+                                        <p class="char-name-text">antagonists.sidekick</p>
+                                        <p class="char-name-expression">(ANGRY)</p>
+                                      </div>
+                                    </div>
+                                    <div class="step-data">
+                                      <div class="textbox">
+                                        <span class="text-langlabel">
+                                          <span class="color-c0">Understandably. Bugs are disgusting.</span>
+                                        </span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>19100</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name"></span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.emilieBugSaga</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.emilie\SWEATY_SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(SWEATY_SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Please... just... just leave it alone. Let's just ignore it and go on. Quickly. Please.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">finalFound</span>
+        </p>
+        <p>Start condition: <span class="condition">map.finalBug</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.bugGone</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.showGoldenBug</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Well done Seeker... </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...You have completed the </span>
+                  <span class="color-c3">Trial of Agility</span>
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Take this token as a sign of your victory...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.showGoldenBug2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">d1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">...so no traders here.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">d2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Well, it makes sense. Not like this path is large enough, anyway.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">d3</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">And the Inn also is cozy as hell.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">d2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">That, too.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">puella</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">plot.line &gt;= 19200</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guests.puella-docta (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Oh, hey there, Spheromancer!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Did you see our post on the quest board?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Woo, finally!! Thank goodness!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Oh yeah, I'm </span>
+                    <span class="color-c3">PuellaDocta</span>
+                    <span class="color-c0"> by the way!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guests.puella-docta (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Lea!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Nice to meet you, Lea!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Okay, down to business!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added guests.puella-docta (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">On behalf of the </span>
+                    <span class="color-c3">Last Minute Heroes</span>
+                    <span class="color-c0"> guild...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...we eagerly welcome your punctuality and willingness to join our cause and serve your fellow player!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Never heard of us, huh? Oh well!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">In any case, we're in a tight spot and looking for some extra help.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\guests.puella-docta\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">guests.puella-docta</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It'll mostly involve </span>
+                    <span class="color-c3">fighting a few monsters here in Sapphire Ridge</span>
+                    <span class="color-c0">. What do you say?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name">patchDiag</span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc3</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Man! We've been sitting here quite a while. This place is pretty serene.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Yeah... but does something seem different now? Like was that flower there before?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc3</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Which one? Maybe there's been a patch recently...</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Something feels off. What if WE were just patched in? We wouldn't even remember it!</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Of course not. That would be silly.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">patchNpc2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Ha! Bet you were hot-fixed to say that!</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

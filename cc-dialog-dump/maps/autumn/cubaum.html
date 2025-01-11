@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Rise - Normal Clearing</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Rise - Normal Clearing</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name"></span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">!tmp.questBall-start</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.triblader-male-blond (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.triblader-male-blond</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Apparently some hacker hid items in this area. </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.triblader-male-blond</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">So everyone is looking for them right now.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BarrierBlock</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.barrierBlock</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">Access denied</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.barrierBlock</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name"></span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.triblader-male-black (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Yo, what's up?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">item.230.amount &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">I see you got the </span>
+                          <span class="color-c3">\v[item.230.name]</span>
+                          <span class="color-c0"> with you! Nice, nice!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Well then, good luck on your journey!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">If you want to pass this barrier you first have to collect the </span>
+                          <span class="color-c3">\v[item.230.name]</span>
+                          <span class="color-c0">.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">You get it at the end of the </span>
+                          <span class="color-c3">Faj'ro Temple</span>
+                          <span class="color-c0">, right after the boss battle.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">In case you already beat the boss, just go to the final room and fetch your reward. It should still be there!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">questBall-camera</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.questBall-start &amp;&amp; tmp.questBall-onMarkChange </span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.questBall-onMark</span>
+              </p>
+              <div class="step-collection container"></div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-markerActive == 1</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.questBall-afterScene</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-GREEN">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-markerActive == 2</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.questBall-afterScene</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-GREEN">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-markerActive == 3</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.questBall-afterScene</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-GREEN">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-markerActive == 4</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.questBall-afterScene</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-GREEN">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-markerActive == 5</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.questBall-afterScene</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SHOW_AR_MSG">
+                              <div class="step-core">
+                                <p class="step-name">SHOW_AR_MSG</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox textbox-small ar-box-color-GREEN">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.questBall-afterScene</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.questBall-onMarkChange</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">questBall-dude</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.fd-3-ball_egg_1.task.2</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hi!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Great, there you are again. About time we finished this task, I would say.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">This time, all the energy signals can be found around that lonely tree there.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Weird coincidence that, considering there's nothing really special about the tree itself...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\NOD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(NOD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">[nods]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Though it seems to be rather unstable and fluctuating this time. You should keep an eye on that.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">In any case, knocking our probe onto the Powerspots as before and clearing hostiles should do the trick.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\PROUD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(PROUD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I am ready whenever you are. Just give me the signal, \v[lore.title.seeker].</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">quest.fd-3-ball_egg_1.task.3</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.questBall-rotationTime</b> to <i>25</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">adventurers.male-bald-white</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ready to finish this up, \v[lore.title.seeker]?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-LABEL">
+              <div class="step-core">
+                <p class="step-name">LABEL</p>
+              </div>
+              <div class="step-data">
+                <p>choice</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Yes</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>test</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Alright, then let me start this thing up!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>test</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>map.questBall-marker</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.questBall-markerActive</b> to <i>1</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.questBall-returnPointPlayer</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Probe has booted. Prepare for the first point to appear.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.questBall-start</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_AR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_AR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox textbox-small ar-box-color-GREEN">
+                          <span class="text-langlabel">
+                            <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Alright, just like before. Knock our device onto the Powerspot and then defeat all the enemies that might appear!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-ADD_MSG_PERSON">
+                      <div class="step-core">
+                        <p class="step-name">ADD_MSG_PERSON</p>
+                      </div>
+                      <div class="step-data">
+                        <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Just remember what I told you about the unstable energy fluctuation.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Be prepared to readjust the probe during the operation in case the Powerspots move around.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\NOD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(NOD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[nods]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SET_TASK">
+                      <div class="step-core">
+                        <p class="step-name">SET_TASK</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Knock the </span>
+                            <span class="color-c3">Probe</span>
+                            <span class="color-c0"> on the </span>
+                            <span class="color-c3">Powerpoints</span>
+                            <span class="color-c0">.
+</span>
+                            <span class="color-c3">Heat</span>
+                            <span class="color-c0">: More knockback
+</span>
+                            <span class="color-c3">Cold</span>
+                            <span class="color-c0">: Stabilize</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CLEAR_MSG">
+                      <div class="step-core">
+                        <p class="step-name">CLEAR_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <p>From side <i>ALL</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.questBall-afterScene</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.questBall-onMarkChange</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">No</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SHAKE.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SHAKE)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">[shakes head]</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Alright, come back when you feel fresh and ready.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 2</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Repeat Instructions</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SURPRISED_AWAY.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SURPRISED_AWAY)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">How?</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">You need me to refresh your memory again? Alright then...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">You need to </span>
+                            <span class="color-c3">push this device around</span>
+                            <span class="color-c0"> and move it onto certain spots of power in this area, short </span>
+                            <span class="color-c3">Powerspots</span>
+                            <span class="color-c0">.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">You can </span>
+                            <span class="color-c3">move</span>
+                            <span class="color-c0"> it by </span>
+                            <span class="color-c3">attacking</span>
+                            <span class="color-c0">. Using </span>
+                            <span class="color-c3">Heat</span>
+                            <span class="color-c0"> will greatly increase the distance and velocity.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Approaching a Powerspot will usually attract some </span>
+                            <span class="color-c3">hostile wildlife</span>
+                            <span class="color-c0"> that will protect those places.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">The Powerspots will grant them a </span>
+                            <span class="color-c3">shield</span>
+                            <span class="color-c0"> that is almost impenetrable, meaning invincible enemies.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"></span>
+                            <span class="color-c3">Placing the probe on an active Powerspot</span>
+                            <span class="color-c0"> will </span>
+                            <span class="color-c3">deactivate the shield</span>
+                            <span class="color-c0">, though, so that's a priority!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Make sure it doesn't get knocked away again. Hitting it with </span>
+                            <span class="color-c3">Cold</span>
+                            <span class="color-c0"> will </span>
+                            <span class="color-c3">stabilize</span>
+                            <span class="color-c0"> it for a bit which should help.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                        <div class="char-name">
+                          <p class="char-name-text">main.lea</p>
+                          <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_MSG</p>
+                        <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+                        <div class="char-name">
+                          <p class="char-name-text">adventurers.male-bald-white</p>
+                          <p class="char-name-expression">(DEFAULT)</p>
+                        </div>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">I hope you got it now, \v[lore.title.seeker].</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>choice</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">questBall-rotateMarker</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.questBall-start &amp;&amp; tmp.questBall-wave1</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.questBall-start</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Powerspot unstable]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.questBall-start</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.questBall-markerBefore</b> to <i>{'varName': 'tmp.questBall-markerActive'}</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-SELECT_RANDOM">
+                        <div class="step-core">
+                          <p class="step-name">SELECT_RANDOM</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="random-option">
+                            <p>Option 0 [condition: <span class="condition">(tmp.questBall-markerActive != 1) &amp;amp;&amp;amp; (tmp.questBall-markerBefore != 1)</span>]</p>
+                            <p>Option 0.0</p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>tmp.questBall-markerActive</b> to <i>1</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_AR_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_AR_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox textbox-small ar-box-color-GREEN">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="random-option">
+                            <p>Option 1 [condition: <span class="condition">(tmp.questBall-markerActive != 2) &amp;amp;&amp;amp; (tmp.questBall-markerBefore != 2)</span>]</p>
+                            <p>Option 1.0</p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>tmp.questBall-markerActive</b> to <i>2</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_AR_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_AR_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox textbox-small ar-box-color-GREEN">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="random-option">
+                            <p>Option 2 [condition: <span class="condition">(tmp.questBall-markerActive != 3) &amp;amp;&amp;amp; (tmp.questBall-markerBefore != 3)</span>]</p>
+                            <p>Option 2.0</p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>tmp.questBall-markerActive</b> to <i>3</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_AR_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_AR_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox textbox-small ar-box-color-GREEN">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="random-option">
+                            <p>Option 3 [condition: <span class="condition">(tmp.questBall-markerActive != 4) &amp;amp;&amp;amp; (tmp.questBall-markerBefore != 4)</span>]</p>
+                            <p>Option 3.0</p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>tmp.questBall-markerActive</b> to <i>4</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_AR_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_AR_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox textbox-small ar-box-color-GREEN">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="random-option">
+                            <p>Option 4 [condition: <span class="condition">(tmp.questBall-markerActive != 5) &amp;amp;&amp;amp; (tmp.questBall-markerBefore != 5)</span>]</p>
+                            <p>Option 4.0</p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>tmp.questBall-markerActive</b> to <i>5</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_AR_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_AR_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox textbox-small ar-box-color-GREEN">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">\v[tmp.questBall-markerText]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">questBall-fightEnd</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.questBall-start &amp;&amp; tmp.questBall-fightCount &gt;= 13</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.questBall-marker</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.questBall-markerActive</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.questBall-start</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added adventurers.male-bald-white (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">adventurers.male-bald-white</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Seems like you're done. Everything's clear. For real this time. Finally.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\WHISTLING.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(WHISTLING)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">adventurers.male-bald-white</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I'm gonna skip further fanfare. Our probe needs to get back to HQ and I need sleep.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\maleAdventurerBald\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">adventurers.male-bald-white</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Talk to our leader for rewards, you know the drill. Now excuse me, I gotta get going.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SMILE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SMILE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...bye.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">emilie-comment</span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Emilie</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.emilie\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">main.emilie</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">What a nice and regular laser bridge!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

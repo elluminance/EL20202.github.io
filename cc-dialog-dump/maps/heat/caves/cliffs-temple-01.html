@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Maroon Valley - Bone Lair</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Maroon Valley - Bone Lair</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">firstEntrance</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">party.has.Emilie</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\..\char-img\main.emilie\SUSPICIOUS.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.emilie</p>
+                      <p class="char-name-expression">(SUSPICIOUS)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Another instanced cave...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">party.has.Glasses</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_SIDE_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_SIDE_MSG</p>
+                          <img src="..\..\..\char-img\main.glasses\EMBARRASSED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.glasses</p>
+                            <p class="char-name-expression">(EMBARRASSED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">I'm really bad at those...</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">party.has.Glasses</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_SIDE_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_SIDE_MSG</p>
+                          <img src="..\..\..\char-img\main.glasses\EMBARRASSED.png">
+                          <div class="char-name">
+                            <p class="char-name-text">main.glasses</p>
+                            <p class="char-name-expression">(EMBARRASSED)</p>
+                          </div>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">I'm really bad at these instanced challenges.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Fallback - cargo-ship.puzzle-challenge</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Fallback - cargo-ship.puzzle-challenge</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">entermap</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">map.entered</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_CENTER_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_CENTER_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Thanks!</span>
+                </span>
+              </div>
+              <hr>
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Thanks a lot for completing this tech demo of CrossCode!
+If you like what you saw, please tell your friends!
+We'd like to get word around! :D
+Also, follow us on Facebook and Twitter!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_CENTER_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_CENTER_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">The final challenge!</span>
+                </span>
+              </div>
+              <hr>
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Wait, we're not done yet!
+From here on we have a small challenge for you to master, if you like to bash some more enemies. 
+Have fun!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.entered</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

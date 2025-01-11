@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Maroon Valley - Toisecave</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Maroon Valley - Toisecave</h1>
+      <div class="container entity entity-Prop">
+        <p>
+          <span class="entity-type">Prop</span>: <span class="entity-name"></span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>choice</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_CHOICE">
+            <div class="step-core">
+              <p class="step-name">SHOW_CHOICE</p>
+              <img src="..\..\..\char-img\main.lea\DEFAULT.png">
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 0</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Information and manual</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-LABEL">
+                    <div class="step-core">
+                      <p class="step-name">LABEL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>info</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Thank you for deciding to use the </span>
+                          <span class="color-c3">\v[combat.name.heat/special/kamikatze-helper]</span>
+                          <span class="color-c0">, the ideal choice for mining, demolition, pest-control and passionate festivities!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">This highly-advanced machine is programmed to follow its user after activation and dispenses explosive devices (also known as </span>
+                          <span class="color-c3">"bombs"</span>
+                          <span class="color-c0">) after being hit with a </span>
+                          <span class="color-c3">charged range attack</span>
+                          <span class="color-c0">.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">When reloading and generally not dispensing "bombs" it will try to evade the movements of its user with highly refined movement algorithms.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">It can be manually deactivated again at this console or it will automatically return to the idle-state when the user leaves the space of operation (for example: a cave).</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">WARNING: Keep stored in dry and cool locations. Should only be used by trained personnel. Keep far away from children and dogs.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-GOTO_LABEL">
+                    <div class="step-core">
+                      <p class="step-name">GOTO_LABEL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>choice</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 1</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Activate \v[combat.name.heat/special/kamikatze-helper]</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">tmp.helperReturning</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">\v[combat.name.heat/special/kamikatze-helper] not at station!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>choice</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="step-name">ELSE</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>map.helperActive</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">quest.nomadAdv-1-turtle_bombing_1.task.1</span>
+                            </p>
+                            <div class="step-collection container"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 2</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Deactivate \v[combat.name.heat/special/kamikatze-helper]</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.exit</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 3</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Cancel</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

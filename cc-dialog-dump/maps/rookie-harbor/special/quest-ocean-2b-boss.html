@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Rookie Harbor - Ocean Patrol Boss</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Rookie Harbor - Ocean Patrol Boss</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">intro</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.fail</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.respawnCounterGoal</b> to <i>10</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bossFight</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.upgradedTurret</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.vertical</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.elementsShockWave</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.turret1Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.turret2Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.turret3Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.turret4Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.suicider1Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.suicider2Free</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.enemyLastSpawn</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.helperPlatforms</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.introMove</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ Big Enemy detected. Get ready for combat! ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ THREAT DETECTED! ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.respawnCounter</b> to <i>5</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.wave1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.introEnd</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">turretShot</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.allyShot</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">test</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Turret Shot</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!(tmp.targetName = "")</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">false</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.allyShot</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">targetChange</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.targetChange</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.targetNamePrev != "" &amp;&amp; (tmp.targetName != tmp.targetNamePrev)</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">test</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Target Change</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.targetChange</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">helperDed</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.helperDead</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.stop</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ Critical damage received. Detonation imminent! ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.platformDed</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.missionFailed</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">fail</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.missionFailed</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c1">QUEST FAILED</span>
+                  <span class="color-c0">
+
+Restart task to try again</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (ANNOYED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_CHOICE">
+            <div class="step-core">
+              <p class="step-name">SHOW_CHOICE</p>
+              <img src="..\..\..\char-img\main.lea\ANNOYED.png">
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 0</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Restart Fight</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-TELEPORT">
+                    <div class="step-core">
+                      <p class="step-name">TELEPORT</p>
+                    </div>
+                    <div class="step-data">
+                      <p>
+                        <a href="..\..\..\maps\rookie-harbor\special\quest-ocean-2b-boss.html">rookie-harbor.special.quest-ocean-2b-boss</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 1</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Back to \v[area.rookie-harbor.name]</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-CLEAR_MSG">
+                    <div class="step-core">
+                      <p class="step-name">CLEAR_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <p>From side <i>ALL</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>g.oceanPatrol.fail</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-TELEPORT">
+                    <div class="step-core">
+                      <p class="step-name">TELEPORT</p>
+                    </div>
+                    <div class="step-data">
+                      <p>
+                        <a href="..\..\..\maps\rookie-harbor\teleporter.html">rookie-harbor.teleporter</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">end1</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.boss-kill</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.introEnd</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ Sensors clear! ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c2">Patrol successful!</span>
+                  <span class="color-c0">
+
+The Coordinator has been destroyed!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>g.oceanPatrol.win</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-TELEPORT">
+            <div class="step-core">
+              <p class="step-name">TELEPORT</p>
+            </div>
+            <div class="step-data">
+              <p>
+                <a href="..\..\..\maps\rookie-harbor\teleporter.html">rookie-harbor.teleporter</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">defenseFail</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.fail &gt;= 5 &amp;&amp; false</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.stop</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0"></span>
+                  <span class="color-c1">You let too many weapons pass by that will now reach the continent!</span>
+                  <span class="color-c0"></span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.missionFailed</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">helpText</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.introEnd &amp;&amp; tmp.helpText != ""</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.helpText == "heat"</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Use </span>
+                        <span class="color-c3">Heat</span>
+                        <span class="color-c0"> for explosive damage!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.helpText == "cold"</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Use </span>
+                        <span class="color-c3">Cold</span>
+                        <span class="color-c0"> to slow down single targets!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.helpText == "shock"</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Use </span>
+                        <span class="color-c3">Shock</span>
+                        <span class="color-c0"> to hit two targets at once!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.helpText == "wave"</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Use </span>
+                        <span class="color-c3">Wave</span>
+                        <span class="color-c0"> to hit targets in a line!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">spawnEnemies</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.introEnd</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>loopStart</p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!tmp.introEnd</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-GOTO_LABEL">
+                  <div class="step-core">
+                    <p class="step-name">GOTO_LABEL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>end</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.respawnCounter</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.respawnCounter &lt; tmp.respawnCounterGoal</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-GOTO_LABEL">
+                  <div class="step-core">
+                    <p class="step-name">GOTO_LABEL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>loopStart</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SELECT_RANDOM">
+            <div class="step-core">
+              <p class="step-name">SELECT_RANDOM</p>
+            </div>
+            <div class="step-data">
+              <div class="random-option">
+                <p>Option 0 [condition: <span class="condition">tmp.turret1Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 1</span>]</p>
+                <p>Option 0.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.turret1Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>1</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Turret 1 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="random-option">
+                <p>Option 1 [condition: <span class="condition">tmp.turret2Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 2</span>]</p>
+                <p>Option 1.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.turret2Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>2</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Turret 2 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="random-option">
+                <p>Option 2 [condition: <span class="condition">tmp.turret3Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 3</span>]</p>
+                <p>Option 2.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.turret3Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>3</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Turret 3 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="random-option">
+                <p>Option 3 [condition: <span class="condition">tmp.turret4Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 4</span>]</p>
+                <p>Option 3.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.turret4Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>4</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Turret 4 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="random-option">
+                <p>Option 4 [condition: <span class="condition">tmp.suicider1Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 5</span>]</p>
+                <p>Option 4.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.suicider1Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>5</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Bomb 1 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="random-option">
+                <p>Option 5 [condition: <span class="condition">tmp.suicider2Free &amp;amp;&amp;amp; tmp.enemyLastSpawn != 6</span>]</p>
+                <p>Option 5.0</p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.suicider2Free</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.enemyLastSpawn</b> to <i>6</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">test</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_AR_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_AR_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox textbox-small ar-box-color-RED">
+                              <span class="text-langlabel">
+                                <span class="color-c0">(Bomb 2 Spawn)</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.respawnCounter</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

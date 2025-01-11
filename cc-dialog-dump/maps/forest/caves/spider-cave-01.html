@@ -1,0 +1,2402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Nesting Grounds</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Nesting Grounds</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">bug</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.bug-hunting.started &amp;&amp; !quest.bug-hunting.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">..A Trial it is you seek, and a trial you shall receive... </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.hideShadow</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...A warrior must stay focused even when surrounded...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...This trial will test both strength and speed...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...As your foes are fast and will grow in numbers even faster...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Now step into the ring and show us your </span>
+                    <span class="color-c3">Vigor</span>
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.bugTalk</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">party.has.Emilie</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\..\char-img\main.emilie\BROKEN.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(BROKEN)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">We have to fight now? Please just let it be spiders...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">party.has.Glasses</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_SIDE_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_SIDE_MSG</p>
+                            <img src="..\..\..\char-img\main.glasses\EXHAUSTED.png">
+                            <div class="char-name">
+                              <p class="char-name-text">main.glasses</p>
+                              <p class="char-name-expression">(EXHAUSTED)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">Now that's a plea I never imagined hearing...</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="step-name">ELSE</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">party.has.Joern</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_SIDE_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_SIDE_MSG</p>
+                                  <img src="..\..\..\char-img\antagonists.sidekick\SURPRISED.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">antagonists.sidekick</p>
+                                    <p class="char-name-expression">(SURPRISED)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">Emilie, please. No spiders, either!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">map.bugTalk</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...A warrior must stay focused even when surrounded...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...This trial will test both strength and speed...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...As your foes are fast and will grow in numbers even faster...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Now step into the ring and show us your </span>
+                    <span class="color-c3">Vigor</span>
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.bugTalk</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">map.bugWait</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...You have completed the </span>
+                    <span class="color-c3">Trial of Vigor</span>
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Take this token as a sign of your victory...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 4 [<span class="condition">quest.bug-hunting-heat.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Stay ever vigilant, Seeker...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 5 [<span class="condition">quest.bug-hunting.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>g.forest.bugChallengeFound</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">!map.bugTalkChallenge</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.score-survival-normal</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.score-survival-hard</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.score-endless</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Welcome back Seeker...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...You mastered all trials and even bested our champion...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Now it is time to test your limits...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.bugTalkChallenge</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">!map.totalKills</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.totalKills</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.challengeMode &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Changed your mind, Seeker...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">tmp.challengeMode == 1</span>
+                      </p>
+                      <div class="step-collection container"></div>
+                      <p>
+                        <span class="step-name">ELSE</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">tmp.challengeMode == 2</span>
+                            </p>
+                            <div class="step-collection container"></div>
+                            <p>
+                              <span class="step-name">ELSE</span>
+                            </p>
+                            <div class="step-collection container"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Seeker, which challenge will you take...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.challengeMode</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.score-surival-normal</b> to <i>{'varName': 'map.score-survival-normal'}</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.score-surival-hard</b> to <i>{'varName': 'map.score-survival-hard'}</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.score-endless</b> to <i>{'varName': 'map.score-endless'}</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-LABEL">
+              <div class="step-core">
+                <p class="step-name">LABEL</p>
+              </div>
+              <div class="step-data">
+                <p>start</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_BOARD_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_BOARD_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Highscores
+-------------------------
+</span>
+                    <span class="color-c3">Survival [Normal]</span>
+                    <span class="color-c0">: \v[misc.localNumTempVar.score-surival-normal]
+</span>
+                    <span class="color-c3">Survival [Hard]</span>
+                    <span class="color-c0">: \v[misc.localNumTempVar.score-surival-hard]
+
+</span>
+                    <span class="color-c3">Endless</span>
+                    <span class="color-c0">: \v[misc.localNumTempVar.score-endless]
+-------------------------
+</span>
+                    <span class="color-c3">Total Eliminations</span>
+                    <span class="color-c0">: \v[map.totalKills]
+-------------------------</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_CHOICE">
+              <div class="step-core">
+                <p class="step-name">SHOW_CHOICE</p>
+                <img src="..\..\..\char-img\main.lea\DEFAULT.png">
+              </div>
+              <div class="step-data">
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 0</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Survival </span>
+                        <span class="color-c2">[Normal]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.challengeMode</b> to <i>1</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 1</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Survival </span>
+                        <span class="color-c2">[Hard]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.challengeMode</b> to <i>2</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 2</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Endless</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.challengeMode</b> to <i>3</i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 3</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Abort </span>
+                        <span class="color-c3">\v[tmp.cancelString]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_DREAM_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_DREAM_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">...Very well...</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.startable</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.wallUp2</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_NUMBER">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_NUMBER</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>tmp.challengeMode</b> to <i>0</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>end</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 4</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Combo Timer </span>
+                        <span class="color-c2">[On]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Combo Timer UI disabled!</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>map.showComboTimer</b> to <i>False</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>start</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 5</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Combo Timer </span>
+                        <span class="color-c1">[Off]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Combo Timer UI enabled! It will be displayed in the bottom right corner.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-CHANGE_VAR_BOOL">
+                      <div class="step-core">
+                        <p class="step-name">CHANGE_VAR_BOOL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>set <b>map.showComboTimer</b> to <i>True</i>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>start</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 6</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">[Help]</span>
+                        <span class="color-c0"></span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Welcome to the </span>
+                            <span class="color-c3">Ring of Spiders</span>
+                            <span class="color-c0">!
+
+Choose the mode you want to try out to begin the challenge.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"></span>
+                            <span class="color-c3">Survival</span>
+                            <span class="color-c0"> is similar to the original </span>
+                            <span class="color-c3">Trial of Vigor</span>
+                            <span class="color-c0">. But instead of 2 minutes, you need to survive for 4.
+</span>
+                            <span class="color-c3">Survival [Hard]</span>
+                            <span class="color-c0"> works the same, but the spiders will be adjusted to match your level.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"></span>
+                            <span class="color-c3">Endless</span>
+                            <span class="color-c0"> will test both endurance and skill. Try to survive as long as you can against the hordes of spiders. 
+Enemies will gradually get stronger as time passes on. </span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Gain points by defeating spiders. Defeat enemies fast to increase the combo multiplier </span>
+                            <span class="color-c3">by 10%</span>
+                            <span class="color-c0">. This stacks infinitely for as long as you defeat another enemy in the time limit of </span>
+                            <span class="color-c3">8 seconds</span>
+                            <span class="color-c0">.
+You can enable/disable the combo timer in the selection menu.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-SHOW_BOARD_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_BOARD_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"> Additionally, </span>
+                            <span class="color-c3">defeating multiple enemies at once</span>
+                            <span class="color-c0"> will give a huge bonus. But you only have half a second so line them up well.
+Earning EXP, Credits and Items are disabled for the duration of a challenge.</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>start</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="choice-container">
+                  <div class="choice-text">
+                    <span class="choice-pretext">Choice 7</span>
+                    <span class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Cancel</span>
+                      </span>
+                    </span>
+                  </div>
+                  <div class="step-collection container">
+                    <div class="step event-step-GOTO_LABEL">
+                      <div class="step-core">
+                        <p class="step-name">GOTO_LABEL</p>
+                      </div>
+                      <div class="step-data">
+                        <p>end</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.challengeMode &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_DREAM_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_DREAM_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...Very well. Step into the ring to begin...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.startable</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>tmp.wallUp2</b> to <i>True</i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-LABEL">
+              <div class="step-core">
+                <p class="step-name">LABEL</p>
+              </div>
+              <div class="step-data">
+                <p>end</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BattleLoop</span>
+        </p>
+        <p>Start condition: <span class="condition">map.startBattleLoop</span>
+          <br>End condition: <span class="condition">map.endFight</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>loop</p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">timers.spiderKillsTotal.remainingTimeNotNull &lt;= 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">combat.activeCnt.forest/spider &lt;= 0</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-GOTO_LABEL">
+                        <div class="step-core">
+                          <p class="step-name">GOTO_LABEL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>end</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!map.switchTask</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-SET_TASK">
+                              <div class="step-core">
+                                <p class="step-name">SET_TASK</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Defeat the remaining spiders!</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-CHANGE_VAR_BOOL">
+                              <div class="step-core">
+                                <p class="step-name">CHANGE_VAR_BOOL</p>
+                              </div>
+                              <div class="step-data">
+                                <p>set <b>map.switchTask</b> to <i>True</i>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-GOTO_LABEL">
+                        <div class="step-core">
+                          <p class="step-name">GOTO_LABEL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>loop</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>sub <b>tmp.timer</b> by <i>0.1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.timer &lt;= 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>add <b>tmp.speedUpCounter</b> by <i>1</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MAX_TIME'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.diff</b> to <i>{'varName': 'tmp.SPEED_UP'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>mul <b>tmp.diff</b> by <i>{'varName': 'tmp.speedUpCounter'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>sub <b>tmp.timer</b> by <i>{'varName': 'tmp.diff'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.timer &lt;= tmp.MIN_TIME</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MIN_TIME'}</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-GOTO_LABEL">
+            <div class="step-core">
+              <p class="step-name">GOTO_LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>loop</p>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.endFight</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BattleStart</span>
+        </p>
+        <p>Start condition: <span class="condition">map.startFight</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.timer</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.speedUpCounter</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.MAX_TIME</b> to <i>10</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.SPEED_UP</b> to <i>0.25</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.MIN_TIME</b> to <i>2</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.TOTAL_TIME</b> to <i>120</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MAX_TIME'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.bugWatches</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.wallUp</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DETERMINED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\char-img\main.lea\ANNOYED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(ANNOYED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Why?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DETERMINED) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\..\char-img\main.lea\SHOCKED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SHOCKED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Sorry!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SET_TASK">
+            <div class="step-core">
+              <p class="step-name">SET_TASK</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Survive the onslaught of spiders!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.startBattleLoop</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">BattleEnd</span>
+        </p>
+        <p>Start condition: <span class="condition">map.endFight &amp;&amp; !player.hasLevelUp</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.wallUp</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.bugWait</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...An impressive display...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_DREAM_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_DREAM_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...Come and collect your reward...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">ChallengeStart</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.startChallenge</span>
+          <br>End condition: <span class="condition">!tmp.startChallenge</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startable</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.spidersKilled</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.killCount</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.timer</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.levelTimer</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.SCORE_PER_KILL</b> to <i>100</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.MAX_NOT_HIT_BONUS</b> to <i>99</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.COMBO_TIME</b> to <i>8</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.score</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.noHitCounter</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.noHitCounterBar</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.speedUpCounter</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.MAX_TIME</b> to <i>10</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.SPEED_UP</b> to <i>0.25</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.MIN_TIME</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.TOTAL_TIME</b> to <i>240</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.LEVEL_UP_START</b> to <i>60</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.LEVEL_UP_TIME</b> to <i>30</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MAX_TIME'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.enemyLevel</b> to <i>52</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.wallUp2</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.challengeMode &lt;=2</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SET_TASK">
+                  <div class="step-core">
+                    <p class="step-name">SET_TASK</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Survive the onslaught of spiders!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SET_TASK">
+                  <div class="step-core">
+                    <p class="step-name">SET_TASK</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Survive as long as you can!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">map.showComboTimer</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.comboBar</b> to <i>{'varName': 'timers.comboCounter.remainingTimeNotNull'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.challengeMode == 1</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.startBattleLoop2</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.challengeMode == 2</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.startBattleLoop2</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.startBattleLoop3</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.playerHP</b> to <i>{'varName': 'player.hp'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startChallenge</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">SurvivalLoop</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.startBattleLoop2</span>
+          <br>End condition: <span class="condition">!tmp.startBattleLoop2</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>loop</p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.noHitCounter &gt; 1</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.comboBar</b> to <i>{'varName': 'timers.comboCounter.remainingTimeNotNull'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.comboBar</b> to <i>{'varName': 'tmp.COMBO_TIME'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">timers.spiderKillsTotal.remainingTimeNotNull &lt;= 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">combat.activeCnt.forest/spider &lt;= 0</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.switchTask</b> to <i>False</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-GOTO_LABEL">
+                        <div class="step-core">
+                          <p class="step-name">GOTO_LABEL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>end</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">!tmp.switchTask</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">tmp.challengeMode == 1</span>
+                                </p>
+                                <div class="step-collection container"></div>
+                                <p>
+                                  <span class="step-name">ELSE</span>
+                                </p>
+                                <div class="step-collection container"></div>
+                              </div>
+                            </div>
+                            <div class="step event-step-SET_TASK">
+                              <div class="step-core">
+                                <p class="step-name">SET_TASK</p>
+                              </div>
+                              <div class="step-data">
+                                <div class="textbox">
+                                  <span class="text-langlabel">
+                                    <span class="color-c0">Defeat the remaining spiders!</span>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step event-step-CHANGE_VAR_BOOL">
+                              <div class="step-core">
+                                <p class="step-name">CHANGE_VAR_BOOL</p>
+                              </div>
+                              <div class="step-data">
+                                <p>set <b>tmp.switchTask</b> to <i>True</i>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-GOTO_LABEL">
+                        <div class="step-core">
+                          <p class="step-name">GOTO_LABEL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>loop</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>sub <b>tmp.timer</b> by <i>0.1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.timer &lt;= 0</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">combat.activeCnt.forest/spider &gt;= 10</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-GOTO_LABEL">
+                        <div class="step-core">
+                          <p class="step-name">GOTO_LABEL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>loop</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>add <b>tmp.speedUpCounter</b> by <i>1</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MAX_TIME'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.diff</b> to <i>{'varName': 'tmp.SPEED_UP'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>mul <b>tmp.diff</b> by <i>{'varName': 'tmp.speedUpCounter'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>sub <b>tmp.timer</b> by <i>{'varName': 'tmp.diff'}</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.timer &lt;= tmp.MIN_TIME</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.timer</b> to <i>{'varName': 'tmp.MIN_TIME'}</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.challengeMode == 1</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-GOTO_LABEL">
+            <div class="step-core">
+              <p class="step-name">GOTO_LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>loop</p>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.endFight2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startBattleLoop2</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">SurivalEnd</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.endFight2 &amp;&amp; !player.hasLevelUp</span>
+          <br>End condition: <span class="condition">!tmp.endFight2</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>map.totalKills</b> by <i>{'varName': 'tmp.spidersKilled'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.completeSign</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.challengeMode == 1</span>
+              </p>
+              <div class="step-collection container"></div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bestScore</b> to <i>{'indirect': 'tmp.scoreString'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bestScoreString</b> to <i>{'indirect': 'tmp.scoreString'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">(tmp.score &gt; tmp.bestScore)</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.bestScore &lt;= 0</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Survival [\v[tmp.modeName]] Record!</span>
+                              <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Surival [\v[tmp.modeName]] Record!</span>
+                              <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points
+-------------------------
+Old Best:
+
+\v[misc.localNumTempVar.bestScoreString] Points</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>{'indirect': 'tmp.scoreString'}</b> to <i>{'varName': 'tmp.score'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_BOARD_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_BOARD_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">Score Surival [\v[tmp.modeName]]:</span>
+                        <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points
+-------------------------
+Best:
+\v[misc.localNumTempVar.bestScoreString] Points
+</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.wallUp2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.endFight2</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.challengeMode</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">EndlessEnd</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.playerDead</span>
+          <br>End condition: <span class="condition">!tmp.playerDead</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startBattleLoop3</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>map.totalKills</b> by <i>{'varName': 'tmp.spidersKilled'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.killsValEndless</b> to <i>{'varName': 'tmp.spidersKilled'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.timeValEndless</b> to <i>{'varName': 'timers.spiderKillsTotal.time'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.completeSign</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bestScore</b> to <i>{'varName': 'map.score-endless'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">(tmp.score &gt; tmp.bestScore)</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.bestScore &lt;= 0</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Endless Record!</span>
+                              <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points
+
+</span>
+                              <span class="color-c3">Time</span>
+                              <span class="color-c0">
+\v[map.timeStringEndless]
+</span>
+                              <span class="color-c3">Eliminations</span>
+                              <span class="color-c0">
+\v[map.killsValEndless]</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0"></span>
+                              <span class="color-c3">New Surival Endless Record!</span>
+                              <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points
+
+</span>
+                              <span class="color-c3">Time</span>
+                              <span class="color-c0">
+\v[map.timeStringEndless]
+</span>
+                              <span class="color-c3">Eliminations</span>
+                              <span class="color-c0">
+\v[map.killsValEndless]</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>map.score-endless</b> to <i>{'varName': 'tmp.score'}</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_BOARD_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_BOARD_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0"></span>
+                        <span class="color-c3">Score Endless:</span>
+                        <span class="color-c0">
+\v[misc.localNumTempVar.scoreStringValue] Points
+
+</span>
+                        <span class="color-c3">Time</span>
+                        <span class="color-c0">
+\v[map.timeStringEndless]
+</span>
+                        <span class="color-c3">Eliminations</span>
+                        <span class="color-c0">
+\v[map.killsValEndless]
+</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">party.size &lt;= 1 &amp;&amp; map.timeValEndless &gt;= 300 &amp;&amp; !trophies.triggered.spider-cave</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.wallUp2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.challengeMode</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.playerDead</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\step_style.css">
+    <script src="..\main.js" defer=""></script>
+    <title>Meta - Space</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Meta - Space</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">Intro</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">plot.line &gt;= 32000</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.investorDone == 4</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">A new future lies ahead of you.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">You reached a dead end.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>plot.metaSpace</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.line</b> to <i>32000</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">forwardEvent</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.forward</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.investorDone &lt; 4</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">The path to the future is </span>
+                        <span class="color-c3">locked away</span>
+                        <span class="color-c0">...</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">extension.post-game.active</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_DREAM_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_DREAM_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">You are ready for the future!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_MODAL_CHOICE">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_MODAL_CHOICE</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Start the </span>
+                              <span class="color-c3">Post Game Episode</span>
+                              <span class="color-c0">?</span>
+                            </span>
+                          </div>
+                          <div class="choice-container">
+                            <div class="choice-text">
+                              <span class="choice-pretext">Choice 0</span>
+                              <span class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">Yes</span>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_NUMBER">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_NUMBER</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>plot.line</b> to <i>40000</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-TELEPORT">
+                                <div class="step-core">
+                                  <p class="step-name">TELEPORT</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>
+                                    <a href="..\maps\dreams\post-prologue.html">dreams.post-prologue</a>
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="choice-container">
+                            <div class="choice-text">
+                              <span class="choice-pretext">Choice 1</span>
+                              <span class="textbox">
+                                <span class="text-langlabel">
+                                  <span class="color-c0">No</span>
+                                </span>
+                              </span>
+                            </div>
+                            <div class="step-collection container"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_DREAM_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_DREAM_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">You wonder what will happen next.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">This point marks the beginning of the Post Game DLC:
+</span>
+                              <span class="color-c3">CrossCode: A New Home</span>
+                              <span class="color-c0">.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">It features a new dungeon, a new area to explore, as well as an extension of the story.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="step event-step-SHOW_BOARD_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_BOARD_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox">
+                            <span class="text-langlabel">
+                              <span class="color-c0">Once the DLC has been installed, you can continue from this point on.</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>plot.endScenes</b> to <i>0</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.forward</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">backwardEvent</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.backward</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">plot.investorDone &lt; 4</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Maybe the </span>
+                        <span class="color-c3">key to the future</span>
+                        <span class="color-c0"> lies in the </span>
+                        <span class="color-c3">past</span>
+                        <span class="color-c0">.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_DREAM_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_DREAM_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">You ponder about returning to the </span>
+                        <span class="color-c3">past</span>
+                        <span class="color-c0">.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Return to the </span>
+                  <span class="color-c3">past</span>
+                  <span class="color-c0">.
+
+You can return back to the </span>
+                  <span class="color-c3">beginning of Chapter 10</span>
+                  <span class="color-c0"> shortly after you met Satoshi.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Your actions in the past might impact your future.
+
+You will keep your </span>
+                  <span class="color-c3">level, items and quest progress</span>
+                  <span class="color-c0">.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_BOARD_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_BOARD_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You will also have the option to </span>
+                  <span class="color-c3">skip the Final Raid and Dungeon</span>
+                  <span class="color-c0">.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MODAL_CHOICE">
+            <div class="step-core">
+              <p class="step-name">SHOW_MODAL_CHOICE</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Do you want to return to the </span>
+                  <span class="color-c3">past</span>
+                  <span class="color-c0">?</span>
+                </span>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 0</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">Yes</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>lea.words.meet</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>lea.words.thanks</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>plot.line</b> to <i>21200</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>plot.investorDone</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>plot.evo</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>plot.endScenes</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.investorMansionOpen</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_BOOL">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_BOOL</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>map.barrierOpenHideout</b> to <i>False</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-CHANGE_VAR_NUMBER">
+                    <div class="step-core">
+                      <p class="step-name">CHANGE_VAR_NUMBER</p>
+                    </div>
+                    <div class="step-data">
+                      <p>set <b>g.last-dng</b> to <i>0</i>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="step event-step-TELEPORT">
+                    <div class="step-core">
+                      <p class="step-name">TELEPORT</p>
+                    </div>
+                    <div class="step-data">
+                      <p>
+                        <a href="..\maps\autumn\guild\inner-fs-eg.html">autumn.guild.inner-fs-eg</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="choice-text">
+                  <span class="choice-pretext">Choice 1</span>
+                  <span class="textbox">
+                    <span class="text-langlabel">
+                      <span class="color-c0">No</span>
+                    </span>
+                  </span>
+                </div>
+                <div class="step-collection container"></div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.backward</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

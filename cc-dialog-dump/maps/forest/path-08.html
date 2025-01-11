@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Carved Pathway</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Carved Pathway</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">bug</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">quest.bug-hunting.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...A Trial it is you seek, and a trial you shall receive... </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.bugPos</b> to <i>0</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.spawnBug</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Agility can be both a curse and a blessing...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...This trial will test your speed and reaction time...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Simply follow this bug...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...But be aware of its trickery...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Approach it to begin...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_BOOL">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_BOOL</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.bugTalk</b> to <i>True</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">party.has.Emilie</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.emilie\BROKEN.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(BROKEN)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">I don't want to follow the bug! I want to run away from it!!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">map.bugTalk</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Simply approach it...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...But be aware of its trickery...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">quest.bug-hunting-shock.solved</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_DREAM_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_DREAM_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Stay ever vigilant Seeker...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">move-3-wrong</span>
+        </p>
+        <p>Start condition: <span class="condition">map.move3Wrong &amp;&amp; !quest.bug-hunting-shock.solved &amp;&amp; !questVars.forest.bugShock.clear1</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.dummyHide1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">party.has.Glasses</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\char-img\main.glasses\SURPRISED.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.glasses</p>
+                      <p class="char-name-expression">(SURPRISED)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">I guess that's what the lantern bug meant with "beware of its trickery"!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">party.has.Emilie</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\char-img\main.emilie\SUSPICIOUS.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.emilie</p>
+                      <p class="char-name-expression">(SUSPICIOUS)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">I hate all bugs, but this one in particular.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

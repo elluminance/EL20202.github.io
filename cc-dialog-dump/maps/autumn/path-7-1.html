@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Autumn's Rise - Pathway 6</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Rise - Pathway 6</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">pakour</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.parkourUp &amp;&amp;!quest.round-and-round.solved</span>
+          <br>End condition: <span class="condition">!tmp.parkourUp</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.parkourPath</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.parkourPath == 10</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_SIDE_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_SIDE_MSG</p>
+                    <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                    <div class="char-name">
+                      <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                      <p class="char-name-expression">(DEFAULT)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Halfway through! I'll go to the end and wait for you.</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.parkourUp</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">dude</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">       </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Hey you!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...Hi?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I'm one of the testers for this game!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\ASTONISHED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(ASTONISHED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">The devs asked me to test an almost finished new quest type: </span>
+                    <span class="color-c3">Parkour</span>
+                    <span class="color-c0">!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">I'm kinda tired and you just came along. So... Wanna try it out?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\EXCITED.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(EXCITED)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Nice! Good to see some enthusiasm! </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Alright, get this. You will start right next to me.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>map.parkourPath</b> to <i>1</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">When you touch this checkpoint, another will pop up.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Your goal is to walk through every marker until you hit the last one.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Aaaaand the last one is over there.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.parkourPath</b> to <i>20</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">It will only appear after you hit the last normal marker.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.parkourPath</b> to <i>0</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\MOPING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(MOPING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Yeah, I know. But it's more fun that way right?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Well, at least if you like running.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Also, if you leave the map all your progress is lost!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\main.lea\MOPING.png">
+                <div class="char-name">
+                  <p class="char-name-text">main.lea</p>
+                  <p class="char-name-expression">(MOPING)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">...</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Another bummer, I know.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Anyway!</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Ready to try?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">quest.round-and-round.started</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.parkourPath &gt;= 19</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Just one more, it's right next to you!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\ANNOYED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(ANNOYED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">tmp.parkourPath &gt;= 10</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_MSG</p>
+                            <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                            <div class="char-name">
+                              <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                              <p class="char-name-expression">(DEFAULT)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">Go on, you can do it!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_MSG</p>
+                            <img src="..\..\char-img\main.lea\PROUD.png">
+                            <div class="char-name">
+                              <p class="char-name-text">main.lea</p>
+                              <p class="char-name-expression">(PROUD)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">...!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="step-name">ELSE</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">tmp.parkourPath &gt;= 1</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                                    <p class="char-name-expression">(DEFAULT)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">The next marker awaits!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\main.lea\NOD.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">main.lea</p>
+                                    <p class="char-name-expression">(NOD)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">[nods]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p>
+                              <span class="step-name">ELSE</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                                    <p class="char-name-expression">(DEFAULT)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">Just step on this first marker here and start running!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\main.lea\NOD.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">main.lea</p>
+                                    <p class="char-name-expression">(NOD)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">[nods]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">quest.round-and-round.started &amp;&amp; tmp.parkourPath &gt;= 10</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added cross-worlds.tester-male-rainbow (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.parkourPath &gt;= 19</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Just one more, it's right next to you!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_MSG</p>
+                      <img src="..\..\char-img\main.lea\ANNOYED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(ANNOYED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-IF">
+                    <div class="step-combined">
+                      <p>
+                        <span class="step-name">IF</span>
+                        <span class="condition">tmp.parkourPath &gt;= 10</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_MSG</p>
+                            <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                            <div class="char-name">
+                              <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                              <p class="char-name-expression">(DEFAULT)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">Go on, you can do it!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_MSG</p>
+                            <img src="..\..\char-img\main.lea\PROUD.png">
+                            <div class="char-name">
+                              <p class="char-name-text">main.lea</p>
+                              <p class="char-name-expression">(PROUD)</p>
+                            </div>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">...!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <p>
+                        <span class="step-name">ELSE</span>
+                      </p>
+                      <div class="step-collection container">
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">tmp.parkourPath &gt;= 1</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                                    <p class="char-name-expression">(DEFAULT)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">The next marker awaits!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\main.lea\NOD.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">main.lea</p>
+                                    <p class="char-name-expression">(NOD)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">[nods]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p>
+                              <span class="step-name">ELSE</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                                    <p class="char-name-expression">(DEFAULT)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">Just step on this first marker here and start running!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_MSG</p>
+                                  <img src="..\..\char-img\main.lea\NOD.png">
+                                  <div class="char-name">
+                                    <p class="char-name-text">main.lea</p>
+                                    <p class="char-name-expression">(NOD)</p>
+                                  </div>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">[nods]</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">parkourDone</span>
+        </p>
+        <p>Start condition: <span class="condition">map.parkourDone</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added cross-worlds.triblader-male-black (DEFAULT) to side LEFT</p>
+            </div>
+          </div>
+          <div class="step event-step-ADD_MSG_PERSON">
+            <div class="step-core">
+              <p class="step-name">ADD_MSG_PERSON</p>
+            </div>
+            <div class="step-data">
+              <p>Added main.lea (DEFAULT) to side RIGHT</p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">You did it. Great job!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\PROUD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(PROUD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">And there was no problem, right? No sudden shocks or anything?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SURPRISED_TOWARD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SURPRISED_TOWARD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\SHAKE.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(SHAKE)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">[shakes head]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Great... Great.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Thanks a lot! Take this for your efforts. </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">I hope we can meet again.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\PROUD.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(PROUD)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.triblader-male-black</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...So you can help me again, you know?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_MSG</p>
+              <img src="..\..\char-img\main.lea\ANNOYED.png">
+              <div class="char-name">
+                <p class="char-name-text">main.lea</p>
+                <p class="char-name-expression">(ANNOYED)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">...</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CLEAR_MSG">
+            <div class="step-core">
+              <p class="step-name">CLEAR_MSG</p>
+            </div>
+            <div class="step-data">
+              <p>From side <i>ALL</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">pakourfirst</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.parkourUpFirst</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.parkourPath</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\abstract\tribladerMale\DEFAULT.png">
+              <div class="char-name">
+                <p class="char-name-text">cross-worlds.tester-male-rainbow</p>
+                <p class="char-name-expression">(DEFAULT)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Alright, let's go!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

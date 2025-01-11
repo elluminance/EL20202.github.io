@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\step_style.css">
+    <script src="..\main.js" defer=""></script>
+    <title>Autumn's Rise - enemy-test-henne</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Autumn's Rise - enemy-test-henne</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">testerina</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.test1</b> to <i>3</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.test2</b> to <i>3</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.test1] = \v[tmp.test2] ?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.test1 = tmp.test2</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">\v[tmp.test1] = \v[tmp.test2] !</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.test3</b> to <i>{'indirect': 'tmp.string1'}</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.test3] = \v[tmp.test2] ?</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">tmp.test3 = tmp.test2</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">\v[tmp.test1] = \v[tmp.test2] !!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 1 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SELECT_RANDOM">
+              <div class="step-core">
+                <p class="step-name">SELECT_RANDOM</p>
+              </div>
+              <div class="step-data">
+                <div class="random-option">
+                  <p>Option 0 [condition: <span class="condition">true</span>]</p>
+                  <p>Option 0.0</p>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">1a</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Option 0.1</p>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">1b</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Option 0.2</p>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">1c</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="random-option">
+                  <p>Option 1 [condition: <span class="condition">true</span>]</p>
+                  <p>Option 1.0</p>
+                  <div class="step-collection container">
+                    <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                      <div class="step-core">
+                        <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                      </div>
+                      <div class="step-data">
+                        <div class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">2</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 2 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.string1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.string1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.string1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 3 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.number1</b> to <i>3</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">\v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">(tmp.number1 % 2) == 0</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">TRUE</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_OFFSCREEN_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">FALSE</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <p class="npc-state">State 4 [<span class="condition">true</span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-CHANGE_VAR_NUMBER">
+              <div class="step-core">
+                <p class="step-name">CHANGE_VAR_NUMBER</p>
+              </div>
+              <div class="step-data">
+                <p>set <b>tmp.number1</b> to <i>1.505455555555555</i>
+                </p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Base: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">floor: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">round: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">round: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">round: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">round: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">ceil: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_OFFSCREEN_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_OFFSCREEN_MSG</p>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">floor: \v[tmp.number1]</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">battleEnd</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.capturedCats &gt;= 1 &amp;&amp; tmp.enemyCounter &gt;= tmp.enemySpawned &amp;&amp; init</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">WINRAR</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

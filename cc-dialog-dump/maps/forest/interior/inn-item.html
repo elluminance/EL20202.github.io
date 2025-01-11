@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Sapphire Ridge - Cave Inn Store</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Sapphire Ridge - Cave Inn Store</h1>
+      <div class="container entity entity-NPC">
+        <p>
+          <span class="entity-type">NPC</span>: <span class="entity-name">shop-item</span>
+        </p>
+        <div class="">
+          <p class="npc-state">State 0 [<span class="condition">    </span>]</p>
+          <div class="step-collection container">
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added baki.female-yellow-tall (DEFAULT) to side LEFT</p>
+              </div>
+            </div>
+            <div class="step event-step-ADD_MSG_PERSON">
+              <div class="step-core">
+                <p class="step-name">ADD_MSG_PERSON</p>
+              </div>
+              <div class="step-data">
+                <p>Added main.lea (DEFAULT) to side RIGHT</p>
+              </div>
+            </div>
+            <div class="step event-step-SHOW_MSG">
+              <div class="step-core">
+                <p class="step-name">SHOW_MSG</p>
+                <img src="..\..\..\char-img\abstract\shadFemale\DEFAULT.png">
+                <div class="char-name">
+                  <p class="char-name-text">baki.female-yellow-tall</p>
+                  <p class="char-name-expression">(DEFAULT)</p>
+                </div>
+              </div>
+              <div class="step-data">
+                <div class="textbox">
+                  <span class="text-langlabel">
+                    <span class="color-c0">Shop. It has the thing you buy.</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="step event-step-CLEAR_MSG">
+              <div class="step-core">
+                <p class="step-name">CLEAR_MSG</p>
+              </div>
+              <div class="step-data">
+                <p>From side <i>ALL</i>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name">clue1</span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">So, found anything useful in here?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Not really, just one chest.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">And this strange device in one of the storage rooms upstairs.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">But it really didn't do anything.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">That's a feels bad...</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Don't even start.</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name">regularDiag</span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">c1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Are you ready to do the trials now?</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Not yet, I used all my sandwiches on the boss before.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">c2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">I'm fresh </span>
+                <span class="color-c5">out of credits</span>
+                <span class="color-c0">, too... </span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
