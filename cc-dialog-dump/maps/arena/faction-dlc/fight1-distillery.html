@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\..\step_style.css">
+    <script src="..\..\..\main.js" defer=""></script>
+    <title>Ba'kii Kum - arena.faction-dlc.fight1-distillery</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Ba'kii Kum - arena.faction-dlc.fight1-distillery</h1>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">brewing_overheatTimer</span>
+        </p>
+        <p>Start condition: <span class="condition">(tmp.brewing_started || (tmp.bossOverheatOn &amp;&amp; tmp.bossStarted)) &amp;&amp; !tmp.brewingHeatOff &amp;&amp; !tmp.overheating</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.overheatTimer</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.overheatTimer &gt;= tmp.overheatTimerGoal</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>add <b>tmp.overheat</b> by <i>1</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.overheatTimer</b> to <i>0</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat == 1 &amp;&amp; tmp.bossOverheatOn</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat == 5 &amp;&amp; tmp.bossOverheatOn</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat == 10</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-RED">
+                            <span class="text-langlabel">
+                              <span class="color-c0">50% Overheat reached!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat == 15</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-RED">
+                            <span class="text-langlabel">
+                              <span class="color-c0">75% Overheat reached! Cooling needed!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat == 18</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-RED">
+                            <span class="text-langlabel">
+                              <span class="color-c0">WARNING: Overheating imminent! Requesting ice!</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">tmp.overheat &gt;= 20</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>tmp.overheated</b> to <i>True</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-IF">
+                        <div class="step-combined">
+                          <p>
+                            <span class="step-name">IF</span>
+                            <span class="condition">tmp.overheat &gt;= 18</span>
+                          </p>
+                          <div class="step-collection container"></div>
+                          <p>
+                            <span class="step-name">ELSE</span>
+                          </p>
+                          <div class="step-collection container">
+                            <div class="step event-step-IF">
+                              <div class="step-combined">
+                                <p>
+                                  <span class="step-name">IF</span>
+                                  <span class="condition">tmp.overheat &gt;= 15</span>
+                                </p>
+                                <div class="step-collection container"></div>
+                                <p>
+                                  <span class="step-name">ELSE</span>
+                                </p>
+                                <div class="step-collection container"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">brewing_overheated</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.brewing_started &amp;&amp; tmp.overheated</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>sub <b>tmp.boozeHP</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.qualityChange</b> to <i>{'varName': 'tmp.quality'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>div <b>tmp.qualityChange</b> by <i>10</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>sub <b>tmp.quality</b> by <i>{'varName': 'tmp.qualityChange'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.boozeHP &lt;= 0 &amp;&amp; !quest.bakiTrader-2-brewing_fun_1.solved</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.brewingFail</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-CHANGE_VAR_NUMBER">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_NUMBER</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.cooldownTime</b> to <i>30</i>
+                    </p>
+                  </div>
+                </div>
+                <div class="step event-step-CHANGE_VAR_BOOL">
+                  <div class="step-core">
+                    <p class="step-name">CHANGE_VAR_BOOL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>set <b>tmp.overheating</b> to <i>True</i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!map.qualityMsgOn || !quest.bakiTrader-2-brewing_fun_1.solved</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Overheated! Starting emergency cooling!</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">Overheated! Starting emergency cooling! Quality -\v[tmp.qualityChange]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.overheated</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-Prop">
+        <p>
+          <span class="entity-type">Prop</span>: <span class="entity-name">brewingStart-prop</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!quest.bakiTrader-2-brewing_fun_1.solved || quest.bakiTrader-2-brewing_challenge_1.started || quest.bakiTrader-2-brewing_challenge_1.solved</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-ADD_MSG_PERSON">
+                  <div class="step-core">
+                    <p class="step-name">ADD_MSG_PERSON</p>
+                  </div>
+                  <div class="step-data">
+                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                  </div>
+                </div>
+                <div class="step event-step-LABEL">
+                  <div class="step-core">
+                    <p class="step-name">LABEL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>choice</p>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">!map.infoRead &amp;&amp; quest.bakiTrader-2-brewing_fun_1.solved</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_CHOICE">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_CHOICE</p>
+                    <img src="..\..\..\char-img\main.lea\DEFAULT.png">
+                    <div class="char-name">
+                      <p class="char-name-text">main.lea</p>
+                      <p class="char-name-expression">(DEFAULT)</p>
+                    </div>
+                  </div>
+                  <div class="step-data">
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 0</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Start Brewing Process</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewing_start</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 1</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"></span>
+                            <span class="color-c1">!!!</span>
+                            <span class="color-c0"> </span>
+                            <span class="color-c3">Upgrade Brewing Machine</span>
+                            <span class="color-c0"> </span>
+                            <span class="color-c1">!!!</span>
+                            <span class="color-c0"></span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.bossStart</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 2</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Brewing: </span>
+                            <span class="color-c3">\v[item.367.name]</span>
+                            <span class="color-c0"> (Material: \v[item.372.amount] | Owned: \v[item.367.amount])</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewing_start</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewingType</b> to <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedTotal</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedAtk</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 3</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Brewing: </span>
+                            <span class="color-c3">\v[item.368.name]</span>
+                            <span class="color-c0"> (Material: \v[item.373.amount] | Owned: \v[item.368.amount])</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewing_start</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewingType</b> to <i>2</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedTotal</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedDef</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 4</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Brewing: </span>
+                            <span class="color-c3">\v[item.369.name]</span>
+                            <span class="color-c0"> (Material: \v[item.374.amount] | Owned: \v[item.369.amount])</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewing_start</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewingType</b> to <i>3</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedTotal</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedFoc</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 5</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Brewing: </span>
+                            <span class="color-c3">\v[item.370.name]</span>
+                            <span class="color-c0"> (Material: \v[item.375.amount] | Owned: \v[item.370.amount])</span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewing_start</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>tmp.brewingType</b> to <i>4</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedTotal</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-CHANGE_VAR_NUMBER">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_NUMBER</p>
+                          </div>
+                          <div class="step-data">
+                            <p>add <b>map.brewedMhp</b> by <i>1</i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 6</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Information </span>
+                            <span class="color-c1">\v[tmp.infoUpdate]</span>
+                            <span class="color-c0"></span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-SHOW_BOARD_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_BOARD_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">- Instruction to Ancient Brewing -</span>
+                                <br>
+                                <span class="color-c0">Quality drinks using the mystical powers of the Track, steam and only the best natural ingredients!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_BOARD_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_BOARD_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">After activating this machine, it will request energy from the </span>
+                                <span class="color-c3">4 steam ovens</span>
+                                <span class="color-c0">. Those requests have to be met with </span>
+                                <span class="color-c3">icedisks</span>
+                                <span class="color-c0"> quickly and correctly!</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_BOARD_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_BOARD_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">In the beginning a </span>
+                                <span class="color-c3">static bubble generator</span>
+                                <span class="color-c0"> will be available, though later it will vanish. At this point, bubbles ejected from the </span>
+                                <span class="color-c3">pipes left and right</span>
+                                <span class="color-c0"> have to be used.</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-SHOW_BOARD_MSG">
+                          <div class="step-core">
+                            <p class="step-name">SHOW_BOARD_MSG</p>
+                          </div>
+                          <div class="step-data">
+                            <div class="textbox">
+                              <span class="text-langlabel">
+                                <span class="color-c0">Due to the immense powers flowing through it, the brewing machine will </span>
+                                <span class="color-c3">overheat</span>
+                                <span class="color-c0"> with time. </span>
+                                <span class="color-c3">Cooling it with ice</span>
+                                <span class="color-c0"> will be necessary to prevent </span>
+                                <span class="color-c3">overheating</span>
+                                <span class="color-c0"> and a </span>
+                                <span class="color-c3">time-consuming cooldown-phase</span>
+                                <span class="color-c0">.</span>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-IF">
+                          <div class="step-combined">
+                            <p>
+                              <span class="step-name">IF</span>
+                              <span class="condition">quest.bakiTrader-2-brewing_fun_1.solved</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-CHANGE_VAR_BOOL">
+                                <div class="step-core">
+                                  <p class="step-name">CHANGE_VAR_BOOL</p>
+                                </div>
+                                <div class="step-data">
+                                  <p>set <b>map.infoRead</b> to <i>True</i>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_BOARD_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_BOARD_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0"></span>
+                                      <span class="color-c3">Not meeting a request</span>
+                                      <span class="color-c0">, </span>
+                                      <span class="color-c3">putting ice in a wrong oven</span>
+                                      <span class="color-c0"> or </span>
+                                      <span class="color-c3">overheating the machine</span>
+                                      <span class="color-c0"> will damage the ingredients and </span>
+                                      <span class="color-c3">reduce the overall quality</span>
+                                      <span class="color-c0"> of the product.</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_BOARD_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_BOARD_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">On the other hand, brewing </span>
+                                      <span class="color-c3">quality</span>
+                                      <span class="color-c0"> will increase at a higher rate with </span>
+                                      <span class="color-c3">growing requests</span>
+                                      <span class="color-c0"> and when maintaining a </span>
+                                      <span class="color-c3">high heat</span>
+                                      <span class="color-c0">!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="step event-step-SHOW_BOARD_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_BOARD_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0">The </span>
+                                      <span class="color-c3">higher the quality</span>
+                                      <span class="color-c0">, the </span>
+                                      <span class="color-c3">more useable drinks</span>
+                                      <span class="color-c0"> can be created from </span>
+                                      <span class="color-c3">the same amount of ingredients</span>
+                                      <span class="color-c0">!</span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <p>
+                              <span class="step-name">ELSE</span>
+                            </p>
+                            <div class="step-collection container">
+                              <div class="step event-step-SHOW_BOARD_MSG">
+                                <div class="step-core">
+                                  <p class="step-name">SHOW_BOARD_MSG</p>
+                                </div>
+                                <div class="step-data">
+                                  <div class="textbox">
+                                    <span class="text-langlabel">
+                                      <span class="color-c0"></span>
+                                      <span class="color-c3">Not meeting a request</span>
+                                      <span class="color-c0">, </span>
+                                      <span class="color-c3">putting ice in a wrong oven</span>
+                                      <span class="color-c0"> or </span>
+                                      <span class="color-c3">overheating the machine</span>
+                                      <span class="color-c0"> will do </span>
+                                      <span class="color-c3">damage</span>
+                                      <span class="color-c0"> to the ingredients. With too much </span>
+                                      <span class="color-c3">damage</span>
+                                      <span class="color-c0">, the brewing will </span>
+                                      <span class="color-c1">fail</span>
+                                      <span class="color-c0">! </span>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>choice</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 7</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Turn Quality Notifications </span>
+                            <span class="color-c2">ON</span>
+                            <span class="color-c0"></span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>map.qualityMsgOn</b> to <i>True</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>choice</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 8</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0">Turn Quality Notifications </span>
+                            <span class="color-c1">OFF</span>
+                            <span class="color-c0"></span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-CHANGE_VAR_BOOL">
+                          <div class="step-core">
+                            <p class="step-name">CHANGE_VAR_BOOL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>set <b>map.qualityMsgOn</b> to <i>False</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>choice</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="choice-container">
+                      <div class="choice-text">
+                        <span class="choice-pretext">Choice 9</span>
+                        <span class="textbox">
+                          <span class="text-langlabel">
+                            <span class="color-c0"></span>
+                            <span class="color-c1">Cancel</span>
+                            <span class="color-c0"></span>
+                          </span>
+                        </span>
+                      </div>
+                      <div class="step-collection container">
+                        <div class="step event-step-GOTO_LABEL">
+                          <div class="step-core">
+                            <p class="step-name">GOTO_LABEL</p>
+                          </div>
+                          <div class="step-data">
+                            <p>end</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <span class="step-name">ELSE</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">[Machine inactive]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>end</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">boss_receiveSteam</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.bossStarted &amp;&amp; (tmp.steam1 || tmp.steam2 || tmp.steam3 || tmp.steam4)</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.nextRequest</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.tempNr</b> to <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-LABEL">
+            <div class="step-core">
+              <p class="step-name">LABEL</p>
+            </div>
+            <div class="step-data">
+              <p>ovenLoop</p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">test</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-GREEN">
+                      <span class="text-langlabel">
+                        <span class="color-c0">VAR: \v[tmp.tempNr]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">[tmp.tempStringSteam]</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">test</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-SHOW_AR_MSG">
+                        <div class="step-core">
+                          <p class="step-name">SHOW_AR_MSG</p>
+                        </div>
+                        <div class="step-data">
+                          <div class="textbox textbox-small ar-box-color-GREEN">
+                            <span class="text-langlabel">
+                              <span class="color-c0">VAR: \v[tmp.tempStringSteam]</span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-IF">
+                  <div class="step-combined">
+                    <p>
+                      <span class="step-name">IF</span>
+                      <span class="condition">[tmp.tempStringOven]</span>
+                    </p>
+                    <div class="step-collection container">
+                      <div class="step event-step-CHANGE_VAR_BOOL">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_BOOL</p>
+                        </div>
+                        <div class="step-data">
+                          <p>set <b>{'indirect': 'tmp.tempStringOven'}</b> to <i>False</i>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="step event-step-CHANGE_VAR_NUMBER">
+                        <div class="step-core">
+                          <p class="step-name">CHANGE_VAR_NUMBER</p>
+                        </div>
+                        <div class="step-data">
+                          <p>sub <b>tmp.ovensOn</b> by <i>1</i>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <span class="step-name">ELSE</span>
+                    </p>
+                    <div class="step-collection container"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>{'indirect': 'tmp.tempStringSteam'}</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>add <b>tmp.tempNr</b> by <i>1</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">tmp.tempNr &lt;= tmp.ovensTotal</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-GOTO_LABEL">
+                  <div class="step-core">
+                    <p class="step-name">GOTO_LABEL</p>
+                  </div>
+                  <div class="step-data">
+                    <p>ovenLoop</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">boss_start</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">!arena.isRush</span>
+              </p>
+              <div class="step-collection container"></div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovensTotal</b> to <i>4</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bubblePanelOn</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.fireLeft</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.fireRight</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bubbleLeft</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bubbleRight</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bubblerUpgrade</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[Upgrade Process START]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-GREEN">
+                <span class="text-langlabel">
+                  <span class="color-c0">[ Initiating Trial ]</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.startMusic</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.cooldownTime</b> to <i>40</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>map.upgrade_ready</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shieldAllowed</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bossStarted</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bossStart</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.battle-start</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">boss_activateShields</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.bossStarted &amp;&amp; tmp.activateShield</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovensOn</b> to <i>{'varName': 'tmp.ovensTotal'}</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovenHot1</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovenHot2</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovenHot3</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.ovenHot4</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.shieldOn</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-IF">
+            <div class="step-combined">
+              <p>
+                <span class="step-name">IF</span>
+                <span class="condition">test</span>
+              </p>
+              <div class="step-collection container">
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">\v[tmp.ovenText]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">\v[tmp.ovenText]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">\v[tmp.ovenText]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="step event-step-SHOW_AR_MSG">
+                  <div class="step-core">
+                    <p class="step-name">SHOW_AR_MSG</p>
+                  </div>
+                  <div class="step-data">
+                    <div class="textbox textbox-small ar-box-color-RED">
+                      <span class="text-langlabel">
+                        <span class="color-c0">\v[tmp.ovenText]</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.bubbleBlock</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.activateShield</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-EventTrigger">
+        <p>
+          <span class="entity-type">EventTrigger</span>: <span class="entity-name">bossOverheated</span>
+        </p>
+        <p>Start condition: <span class="condition">tmp.bossStarted &amp;&amp; tmp.overheated</span>
+          <br>End condition: <span class="condition">false</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.cooldownTime</b> to <i>30</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_NUMBER">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_NUMBER</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.overheat</b> to <i>20</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.overheating</b> to <i>True</i>
+              </p>
+            </div>
+          </div>
+          <div class="step event-step-SHOW_AR_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_AR_MSG</p>
+            </div>
+            <div class="step-data">
+              <div class="textbox textbox-small ar-box-color-RED">
+                <span class="text-langlabel">
+                  <span class="color-c0">Overheated! Starting emergency cooling!</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="step event-step-CHANGE_VAR_BOOL">
+            <div class="step-core">
+              <p class="step-name">CHANGE_VAR_BOOL</p>
+            </div>
+            <div class="step-data">
+              <p>set <b>tmp.overheated</b> to <i>False</i>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

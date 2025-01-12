@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="..\..\step_style.css">
+    <script src="..\..\main.js" defer=""></script>
+    <title>Azure Archipelago - UFO Island</title>
+    <a href="index.html">Back to area</a>
+  </head>
+  <body>
+    <div>
+      <h1>Azure Archipelago - UFO Island</h1>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name"></span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Schneider</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.schneider\SKEPTICAL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(SKEPTICAL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Huh... those statues seem familiar. Didn't expect to see those around here.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name"></span>
+        </p>
+        <p>Start condition: <span class="condition">party.alive.Luke</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.luke\SKEPTICAL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.luke</p>
+                <p class="char-name-expression">(SKEPTICAL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Well... those faces sure are a landmark I suppose.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">SchneiderJUmping</span>
+        </p>
+        <p>Start condition: <span class="condition">party.has.Schneider</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SHOW_SIDE_MSG">
+            <div class="step-core">
+              <p class="step-name">SHOW_SIDE_MSG</p>
+              <img src="..\..\char-img\main.schneider\SKEPTICAL.png">
+              <div class="char-name">
+                <p class="char-name-text">main.schneider</p>
+                <p class="char-name-expression">(SKEPTICAL)</p>
+              </div>
+            </div>
+            <div class="step-data">
+              <div class="textbox">
+                <span class="text-langlabel">
+                  <span class="color-c0">Man, they really went full out with the jumping puzzles, didn't they?</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">Moooore(2)</span>
+        </p>
+        <p>Start condition: <span class="condition">party.size &gt; 1</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SELECT_FIRST">
+            <div class="step-core">
+              <p class="step-name">SELECT_FIRST</p>
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 0: party.has.Emilie</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.emilie\SHOCKED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(SHOCKED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">It just! Won't! Stop!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 1: party.has.Glasses</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.glasses\BLANK.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.glasses</p>
+                        <p class="char-name-expression">(BLANK)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">More... stone... hopping...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 2: party.has.Luke</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.luke\WONDERING.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.luke</p>
+                        <p class="char-name-expression">(WONDERING)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Japp, it surely would suck to miss a jump now.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 3: party.has.Apollo</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\antagonists.fancyguy\SUSPICIOUS.png">
+                      <div class="char-name">
+                        <p class="char-name-text">antagonists.fancyguy</p>
+                        <p class="char-name-expression">(SUSPICIOUS)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Better not slip now...</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">Moooore(2</span>
+        </p>
+        <p>Start condition: <span class="condition">map.jumpPanel1</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SELECT_FIRST">
+            <div class="step-core">
+              <p class="step-name">SELECT_FIRST</p>
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 0: party.has.Apollo</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\antagonists.fancyguy\PONDERING.png">
+                      <div class="char-name">
+                        <p class="char-name-text">antagonists.fancyguy</p>
+                        <p class="char-name-expression">(PONDERING)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">A checkpoint... Is this end of this jumping trail or have the Ancients planned more for us?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 1: party.has.Emilie</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.emilie\BROKEN.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(BROKEN)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Another Checkpoint! So... we're still not there yet? Or is that it?</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 2: party.has.Glasses</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.glasses\EMBARRASSED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.glasses</p>
+                        <p class="char-name-expression">(EMBARRASSED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Another checkpoint? This... This is not it, isn't it? </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 3: party.has.Luke</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.luke\WONDERING.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.luke</p>
+                        <p class="char-name-expression">(WONDERING)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">It seems like this might be it... but it probably isn't over yet.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-LocationEvent">
+        <p>
+          <span class="entity-type">LocationEvent</span>: <span class="entity-name">Mooooooooooore</span>
+        </p>
+        <p>Start condition: <span class="condition">true</span>
+        </p>
+        <div class="step-collection container">
+          <div class="step event-step-SELECT_FIRST">
+            <div class="step-core">
+              <p class="step-name">SELECT_FIRST</p>
+            </div>
+            <div class="step-data">
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 0: party.has.Emilie</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.emilie\SHOCKED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.emilie</p>
+                        <p class="char-name-expression">(SHOCKED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">IT'S STILL NOT OVER YOU GOT TO BE KIDDING ME!!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 1: party.has.Glasses</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.glasses\EXHAUSTED.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.glasses</p>
+                        <p class="char-name-expression">(EXHAUSTED)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">It... still goes on.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 2: party.has.Apollo</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\antagonists.fancyguy\SUSPICIOUS.png">
+                      <div class="char-name">
+                        <p class="char-name-text">antagonists.fancyguy</p>
+                        <p class="char-name-expression">(SUSPICIOUS)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">Indeed, it looks the Ancients still have more plans for us.</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="choice-container">
+                <div class="option-header">
+                  <p>Option 3: party.has.Luke</p>
+                </div>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_SIDE_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_SIDE_MSG</p>
+                      <img src="..\..\char-img\main.luke\COMPLAINING.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.luke</p>
+                        <p class="char-name-expression">(COMPLAINING)</p>
+                      </div>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel">
+                          <span class="color-c0">I was right again... why do I have to be right again?!</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container entity entity-XenoDialog">
+        <p>
+          <span class="entity-type">XenoDialog</span>: <span class="entity-name"></span>
+        </p>
+        <table class="xenodialog-table">
+          <tr>
+            <th>Name</th>
+            <th>Dialog</th>
+          </tr>
+          <tr>
+            <td class="padded">yay1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Whohooo~!</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">yay3</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Look at her go!</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">yay2</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">Man, I wish they'd finally implement a proper swimming feature.</span>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="padded">yay1</td>
+            <td class="textbox">
+              <span class="text-langlabel">
+                <span class="color-c0">This place is the best!</span>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
