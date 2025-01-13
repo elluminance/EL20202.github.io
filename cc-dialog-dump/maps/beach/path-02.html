@@ -13,112 +13,121 @@
         <p>
           <span class="entity-type">Prop</span>: <span class="entity-name"></span>
         </p>
-        <div class="step-collection container">
-          <div class="step event-step-IF">
-            <div class="step-combined">
-              <p>
-                <span class="step-name">IF</span>
-                <span class="condition">item.622.amount &gt;= 1</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
-                        <span class="color-c3">\v[item.622.name]</span>
-                        <span class="color-c0">?</span>
-                      </span>
+        <div class="prop-interact">
+          <p>Hover text: <div class="textbox textbox-small">
+              <span class="text-langlabel font-SMALL">
+                <span class="color-c0">Inspect</span>
+              </span>
+            </div>
+          </p>
+          <p>Event:</p>
+          <div class="step-collection container">
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">item.622.amount &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
                     </div>
-                  </div>
-                </div>
-                <div class="step event-step-ADD_MSG_PERSON">
-                  <div class="step-core">
-                    <p class="step-name">ADD_MSG_PERSON</p>
-                  </div>
-                  <div class="step-data">
-                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
-                  </div>
-                </div>
-                <div class="step event-step-SHOW_CHOICE">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_CHOICE</p>
-                    <img src="..\..\char-img\main.lea\DEFAULT.png">
-                    <div class="char-name">
-                      <p class="char-name-text">main.lea</p>
-                      <p class="char-name-expression">(DEFAULT)</p>
-                    </div>
-                  </div>
-                  <div class="step-data">
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 0</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">Yes</span>
-                          </span>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
+                          <span class="color-c3">\v[item.622.name]</span>
+                          <span class="color-c0">?</span>
                         </span>
                       </div>
-                      <div class="step-collection container">
-                        <div class="step event-step-CLEAR_MSG">
-                          <div class="step-core">
-                            <p class="step-name">CLEAR_MSG</p>
-                          </div>
-                          <div class="step-data">
-                            <p>From side <i>ALL</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altarActive1</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altar1Done</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_CHOICE">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_CHOICE</p>
+                      <img src="..\..\char-img\main.lea\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
                       </div>
                     </div>
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 1</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">No</span>
+                    <div class="step-data">
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 0</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">Yes</span>
+                            </span>
                           </span>
-                        </span>
+                        </div>
+                        <div class="step-collection container">
+                          <div class="step event-step-CLEAR_MSG">
+                            <div class="step-core">
+                              <p class="step-name">CLEAR_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <p>From side <i>ALL</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altarActive1</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altar1Done</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="step-collection container"></div>
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 1</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">No</span>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="step-collection container"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <p>
-                <span class="step-name">ELSE</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
-                      </span>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -131,112 +140,121 @@
         <p>
           <span class="entity-type">Prop</span>: <span class="entity-name"></span>
         </p>
-        <div class="step-collection container">
-          <div class="step event-step-IF">
-            <div class="step-combined">
-              <p>
-                <span class="step-name">IF</span>
-                <span class="condition">item.622.amount &gt;= 1</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
-                        <span class="color-c3">\v[item.622.name]</span>
-                        <span class="color-c0">?</span>
-                      </span>
+        <div class="prop-interact">
+          <p>Hover text: <div class="textbox textbox-small">
+              <span class="text-langlabel font-SMALL">
+                <span class="color-c0">Inspect</span>
+              </span>
+            </div>
+          </p>
+          <p>Event:</p>
+          <div class="step-collection container">
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">item.622.amount &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
                     </div>
-                  </div>
-                </div>
-                <div class="step event-step-ADD_MSG_PERSON">
-                  <div class="step-core">
-                    <p class="step-name">ADD_MSG_PERSON</p>
-                  </div>
-                  <div class="step-data">
-                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
-                  </div>
-                </div>
-                <div class="step event-step-SHOW_CHOICE">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_CHOICE</p>
-                    <img src="..\..\char-img\main.lea\DEFAULT.png">
-                    <div class="char-name">
-                      <p class="char-name-text">main.lea</p>
-                      <p class="char-name-expression">(DEFAULT)</p>
-                    </div>
-                  </div>
-                  <div class="step-data">
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 0</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">Yes</span>
-                          </span>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
+                          <span class="color-c3">\v[item.622.name]</span>
+                          <span class="color-c0">?</span>
                         </span>
                       </div>
-                      <div class="step-collection container">
-                        <div class="step event-step-CLEAR_MSG">
-                          <div class="step-core">
-                            <p class="step-name">CLEAR_MSG</p>
-                          </div>
-                          <div class="step-data">
-                            <p>From side <i>ALL</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altarActive2</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altar2Done</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_CHOICE">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_CHOICE</p>
+                      <img src="..\..\char-img\main.lea\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
                       </div>
                     </div>
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 1</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">No</span>
+                    <div class="step-data">
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 0</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">Yes</span>
+                            </span>
                           </span>
-                        </span>
+                        </div>
+                        <div class="step-collection container">
+                          <div class="step event-step-CLEAR_MSG">
+                            <div class="step-core">
+                              <p class="step-name">CLEAR_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <p>From side <i>ALL</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altarActive2</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altar2Done</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="step-collection container"></div>
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 1</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">No</span>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="step-collection container"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <p>
-                <span class="step-name">ELSE</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
-                      </span>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -249,112 +267,121 @@
         <p>
           <span class="entity-type">Prop</span>: <span class="entity-name"></span>
         </p>
-        <div class="step-collection container">
-          <div class="step event-step-IF">
-            <div class="step-combined">
-              <p>
-                <span class="step-name">IF</span>
-                <span class="condition">item.622.amount &gt;= 1</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
-                        <span class="color-c3">\v[item.622.name]</span>
-                        <span class="color-c0">?</span>
-                      </span>
+        <div class="prop-interact">
+          <p>Hover text: <div class="textbox textbox-small">
+              <span class="text-langlabel font-SMALL">
+                <span class="color-c0">Inspect</span>
+              </span>
+            </div>
+          </p>
+          <p>Event:</p>
+          <div class="step-collection container">
+            <div class="step event-step-IF">
+              <div class="step-combined">
+                <p>
+                  <span class="step-name">IF</span>
+                  <span class="condition">item.622.amount &gt;= 1</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
                     </div>
-                  </div>
-                </div>
-                <div class="step event-step-ADD_MSG_PERSON">
-                  <div class="step-core">
-                    <p class="step-name">ADD_MSG_PERSON</p>
-                  </div>
-                  <div class="step-data">
-                    <p>Added main.lea (DEFAULT) to side RIGHT</p>
-                  </div>
-                </div>
-                <div class="step event-step-SHOW_CHOICE">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_CHOICE</p>
-                    <img src="..\..\char-img\main.lea\DEFAULT.png">
-                    <div class="char-name">
-                      <p class="char-name-text">main.lea</p>
-                      <p class="char-name-expression">(DEFAULT)</p>
-                    </div>
-                  </div>
-                  <div class="step-data">
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 0</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">Yes</span>
-                          </span>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Insert a </span>
+                          <span class="color-c3">\v[item.622.name]</span>
+                          <span class="color-c0">?</span>
                         </span>
                       </div>
-                      <div class="step-collection container">
-                        <div class="step event-step-CLEAR_MSG">
-                          <div class="step-core">
-                            <p class="step-name">CLEAR_MSG</p>
-                          </div>
-                          <div class="step-data">
-                            <p>From side <i>ALL</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altarActive3</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="step event-step-CHANGE_VAR_BOOL">
-                          <div class="step-core">
-                            <p class="step-name">CHANGE_VAR_BOOL</p>
-                          </div>
-                          <div class="step-data">
-                            <p>set <b>map.altar3Done</b> to <i>True</i>
-                            </p>
-                          </div>
-                        </div>
+                    </div>
+                  </div>
+                  <div class="step event-step-ADD_MSG_PERSON">
+                    <div class="step-core">
+                      <p class="step-name">ADD_MSG_PERSON</p>
+                    </div>
+                    <div class="step-data">
+                      <p>Added main.lea (DEFAULT) to side RIGHT</p>
+                    </div>
+                  </div>
+                  <div class="step event-step-SHOW_CHOICE">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_CHOICE</p>
+                      <img src="..\..\char-img\main.lea\DEFAULT.png">
+                      <div class="char-name">
+                        <p class="char-name-text">main.lea</p>
+                        <p class="char-name-expression">(DEFAULT)</p>
                       </div>
                     </div>
-                    <div class="choice-container">
-                      <div class="choice-text">
-                        <span class="choice-pretext">Choice 1</span>
-                        <span class="textbox">
-                          <span class="text-langlabel">
-                            <span class="color-c0">No</span>
+                    <div class="step-data">
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 0</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">Yes</span>
+                            </span>
                           </span>
-                        </span>
+                        </div>
+                        <div class="step-collection container">
+                          <div class="step event-step-CLEAR_MSG">
+                            <div class="step-core">
+                              <p class="step-name">CLEAR_MSG</p>
+                            </div>
+                            <div class="step-data">
+                              <p>From side <i>ALL</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altarActive3</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="step event-step-CHANGE_VAR_BOOL">
+                            <div class="step-core">
+                              <p class="step-name">CHANGE_VAR_BOOL</p>
+                            </div>
+                            <div class="step-data">
+                              <p>set <b>map.altar3Done</b> to <i>True</i>
+                              </p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class="step-collection container"></div>
+                      <div class="choice-container">
+                        <div class="choice-text">
+                          <span class="choice-pretext">Choice 1</span>
+                          <span class="textbox">
+                            <span class="text-langlabel font-NORMAL">
+                              <span class="color-c0">No</span>
+                            </span>
+                          </span>
+                        </div>
+                        <div class="step-collection container"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <p>
-                <span class="step-name">ELSE</span>
-              </p>
-              <div class="step-collection container">
-                <div class="step event-step-SHOW_BOARD_MSG">
-                  <div class="step-core">
-                    <p class="step-name">SHOW_BOARD_MSG</p>
-                  </div>
-                  <div class="step-data">
-                    <div class="textbox">
-                      <span class="text-langlabel">
-                        <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
-                      </span>
+                <p>
+                  <span class="step-name">ELSE</span>
+                </p>
+                <div class="step-collection container">
+                  <div class="step event-step-SHOW_BOARD_MSG">
+                    <div class="step-core">
+                      <p class="step-name">SHOW_BOARD_MSG</p>
+                    </div>
+                    <div class="step-data">
+                      <div class="textbox">
+                        <span class="text-langlabel font-NORMAL">
+                          <span class="color-c0">An altar with a round slit in the middle. Could fit a coin.</span>
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -399,7 +426,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">It's really like I always imagined the perfect vacation would be.</span>
                 </span>
               </div>
@@ -416,7 +443,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Minus the flying fish monsters.</span>
                 </span>
               </div>
@@ -441,7 +468,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">[nods]</span>
                 </span>
               </div>
@@ -458,7 +485,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">I just wish swimming was an option.</span>
                   <br>
                   <span class="color-c0"></span>
@@ -502,7 +529,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...Why?</span>
                 </span>
               </div>
@@ -519,7 +546,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Well... swimming is fun?</span>
                 </span>
               </div>
@@ -536,7 +563,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -553,7 +580,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -570,7 +597,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0"></span>
                   <span class="color-c2">[Swimsuits]</span>
                   <span class="color-c0"></span>
@@ -589,7 +616,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">What? No! Come on...</span>
                 </span>
               </div>
@@ -606,7 +633,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Swimsuit skins have been around since forever.</span>
                 </span>
               </div>
@@ -623,7 +650,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...?!</span>
                 </span>
               </div>
@@ -640,7 +667,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Of course there are! It's easy money.</span>
                 </span>
               </div>
@@ -657,7 +684,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">It's just that we Evotars can't access them.</span>
                 </span>
               </div>
@@ -674,7 +701,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Why?!</span>
                 </span>
               </div>
@@ -691,7 +718,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Yeah, it's not fair...</span>
                 </span>
               </div>
@@ -708,7 +735,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0"></span>
                   <span class="color-c2">[Double Standard!]</span>
                   <span class="color-c0"></span>
@@ -727,7 +754,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Right?! Time to fight for our rights to cosmetics!</span>
                 </span>
               </div>
@@ -781,7 +808,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">What a peculiar shape in the middle of the sea! It looks like the Ancients have something planned for us!</span>
                 </span>
               </div>
@@ -805,7 +832,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Oui... and for once you </span>
                         <span class="color-c3">actually</span>
                         <span class="color-c0"> don't know what this is about and don't just act like it. Non?</span>
@@ -824,7 +851,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Surely, if that's what you want to believe, Pentafist!</span>
                       </span>
                     </div>
@@ -841,7 +868,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">...</span>
                       </span>
                     </div>
@@ -870,7 +897,7 @@
                         </div>
                         <div class="step-data">
                           <div class="textbox">
-                            <span class="text-langlabel">
+                            <span class="text-langlabel font-NORMAL">
                               <span class="color-c0">True. And finally we both can find out what it's about at the same time.</span>
                             </span>
                           </div>
@@ -912,7 +939,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">Oui, I really feel like smashing a few things now.</span>
                         </span>
                       </div>
@@ -936,7 +963,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">Surely it can't be much longer!</span>
                         </span>
                       </div>
@@ -960,7 +987,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">I think we're getting close. We're not that far from where we started.</span>
                         </span>
                       </div>
@@ -984,7 +1011,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">Finally decent ground to stand on... somewhat.</span>
                         </span>
                       </div>
@@ -1024,7 +1051,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">I think we really went full circle... almost.</span>
                         </span>
                       </div>
@@ -1048,7 +1075,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">Aaaaand further back.</span>
                         </span>
                       </div>
@@ -1072,7 +1099,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">By the Ancients...</span>
                         </span>
                       </div>
@@ -1096,7 +1123,7 @@
                     </div>
                     <div class="step-data">
                       <div class="textbox">
-                        <span class="text-langlabel">
+                        <span class="text-langlabel font-NORMAL">
                           <span class="color-c0">Please... let it end.</span>
                         </span>
                       </div>
@@ -1194,7 +1221,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Good, I will mark the first spot I have to investigate!</span>
                 </span>
               </div>
@@ -1236,7 +1263,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">All set, we can start now! And please protect me from angry critters, okay?</span>
                 </span>
               </div>
@@ -1253,7 +1280,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">[nods]</span>
                 </span>
               </div>
@@ -1270,7 +1297,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Alright, let's do this!</span>
                 </span>
               </div>
@@ -1291,7 +1318,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0"></span>
                   <span class="color-c3">Protect Linde</span>
                   <span class="color-c0"> while she inspects the area</span>
@@ -1314,7 +1341,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-RED">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-pointText]</span>
                 </span>
               </div>
@@ -1384,7 +1411,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Yep, yep, awesome! \v[lore.title.seeker], this is the spot!</span>
                 </span>
               </div>
@@ -1401,7 +1428,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -1418,7 +1445,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Now we will need to cause some ruckus for those salt-bearing critters to appear.</span>
                 </span>
               </div>
@@ -1435,7 +1462,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">I will get everything prepared for that. Just talk to me again when you want to wrap this up.</span>
                 </span>
               </div>
@@ -1452,7 +1479,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">[nods]</span>
                 </span>
               </div>
@@ -1533,7 +1560,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Careful, I hear something!</span>
                 </span>
               </div>
@@ -1560,7 +1587,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Starting the investigation!</span>
                 </span>
               </div>
@@ -1581,7 +1608,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-GREEN">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-inspectText]</span>
                 </span>
               </div>
@@ -1620,7 +1647,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-RED">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-pointText]</span>
                 </span>
               </div>
@@ -1637,7 +1664,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Alrighty!</span>
                 </span>
               </div>
@@ -1654,7 +1681,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Meet?</span>
                 </span>
               </div>
@@ -1671,7 +1698,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Oh, no, it's not here. But one less place to search, yay!</span>
                 </span>
               </div>
@@ -1688,7 +1715,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -1747,7 +1774,7 @@
                         </div>
                         <div class="step-data">
                           <div class="textbox">
-                            <span class="text-langlabel">
+                            <span class="text-langlabel font-NORMAL">
                               <span class="color-c0">Getting dizzy...</span>
                             </span>
                           </div>
@@ -1764,7 +1791,7 @@
                         </div>
                         <div class="step-data">
                           <div class="textbox">
-                            <span class="text-langlabel">
+                            <span class="text-langlabel font-NORMAL">
                               <span class="color-c0">...!</span>
                             </span>
                           </div>
@@ -1802,7 +1829,7 @@
                               </div>
                               <div class="step-data">
                                 <div class="textbox">
-                                  <span class="text-langlabel">
+                                  <span class="text-langlabel font-NORMAL">
                                     <span class="color-c0">Don't want to stress you, but this is getting a bit painful...</span>
                                   </span>
                                 </div>
@@ -1819,7 +1846,7 @@
                               </div>
                               <div class="step-data">
                                 <div class="textbox">
-                                  <span class="text-langlabel">
+                                  <span class="text-langlabel font-NORMAL">
                                     <span class="color-c0">...</span>
                                   </span>
                                 </div>
@@ -1857,7 +1884,7 @@
                                     </div>
                                     <div class="step-data">
                                       <div class="textbox">
-                                        <span class="text-langlabel">
+                                        <span class="text-langlabel font-NORMAL">
                                           <span class="color-c0">Ouchie... seems like they really are angry.</span>
                                         </span>
                                       </div>
@@ -1970,7 +1997,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0"></span>
                   <span class="color-c1">QUEST FAILED</span>
                   <span class="color-c0"></span>
@@ -2067,7 +2094,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Hi!</span>
                   </span>
                 </div>
@@ -2084,7 +2111,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Ahh, \v[lore.title.seeker], great to see you again!</span>
                   </span>
                 </div>
@@ -2101,7 +2128,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Hi! Meet!</span>
                   </span>
                 </div>
@@ -2118,7 +2145,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Yeah, we can work together again. And look at you, even more impressive and shiny than last time!</span>
                   </span>
                 </div>
@@ -2135,7 +2162,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">...</span>
                   </span>
                 </div>
@@ -2152,7 +2179,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Can't brag that much about myself, but I tried my best. l pull my weight with the Gardeners. We'll be a great team!</span>
                   </span>
                 </div>
@@ -2169,7 +2196,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">[nods]</span>
                   </span>
                 </div>
@@ -2186,7 +2213,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">How?</span>
                   </span>
                 </div>
@@ -2203,7 +2230,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Oh, I will search for an ideal position to harvest the salt by checking energy concentrations around the area.</span>
                   </span>
                 </div>
@@ -2220,7 +2247,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">It'll be the same for you as last time. Just hold off the angry critters that want to bite off a piece of me, ha...</span>
                   </span>
                 </div>
@@ -2237,7 +2264,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">...</span>
                   </span>
                 </div>
@@ -2254,7 +2281,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">No, but seriously, please do. The wildlife here is scary, I tell ya.</span>
                   </span>
                 </div>
@@ -2271,7 +2298,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Anyway, I gotta prepare myself. Talk to me again when you are ready to go!</span>
                   </span>
                 </div>
@@ -2288,7 +2315,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">[nods]</span>
                   </span>
                 </div>
@@ -2335,7 +2362,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Hey there, \v[lore.title.seeker]! Are you ready to escort me around?</span>
                   </span>
                 </div>
@@ -2363,7 +2390,7 @@
                   <div class="choice-text">
                     <span class="choice-pretext">Choice 0</span>
                     <span class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0"></span>
                         <span class="color-c2">Yes</span>
                         <span class="color-c0"></span>
@@ -2382,7 +2409,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">[nods]</span>
                           </span>
                         </div>
@@ -2399,7 +2426,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Alright. Just let me prepare myself real quick.</span>
                           </span>
                         </div>
@@ -2439,7 +2466,7 @@
                   <div class="choice-text">
                     <span class="choice-pretext">Choice 1</span>
                     <span class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0"></span>
                         <span class="color-c1">No</span>
                         <span class="color-c0"></span>
@@ -2458,7 +2485,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">[shakes head]</span>
                           </span>
                         </div>
@@ -2475,7 +2502,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Aw, alright. I will wait for you here.</span>
                           </span>
                         </div>
@@ -2517,7 +2544,7 @@
               </div>
               <div class="step-data">
                 <div class="textbox">
-                  <span class="text-langlabel">
+                  <span class="text-langlabel font-NORMAL">
                     <span class="color-c0">Hey there, \v[lore.title.seeker]! Can we extract that precious salt now?</span>
                   </span>
                 </div>
@@ -2545,7 +2572,7 @@
                   <div class="choice-text">
                     <span class="choice-pretext">Choice 0</span>
                     <span class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0"></span>
                         <span class="color-c2">Yes</span>
                         <span class="color-c0"></span>
@@ -2564,7 +2591,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">[nods]</span>
                           </span>
                         </div>
@@ -2581,7 +2608,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Awesome! I will stir up the water a bit to lure out the blobs!</span>
                           </span>
                         </div>
@@ -2632,7 +2659,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Look, \v[lore.title.seeker], there they are in all their squishy, salty beauty!</span>
                           </span>
                         </div>
@@ -2649,7 +2676,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Now you need to </span>
                             <span class="color-c3">weaken</span>
                             <span class="color-c0"> and then </span>
@@ -2670,7 +2697,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">[nods]</span>
                           </span>
                         </div>
@@ -2778,7 +2805,7 @@
                   <div class="choice-text">
                     <span class="choice-pretext">Choice 1</span>
                     <span class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0"></span>
                         <span class="color-c1">No</span>
                         <span class="color-c0"></span>
@@ -2797,7 +2824,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">[shakes head]</span>
                           </span>
                         </div>
@@ -2814,7 +2841,7 @@
                       </div>
                       <div class="step-data">
                         <div class="textbox">
-                          <span class="text-langlabel">
+                          <span class="text-langlabel font-NORMAL">
                             <span class="color-c0">Okay, I will wait until you're ready. But don't take too long, the energy feels very volatile here.</span>
                           </span>
                         </div>
@@ -2864,7 +2891,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">There's more of those beach critters!</span>
                 </span>
               </div>
@@ -2891,7 +2918,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Checking another spot...</span>
                 </span>
               </div>
@@ -2912,7 +2939,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-GREEN">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-inspectText]</span>
                 </span>
               </div>
@@ -2942,7 +2969,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-RED">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-pointText]</span>
                 </span>
               </div>
@@ -2959,7 +2986,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Good job so far! We're definitely getting closer!</span>
                 </span>
               </div>
@@ -3022,7 +3049,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">More of them... not my type of day at the beach.</span>
                 </span>
               </div>
@@ -3049,7 +3076,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Gotta do another check. I think we're almost there, \v[lore.title.seeker]!</span>
                 </span>
               </div>
@@ -3066,7 +3093,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...!</span>
                 </span>
               </div>
@@ -3087,7 +3114,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-GREEN">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-inspectText]</span>
                 </span>
               </div>
@@ -3117,7 +3144,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-RED">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-pointText]</span>
                 </span>
               </div>
@@ -3134,7 +3161,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Still not the spot. But it leads to that island back there. That MUST be it, \v[lore.title.seeker]!</span>
                 </span>
               </div>
@@ -3151,7 +3178,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...!</span>
                 </span>
               </div>
@@ -3205,7 +3232,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">They really don't want us to reach the spot, eh?</span>
                 </span>
               </div>
@@ -3232,7 +3259,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Yes, picking up a lot of energy already. This might be it, \v[lore.title.seeker]!</span>
                 </span>
               </div>
@@ -3249,7 +3276,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -3270,7 +3297,7 @@
             </div>
             <div class="step-data">
               <div class="textbox textbox-small ar-box-color-GREEN">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">\v[tmp.questEscort-inspectText]</span>
                 </span>
               </div>
@@ -3287,7 +3314,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Investigation done, this is definitely the place!</span>
                 </span>
               </div>
@@ -3311,7 +3338,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Just get rid of the remaining enemies and we can begin extracting the salt!</span>
                       </span>
                     </div>
@@ -3402,7 +3429,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Woah, it works! My back feels hella salty already!</span>
                       </span>
                     </div>
@@ -3419,7 +3446,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Or maybe I'm just sweaty...?</span>
                       </span>
                     </div>
@@ -3436,7 +3463,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Why...?</span>
                       </span>
                     </div>
@@ -3465,7 +3492,7 @@
                         </div>
                         <div class="step-data">
                           <div class="textbox">
-                            <span class="text-langlabel">
+                            <span class="text-langlabel font-NORMAL">
                               <span class="color-c0">And another one! Just one more and we're done here, \v[lore.title.seeker].</span>
                             </span>
                           </div>
@@ -3510,7 +3537,7 @@
                                     </div>
                                     <div class="step-data">
                                       <div class="textbox">
-                                        <span class="text-langlabel">
+                                        <span class="text-langlabel font-NORMAL">
                                           <span class="color-c0">Yeah! That's all \v[lore.title.seeker], great job!</span>
                                         </span>
                                       </div>
@@ -3527,7 +3554,7 @@
                                     </div>
                                     <div class="step-data">
                                       <div class="textbox">
-                                        <span class="text-langlabel">
+                                        <span class="text-langlabel font-NORMAL">
                                           <span class="color-c0">Now we just </span>
                                           <span class="color-c3">need to get rid of the rest</span>
                                           <span class="color-c0">, so we can relax and go back!</span>
@@ -3601,7 +3628,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">\v[lore.title.seeker], I got one! ... still not enough, though.</span>
                       </span>
                     </div>
@@ -3618,7 +3645,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">We better wait for more to appear, so we can get enough salt!</span>
                       </span>
                     </div>
@@ -3640,7 +3667,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">Aw, \v[lore.title.seeker]! All of the salty blobs are gone before we got enough salt!</span>
                       </span>
                     </div>
@@ -3657,7 +3684,7 @@
                   </div>
                   <div class="step-data">
                     <div class="textbox">
-                      <span class="text-langlabel">
+                      <span class="text-langlabel font-NORMAL">
                         <span class="color-c0">We better wait for more to appear, so I can fill the tank!</span>
                       </span>
                     </div>
@@ -3777,7 +3804,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Yes! We got enough of the precious salt!</span>
                 </span>
               </div>
@@ -3794,7 +3821,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">This should help HQ to tinker together something that can help against that pesky spirit.</span>
                 </span>
               </div>
@@ -3811,7 +3838,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...!</span>
                 </span>
               </div>
@@ -3828,7 +3855,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">I just knew that we'd get this done. Jungle or beach, you can rely on a \v[lore.title.seeker]!</span>
                 </span>
               </div>
@@ -3845,7 +3872,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">...</span>
                 </span>
               </div>
@@ -3862,7 +3889,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">But I gotta hurry back to the HQ so we can get our tools ready. I will see you later!</span>
                 </span>
               </div>
@@ -3879,7 +3906,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">[nods]</span>
                 </span>
               </div>
@@ -3896,7 +3923,7 @@
             </div>
             <div class="step-data">
               <div class="textbox">
-                <span class="text-langlabel">
+                <span class="text-langlabel font-NORMAL">
                   <span class="color-c0">Bye!</span>
                 </span>
               </div>
@@ -3925,7 +3952,7 @@
           <tr>
             <td class="padded">chest1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Where the heck is that last MacGuffin? I swear, I looked everywhere!</span>
               </span>
             </td>
@@ -3933,7 +3960,7 @@
           <tr>
             <td class="padded">chest2</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Nobody knows! Trust me, I asked around. A lot.</span>
               </span>
             </td>
@@ -3941,7 +3968,7 @@
           <tr>
             <td class="padded">chest1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">What do you mean? Did no one find it?</span>
               </span>
             </td>
@@ -3949,7 +3976,7 @@
           <tr>
             <td class="padded">chest2</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Seems like it. Maybe there is no way to get it just yet.</span>
               </span>
             </td>
@@ -3957,7 +3984,7 @@
           <tr>
             <td class="padded">chest1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">I can't believe it...</span>
               </span>
             </td>
@@ -3976,7 +4003,7 @@
           <tr>
             <td class="padded">coconut1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Don't worry, I'm fine.</span>
               </span>
             </td>
@@ -3984,7 +4011,7 @@
           <tr>
             <td class="padded">coconut2</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">I'm just saying... getting hit by a falling coconut is a serious danger!</span>
               </span>
             </td>
@@ -3992,7 +4019,7 @@
           <tr>
             <td class="padded">coconut1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Did you forget this is a game? What's the worst that can happen?</span>
               </span>
             </td>
@@ -4000,7 +4027,7 @@
           <tr>
             <td class="padded">coconut2</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Who knows! It might be a hidden insta-kill field hazard!</span>
               </span>
             </td>
@@ -4008,7 +4035,7 @@
           <tr>
             <td class="padded">coconut1</td>
             <td class="textbox">
-              <span class="text-langlabel">
+              <span class="text-langlabel font-SMALL">
                 <span class="color-c0">Yeah right... I'll take my chances.</span>
               </span>
             </td>
